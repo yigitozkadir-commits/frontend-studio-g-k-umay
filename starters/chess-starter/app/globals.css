@@ -1,0 +1,791 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+  color: #1f2937;
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
+}
+
+/* ============================================
+   CHESS BOARD STYLES
+   ============================================ */
+
+.chess-board {
+  @apply relative w-full max-w-2xl aspect-square;
+  perspective: 1000px;
+  background: linear-gradient(135deg, #f0d9b5 0%, #b58863 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.dark .chess-board {
+  background: linear-gradient(135deg, #c5b89f 0%, #7a6f63 100%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.chess-board:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.chess-board.flipping {
+  animation: board-flip 0.8s ease-in-out;
+}
+
+.chess-board-grid {
+  @apply grid grid-cols-8 gap-0 w-full h-full;
+  touch-action: none;
+  background: inherit;
+}
+
+/* ============================================
+   CHESS SQUARE STYLES
+   ============================================ */
+
+.chess-square {
+  @apply flex items-center justify-center select-none relative;
+  aspect-ratio: 1;
+  transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Light and dark square base colors */
+.chess-square.light {
+  @apply bg-chess-light;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chess-square.light:hover:not(.disabled) {
+  @apply bg-chess-light-hover;
+}
+
+.chess-square.dark {
+  @apply bg-chess-dark;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chess-square.dark:hover:not(.disabled) {
+  @apply bg-chess-dark-hover;
+}
+
+/* Dark mode square colors */
+.dark .chess-square.light {
+  @apply bg-dark-chess-light;
+}
+
+.dark .chess-square.light:hover:not(.disabled) {
+  @apply bg-dark-chess-light;
+  opacity: 0.85;
+}
+
+.dark .chess-square.dark {
+  @apply bg-dark-chess-dark;
+}
+
+.dark .chess-square.dark:hover:not(.disabled) {
+  @apply bg-dark-chess-dark;
+  opacity: 0.85;
+}
+
+/* Selected square - glow effect with improved contrast */
+.chess-square.selected {
+  @apply ring-inset ring-4 ring-chess-highlight-selected;
+  animation: glow-pulse 1.5s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(127, 201, 127, 0.4),
+              inset 0 0 10px rgba(127, 201, 127, 0.2);
+  background-image: radial-gradient(ellipse at center, rgba(127, 201, 127, 0.1) 0%, transparent 100%);
+}
+
+/* Possible move indicator with pulsing effect */
+.chess-square.possible-move {
+  @apply ring-inset ring-4 ring-chess-highlight-valid;
+  box-shadow: inset 0 0 8px rgba(186, 202, 68, 0.3);
+  animation: ring-pulse 1.5s ease-out infinite;
+}
+
+.chess-square.possible-move:hover:not(.disabled) {
+  @apply ring-chess-highlight-valid;
+  box-shadow: 0 0 12px rgba(186, 202, 68, 0.5),
+              inset 0 0 10px rgba(186, 202, 68, 0.3);
+}
+
+/* Check state - red border with animation and pattern */
+.chess-square.check {
+  @apply ring-inset ring-4 ring-chess-highlight-check;
+  animation: check-pulse 1s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.5),
+              inset 0 0 10px rgba(255, 107, 107, 0.2);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 107, 107, 0.05),
+    rgba(255, 107, 107, 0.05) 10px,
+    rgba(255, 107, 107, 0.1) 10px,
+    rgba(255, 107, 107, 0.1) 20px
+  );
+}
+
+/* Last move highlight - golden/orange pulse */
+.chess-square.last-move {
+  animation: last-move-pulse 1s ease-in-out infinite;
+  background-color: #f39c12 !important;
+  box-shadow: inset 0 0 15px rgba(243, 156, 18, 0.3);
+}
+
+/* Capture square highlight with ring effect */
+.chess-square.capture-highlight {
+  @apply ring-inset ring-4 ring-chess-highlight-capture;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.4),
+              inset 0 0 8px rgba(231, 76, 60, 0.2);
+}
+
+/* Disabled state */
+.chess-square.disabled {
+  @apply cursor-not-allowed opacity-50;
+  pointer-events: none;
+}
+
+/* ============================================
+   CHESS PIECE STYLES
+   ============================================ */
+
+.chess-piece {
+  @apply text-5xl select-none relative z-10;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: grab;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: transform, filter;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.chess-square:hover .chess-piece:not(.disabled) {
+  animation: piece-hover-lift 0.2s ease-out forwards;
+  cursor: grab;
+}
+
+.chess-piece.moving {
+  animation: piece-move 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.chess-piece.captured {
+  animation: fade-out 0.4s ease-in forwards;
+}
+
+/* Piece dragging state - GPU accelerated */
+.chess-piece.dragging {
+  @apply cursor-grabbing opacity-80;
+  transform: scale(1.12) translateZ(0);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) brightness(1.1);
+  z-index: 50;
+  will-change: transform;
+}
+
+/* Disabled piece state */
+.chess-piece.disabled {
+  @apply cursor-not-allowed opacity-40;
+  pointer-events: none;
+}
+
+/* Dark mode piece enhancements */
+.dark .chess-piece {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* ============================================
+   VALID MOVE INDICATOR
+   ============================================ */
+
+.valid-move-dot {
+  @apply w-3 h-3 rounded-full;
+  background-color: #baca44;
+  opacity: 0.7;
+  animation: valid-pulse 0.6s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(186, 202, 68, 0.7);
+  transition: all 0.2s ease-out;
+  will-change: transform;
+}
+
+.valid-move-dot:hover {
+  opacity: 0.95;
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(186, 202, 68, 0.9);
+}
+
+.dark .valid-move-dot {
+  filter: drop-shadow(0 0 8px rgba(186, 202, 68, 0.6));
+}
+
+/* Large piece capture indicator */
+.valid-move-ring {
+  @apply absolute w-8 h-8 rounded-full border-2;
+  border-color: #baca44;
+  opacity: 0.6;
+  animation: valid-pulse 0.8s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(186, 202, 68, 0.4);
+  transition: all 0.2s ease-out;
+}
+
+/* ============================================
+   CAPTURED PIECES DISPLAY
+   ============================================ */
+
+.captured-pieces-container {
+  @apply flex flex-wrap gap-2 p-4 rounded-lg;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef2f5 100%);
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  min-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.dark .captured-pieces-container {
+  background: linear-gradient(135deg, #2d3748 0%, #1f2937 100%);
+  border-color: #4a5568;
+}
+
+.captured-piece {
+  @apply text-2xl p-2 rounded transition-all;
+  animation: slide-in 0.3s ease-out;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  background: white;
+  border: 1px solid #e5e7eb;
+  will-change: transform;
+}
+
+.dark .captured-piece {
+  background: #3f4651;
+  border-color: #555f70;
+}
+
+.captured-piece:hover {
+  transform: scale(1.15) translateY(-2px);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   BOARD SIZING & RESPONSIVE DESIGN
+   ============================================ */
+
+/* Desktop: 400px board (lg screens) */
+@media (min-width: 1024px) {
+  .chess-board-container {
+    max-width: 420px;
+  }
+
+  .chess-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .chess-piece {
+    @apply text-5xl;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Tablet: 320px board (md screens) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .chess-board-container {
+    max-width: 360px;
+  }
+
+  .chess-piece {
+    @apply text-4xl;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Mobile: responsive full-width (sm screens) */
+@media (max-width: 639px) {
+  .chess-board-container {
+    @apply w-full max-w-xs mx-auto px-2;
+  }
+
+  .chess-piece {
+    @apply text-3xl;
+  }
+
+  .chess-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Touch-friendly buttons - 48px minimum height */
+  .chess-button {
+    @apply min-h-12 px-4 py-3 text-sm;
+  }
+
+  .chess-panel {
+    @apply p-4;
+  }
+
+  .chess-panel-header {
+    @apply text-xl;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile: 280px board */
+@media (max-width: 400px) {
+  .chess-board-container {
+    @apply w-full max-w-xs;
+  }
+
+  .chess-piece {
+    @apply text-2xl;
+  }
+
+  .chess-panel {
+    @apply p-3;
+  }
+
+  .chess-button {
+    @apply text-xs px-3 py-2.5;
+  }
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.chess-button {
+  @apply px-4 py-2 rounded-lg font-semibold transition-all duration-250;
+  @apply active:scale-95;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  will-change: transform, box-shadow;
+  transform: translateZ(0);
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  letter-spacing: 0.5px;
+}
+
+.chess-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+  pointer-events: none;
+}
+
+.chess-button-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+  @apply dark:bg-blue-700 dark:hover:bg-blue-600;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chess-button-primary:hover:not(:disabled) {
+  box-shadow: 0 8px 12px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
+.chess-button-primary:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-600;
+}
+
+.chess-button-secondary {
+  @apply bg-gray-200 text-gray-900 hover:bg-gray-300;
+  @apply dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chess-button-secondary:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.chess-button-danger {
+  @apply bg-red-500 text-white hover:bg-red-600 active:bg-red-700;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chess-button-danger:hover:not(:disabled) {
+  box-shadow: 0 8px 12px rgba(239, 68, 68, 0.4);
+  transform: translateY(-2px);
+}
+
+.chess-button-warning {
+  @apply bg-yellow-500 text-white hover:bg-yellow-600 active:bg-yellow-700;
+  box-shadow: 0 4px 6px rgba(234, 179, 8, 0.3);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chess-button-warning:hover:not(:disabled) {
+  box-shadow: 0 8px 12px rgba(234, 179, 8, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   PANEL & CONTAINER STYLES
+   ============================================ */
+
+.chess-panel {
+  @apply bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6;
+  @apply transition-all duration-300 ease-out;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.chess-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.chess-panel:hover::before {
+  left: 100%;
+}
+
+.dark .chess-panel {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chess-panel-header {
+  @apply font-display text-2xl font-bold mb-4 flex items-center gap-2;
+  color: inherit;
+  animation: slide-in 0.3s ease-out;
+}
+
+/* Status card with border accent */
+.chess-status-card {
+  @apply border-l-4 border-blue-500 pl-4 py-2 rounded-r-lg;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.05), transparent);
+  transition: all 0.2s ease-out;
+  animation: slide-in 0.3s ease-out;
+}
+
+.chess-status-card:hover {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), transparent);
+}
+
+.chess-status-card.check {
+  @apply border-chess-highlight-check;
+  background: linear-gradient(90deg, rgba(255, 107, 107, 0.05), transparent);
+}
+
+.chess-status-card.check:hover {
+  background: linear-gradient(90deg, rgba(255, 107, 107, 0.1), transparent);
+}
+
+.chess-status-card.checkmate {
+  @apply border-chess-highlight-check;
+  background: linear-gradient(90deg, rgba(255, 107, 107, 0.08), transparent);
+}
+
+.chess-status-card.checkmate:hover {
+  background: linear-gradient(90deg, rgba(255, 107, 107, 0.15), transparent);
+}
+
+.chess-status-card.success {
+  @apply border-green-500;
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.05), transparent);
+}
+
+.chess-status-card.success:hover {
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.1), transparent);
+}
+
+/* ============================================
+   ACCESSIBILITY & HIGH CONTRAST
+   ============================================ */
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  .chess-square.selected {
+    @apply ring-4 ring-inset;
+    box-shadow: 0 0 0 4px currentColor;
+  }
+
+  .chess-piece {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
+    font-weight: 900;
+  }
+
+  .chess-button {
+    font-weight: 900;
+    border: 2px solid currentColor;
+  }
+}
+
+/* Focus states for keyboard navigation - visible and accessible */
+.chess-square:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-600;
+  outline-style: solid;
+}
+
+.chess-button:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-600;
+  outline-style: solid;
+}
+
+.chess-panel:focus-visible {
+  @apply outline-2 outline-offset-2 outline-blue-600;
+}
+
+/* High contrast focus indicator for dark mode */
+.dark .chess-square:focus-visible,
+.dark .chess-button:focus-visible {
+  @apply outline-yellow-400;
+}
+
+/* Reduced motion support - disable all animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .chess-square,
+  .chess-piece,
+  .chess-board,
+  .chess-button,
+  .valid-move-dot,
+  .chess-panel {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   UTILITY ANIMATIONS & TRANSITIONS
+   ============================================ */
+
+@keyframes fade-out-gentle {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.animate-fade-out-gentle {
+  animation: fade-out-gentle 0.4s ease-in forwards;
+}
+
+/* Smooth opacity transition */
+.transition-opacity-smooth {
+  @apply transition-opacity duration-300 ease-in-out;
+}
+
+/* GPU-accelerated transform transitions - performance optimized */
+.transition-transform-gpu {
+  @apply transition-transform duration-300 ease-out;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
+}
+
+/* Smooth color transitions */
+.transition-colors-smooth {
+  @apply transition-colors duration-200;
+  will-change: background-color, border-color;
+}
+
+/* Smooth shadow transitions */
+.transition-shadow-smooth {
+  @apply transition-shadow duration-200;
+  will-change: box-shadow;
+}
+
+/* ============================================
+   DARK MODE ENHANCEMENTS
+   ============================================ */
+
+.dark .chess-piece {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.dark .chess-button-primary {
+  @apply bg-blue-700 hover:bg-blue-600;
+  box-shadow: 0 4px 6px rgba(29, 78, 216, 0.4);
+}
+
+.dark .chess-button-primary:hover:not(:disabled) {
+  box-shadow: 0 8px 12px rgba(29, 78, 216, 0.5);
+}
+
+.dark .valid-move-dot {
+  filter: drop-shadow(0 0 8px rgba(186, 202, 68, 0.6));
+}
+
+/* Dark mode text improvements */
+.dark body {
+  color: #f1f5f9;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #f8fafc;
+}
+
+/* ============================================
+   LOADING & TRANSITION STATES
+   ============================================ */
+
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.transitioning {
+  @apply pointer-events-none;
+}
+
+/* ============================================
+   SCROLLBAR STYLES
+   ============================================ */
+
+/* Custom scrollbar for history */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+
+/* ============================================
+   VISUAL FEEDBACK & INTERACTIONS
+   ============================================ */
+
+/* Subtle glow on hover for interactive elements */
+button:hover:not(:disabled),
+a:hover,
+.interactive:hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth slide animations */
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-from-left {
+  animation: slide-from-left 0.3s ease-out;
+}
+
+.animate-slide-from-right {
+  animation: slide-from-right 0.3s ease-out;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Enable GPU acceleration for smooth animations */
+.chess-piece,
+.chess-square,
+.chess-button {
+  will-change: auto;
+}
+
+.chess-piece.moving,
+.chess-piece.dragging {
+  will-change: transform;
+}
+
+.chess-button:active,
+.chess-square:active {
+  will-change: transform;
+}

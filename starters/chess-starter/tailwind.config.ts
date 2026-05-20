@@ -123,6 +123,10 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'pop-in': {
+          '0%': { transform: 'scale(0.95) translateY(-10px)', opacity: '0' },
+          '100%': { transform: 'scale(1) translateY(0)', opacity: '1' },
+        },
       },
       animation: {
         'piece-move': 'piece-move 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
@@ -140,6 +144,7 @@ const config: Config = {
         'check-pulse': 'check-pulse 1s ease-in-out infinite',
         'slide-in': 'slide-in 0.3s ease-out',
         'fade-in': 'fade-in 0.3s ease-out',
+        'pop-in': 'pop-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
       },
       transitionDuration: {
         '150': '150ms',

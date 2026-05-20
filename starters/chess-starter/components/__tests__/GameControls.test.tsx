@@ -204,7 +204,7 @@ describe('GameControls Component', () => {
       render(<GameControls {...defaultProps} onReset={onReset} />)
 
       const resetButton = screen.getByText(/Baştan Başla/i)
-      await userEvent.click(resetButton)
+      fireEvent.click(resetButton)
 
       expect(onReset).toHaveBeenCalled()
     })
@@ -214,7 +214,7 @@ describe('GameControls Component', () => {
       render(<GameControls {...defaultProps} onUndo={onUndo} />)
 
       const undoButton = screen.getByText(/Geri Al/i)
-      await userEvent.click(undoButton)
+      fireEvent.click(undoButton)
 
       expect(onUndo).toHaveBeenCalled()
     })
@@ -246,7 +246,7 @@ describe('GameControls Component', () => {
       )
 
       const resetButton = screen.getByText(/Baştan Başla/i)
-      await userEvent.click(resetButton)
+      fireEvent.click(resetButton)
 
       expect(onReset).toHaveBeenCalled()
     })
@@ -262,7 +262,7 @@ describe('GameControls Component', () => {
       )
 
       const resetButton = screen.getByText(/Baştan Başla/i)
-      await userEvent.click(resetButton)
+      fireEvent.click(resetButton)
 
       expect(onReset).toHaveBeenCalled()
     })
@@ -326,7 +326,7 @@ describe('GameControls Component', () => {
     it('handles many captured pieces', () => {
       const capturedPieces = Array.from({ length: 30 }, (_, i) => ({
         piece: i % 2 === 0 ? 'p' : 'n',
-        color: (i % 2 === 0 ? 'w' : 'b') as const,
+        color: (i % 2 === 0 ? 'w' : 'b') as 'w' | 'b',
         moveNumber: i,
         turn: i + 1,
       }))

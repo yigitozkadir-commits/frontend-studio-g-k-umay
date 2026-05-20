@@ -1,0 +1,37 @@
+{
+  "workflow": "multimedia",
+  "version": "1.0.0",
+  "description": "Ses ve video yönetimi. Howler.js ile gelişmiş ses efektleri, Tone.js ile web sentezci, Plyr ile özelleştirilmiş video oynatıcı.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 57,
+      "name": "Howler.js Ses Motoru",
+      "purpose": "Karmaşık ses yönetimi için Howler.js kur.",
+      "instruction": "goldfire/howler.js reposuna git. Howl nesnesi oluştur, sprite'ları tanımla. Ses havuzu, fade in/out, 3D pozisyonel ses özelliklerini incele. Kullanıcı etkileşimi sonrası ses başlatma stratejisini öğren.",
+      "expected_output": "Sprite destekli ses havuzu, kullanıcı tetiklemeli ses efektleri."
+    },
+    {
+      "order": 2,
+      "tool_id": 58,
+      "name": "Tone.js Sentezci",
+      "purpose": "Tarayıcı tabanlı müzik sentezi için Tone.js kur.",
+      "instruction": "Tonejs/Tone.js reposuna git. Tone.start() ile AudioContext aç. Synth, PolySynth ve Sequence kullan. Transport ile ritim döngüsü oluştur. Efektler: Reverb, Distortion, Chorus.",
+      "expected_output": "Tarayıcıda çalışan müzik sentezci, temel sekansör."
+    },
+    {
+      "order": 3,
+      "tool_id": 59,
+      "name": "Plyr Video Oynatıcı",
+      "purpose": "Özelleştirilmiş HTML5 video oynatıcı için Plyr kur.",
+      "instruction": "sampotts/plyr reposuna git. Plyr'ı video elementine bağla. Özel kontroller, klavye kısayolları ve altyazı desteğini yapılandır. YouTube ve Vimeo embed desteğini ekle.",
+      "expected_output": "Tam özellikli, markalı video oynatıcı, altyazı ve klavye kontrolü."
+    }
+  ]
+}

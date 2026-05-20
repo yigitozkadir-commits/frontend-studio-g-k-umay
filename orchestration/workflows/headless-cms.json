@@ -1,0 +1,43 @@
+{
+  "workflow": "headless-cms",
+  "version": "1.0.0",
+  "description": "Headless CMS entegrasyonlu içerik sürücülü site. ISR, on-demand revalidation, preview mode, görsel optimizasyonu, taksonomi sayfaları.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "tags": [
+    "cms",
+    "content",
+    "isr"
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 164,
+      "name": "CMS Bağlantısı",
+      "purpose": "CMS client'ı (Sanity, Contentful veya Strapi) kur.",
+      "instruction": "next-sanity veya benzeri client paketini ekle. lib/cms.ts'te tipli fetch wrapper'ı yaz. .env.example'a CMS_TOKEN ekle.",
+      "expected_output": "lib/cms.ts üzerinden tipli içerik çekiliyor.",
+      "selection_rationale": "Next 14 fetch + cache + tag entegrasyonu ile on-demand revalidation native destekleniyor."
+    },
+    {
+      "order": 2,
+      "tool_id": 165,
+      "name": "İçerik Şemaları",
+      "purpose": "CMS yanıtlarını Zod ile doğrula.",
+      "instruction": "lib/cms/schemas.ts içinde her content type için Zod şeması yaz. fetch wrapper'da parse et.",
+      "expected_output": "CMS şema değişirse build zamanında hata."
+    }
+  ],
+  "final_output": "CMS-driven, ISR + on-demand revalidate, preview mode, optimize görseller içeren içerik sitesi.",
+  "estimated_time": "Her adım ~8 dakika, toplam ~40 dakika",
+  "test_checklist": [
+    "CMS'te post oluşturulunca site güncelleniyor mu?",
+    "Preview cookie ile taslaklar görünüyor mu?",
+    "Şema uyumsuzluğu build'i kırıyor mu?",
+    "Görseller AVIF/WebP serv ediliyor mu?"
+  ]
+}

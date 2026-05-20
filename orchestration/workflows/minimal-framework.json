@@ -1,0 +1,37 @@
+{
+  "workflow": "minimal-framework",
+  "version": "1.0.0",
+  "description": "Alternatif hafif framework'ler. Preact ile React uyumlu küçük bundle, SolidJS ile reaktif render, Svelte ile derleme zamanı framework.",
+  "prerequisites": {
+    "framework": "Vite 5+ (herhangi bir framework için)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 128,
+      "name": "Preact ile Başlangıç",
+      "purpose": "React API uyumlu 3KB framework için Preact kur.",
+      "instruction": "preactjs/preact reposuna git. preact/compat ile mevcut React bileşenlerini uyumsuz değişiklik olmadan çalıştır. Signals API ile reaktif state yönetimini öğren.",
+      "expected_output": "React bileşenleri çalışan Preact uygulaması, < 10KB bundle."
+    },
+    {
+      "order": 2,
+      "tool_id": 129,
+      "name": "SolidJS Reaktifliği",
+      "purpose": "Sanal DOM olmadan gerçek reaktiflik için SolidJS kur.",
+      "instruction": "solidjs/solid reposuna git. createSignal, createEffect, createMemo primitive'lerini öğren. For, Show, Switch bileşenlerini kullan. Vite ile proje oluştur.",
+      "expected_output": "Sanal DOM olmayan, sinyal bazlı reaktif SolidJS uygulaması."
+    },
+    {
+      "order": 3,
+      "tool_id": 130,
+      "name": "Svelte Derleyici",
+      "purpose": "Çalışma zamanı framework'ü olmayan Svelte kur.",
+      "instruction": "sveltejs/svelte reposuna git. .svelte dosyası yapısını öğren: script, markup, style. Stores ile reaktif state yönetimi. SvelteKit ile SSR kurulumu yap.",
+      "expected_output": "Minimal runtime ile çalışan Svelte bileşeni, reactive store."
+    }
+  ]
+}

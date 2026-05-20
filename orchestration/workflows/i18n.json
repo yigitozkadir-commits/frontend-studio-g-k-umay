@@ -1,0 +1,63 @@
+{
+  "workflow": "i18n",
+  "version": "1.0.0",
+  "description": "Next.js App Router için çok dilli (i18n) altyapı. next-intl tabanlı, server component uyumlu, SSG/ISR ile uyumlu yerelleştirme.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "tags": ["i18n", "l10n", "localization"],
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 141,
+      "name": "i18n Kütüphanesi Kurulumu",
+      "purpose": "next-intl ile App Router uyumlu i18n altyapısı kur.",
+      "instruction": "next-intl paketini ekle. middleware.ts'te locale detection yap. app/[locale]/layout.tsx oluştur.",
+      "expected_output": "/en, /tr, /de gibi locale prefix'leri çalışıyor.",
+      "selection_rationale": "next-intl, i18next'in tersine Next 14 App Router + RSC ile native uyumlu."
+    },
+    {
+      "order": 2,
+      "tool_id": 102,
+      "name": "Çeviri Dosya Şemaları",
+      "purpose": "Çeviri JSON dosyalarını Zod ile şemaya bağla.",
+      "instruction": "messages/en.json, messages/tr.json oluştur. lib/i18n/schema.ts'te Zod ile çeviri anahtar şemasını tanımla. Eksik anahtarlar CI'da fail olsun.",
+      "expected_output": "Çeviri dosyaları şema uyumlu, eksik key derleme zamanında yakalanıyor."
+    },
+    {
+      "order": 3,
+      "tool_id": 105,
+      "name": "Dil Değiştirici UI",
+      "purpose": "Kullanıcının dil seçebileceği bir component yaz.",
+      "instruction": "lucide-react'tan Globe ikonu, shadcn/ui DropdownMenu ile dil seçici yap. useRouter ile locale değiştir.",
+      "expected_output": "Dropdown'dan dil değiştirilebiliyor, URL ve içerik güncelleniyor."
+    },
+    {
+      "order": 4,
+      "tool_id": 117,
+      "name": "RTL Desteği",
+      "purpose": "Arapça/İbranice gibi RTL diller için sayfa yönünü ayarla.",
+      "instruction": "app/[locale]/layout.tsx'te <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale}> ayarla. Tailwind'in rtl: variant'ını etkinleştir.",
+      "expected_output": "AR locale'inde içerik sağdan sola hizalanıyor, layout bozulmuyor."
+    },
+    {
+      "order": 5,
+      "tool_id": 98,
+      "name": "Tarih ve Sayı Formatları",
+      "purpose": "Locale-aware tarih ve sayı formatlama.",
+      "instruction": "Intl.DateTimeFormat ve Intl.NumberFormat kullan. dayjs ile yardımcı util'leri yaz.",
+      "expected_output": "1.234,56 TR; 1,234.56 EN; tarih formatları locale'e uyuyor."
+    }
+  ],
+  "final_output": "Locale prefix'leri, dil değiştirici, RTL ve Intl formatlama içeren tam i18n altyapısı.",
+  "estimated_time": "Her adım ~7 dakika, toplam ~35 dakika",
+  "test_checklist": [
+    "/en, /tr, /ar route'ları çalışıyor mu?",
+    "Eksik çeviri key build'i kırıyor mu?",
+    "AR locale'inde RTL düzgün mü?",
+    "Tarih ve sayı formatları locale'e uygun mu?"
+  ]
+}

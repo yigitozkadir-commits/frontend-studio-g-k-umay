@@ -1,0 +1,43 @@
+{
+  "workflow": "pwa",
+  "version": "1.0.0",
+  "description": "Progressive Web App altyapısı: Service Worker, Web App Manifest, offline cache, push notification, install prompt.",
+  "prerequisites": {
+    "framework": "Next.js 14+ veya Vite",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "tags": [
+    "pwa",
+    "offline",
+    "mobile"
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 155,
+      "name": "Web App Manifest",
+      "purpose": "PWA manifest dosyasını oluştur.",
+      "instruction": "public/manifest.webmanifest oluştur. name, short_name, theme_color, icons (192x192, 512x512) doldur. app/layout.tsx'te metadata.manifest ekle.",
+      "expected_output": "Chrome DevTools > Application > Manifest sekmesi yeşil.",
+      "selection_rationale": "Next 14 metadata API'si manifest'i first-class destekliyor."
+    },
+    {
+      "order": 2,
+      "tool_id": 156,
+      "name": "Service Worker (Workbox)",
+      "purpose": "Offline cache stratejisi kur.",
+      "instruction": "next-pwa veya serwist paketini ekle. next.config.mjs'i sar. precache statik asset'leri, runtime cache API çağrıları için 'NetworkFirst' kullan.",
+      "expected_output": "Offline mod sayfayı yükleyebiliyor."
+    }
+  ],
+  "final_output": "Manifest, Service Worker, offline cache, install prompt ve push bildirimleri ile PWA uyumlu uygulama.",
+  "estimated_time": "Her adım ~8 dakika, toplam ~40 dakika",
+  "test_checklist": [
+    "Lighthouse PWA skoru >90 mı?",
+    "Offline mod çalışıyor mu?",
+    "Install prompt mobilde çıkıyor mu?",
+    "manifest.webmanifest valid mi?"
+  ]
+}

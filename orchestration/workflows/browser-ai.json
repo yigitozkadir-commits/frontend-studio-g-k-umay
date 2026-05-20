@@ -1,0 +1,37 @@
+{
+  "workflow": "browser-ai",
+  "version": "1.0.0",
+  "description": "Tarayıcıda çalışan AI/ML modelleri. TensorFlow.js ile görüntü sınıflandırma, ml5.js ile kullanımı kolay ML, Brain.js ile sinir ağı.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 181,
+      "name": "TensorFlow.js Modeli",
+      "purpose": "Önceden eğitilmiş modelle tarayıcıda tahmin yap.",
+      "instruction": "tensorflow/tfjs-models reposuna git. MobileNet veya COCO-SSD modelini yükle. Kamera görüntüsünden nesne tespiti yap. Web Worker'da çalıştırarak UI'ı bloklamaktan kaçın.",
+      "expected_output": "Kamera görüntüsünde gerçek zamanlı nesne tespiti, tahmin etiketleri."
+    },
+    {
+      "order": 2,
+      "tool_id": 182,
+      "name": "ml5.js Kolaylığı",
+      "purpose": "Sanatçı ve tasarımcılar için erişilebilir ML API'si.",
+      "instruction": "ml5js/ml5-library reposuna git. ml5.imageClassifier() ve ml5.poseNet() örneklerini incele. p5.js ile entegrasyon kurulumunu öğren. Eğitim ve tahmin döngüsünü uygula.",
+      "expected_output": "Görüntü sınıflandırıcı veya poz tanıma çalışan demo."
+    },
+    {
+      "order": 3,
+      "tool_id": 183,
+      "name": "Brain.js Sinir Ağı",
+      "purpose": "Tarayıcıda küçük sinir ağı eğitimi için Brain.js kur.",
+      "instruction": "BrainJS/brain.js reposuna git. brain.NeuralNetwork() ile basit sınıflandırıcı oluştur. Eğitim verisi formatını, train() ve run() metodlarını öğren. Modeli JSON olarak export et.",
+      "expected_output": "Tarayıcıda eğitilen ve çalışan küçük sinir ağı modeli."
+    }
+  ]
+}

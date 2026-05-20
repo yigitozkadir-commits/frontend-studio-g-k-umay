@@ -1,0 +1,7335 @@
+[
+  {
+    "id": 1,
+    "name": "kamranahmedse/developer-roadmap",
+    "url": "https://github.com/kamranahmedse/developer-roadmap",
+    "category": "yol-haritalari",
+    "tags": [
+      "roadmap",
+      "kariyer",
+      "müfredat",
+      "rehber"
+    ],
+    "type": "reference",
+    "priority": "high",
+    "when_to_use": "Hangi frontend teknolojisine öncelik verileceği, hangi aracın ne zaman öğrenileceği sorulduğunda.",
+    "how_to_use": "README.md'deki frontend diyagramını incele, güncel yılın önerilerini oku.",
+    "related": [
+      2
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 5,
+      "rsc_compat": 5,
+      "bundle_cost": 10,
+      "typescript": 5,
+      "maintenance": 7,
+      "learning_curve": 7,
+      "community": 7
+    }
+  },
+  {
+    "id": 2,
+    "name": "mdn/content",
+    "url": "https://github.com/mdn/content",
+    "category": "yol-haritalari",
+    "tags": [
+      "mdn",
+      "web-standartlari",
+      "html",
+      "css",
+      "javascript",
+      "api"
+    ],
+    "type": "reference",
+    "priority": "high",
+    "when_to_use": "HTML, CSS, JavaScript ve Web API'lerinin derinlemesine referansı gerektiğinde.",
+    "how_to_use": "files/en-us/ altındaki dokümanları oku, ilgili API'nin kullanım örneğini bul.",
+    "related": [
+      1,
+      3
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 5,
+      "rsc_compat": 5,
+      "bundle_cost": 10,
+      "typescript": 5,
+      "maintenance": 7,
+      "learning_curve": 7,
+      "community": 7
+    }
+  },
+  {
+    "id": 3,
+    "name": "html5boilerplate/html5-boilerplate",
+    "url": "https://github.com/h5bp/html5-boilerplate",
+    "category": "yol-haritalari",
+    "tags": [
+      "html5",
+      "baslangic",
+      "sablon",
+      "performans",
+      "seo"
+    ],
+    "type": "template",
+    "priority": "medium",
+    "when_to_use": "Sıfırdan profesyonel bir HTML/CSS projesi başlatırken, temel best practice'leri garantilemek için.",
+    "how_to_use": "dist/ klasöründeki yapıyı incele, .htaccess ve index.html yapılandırmalarını kopyala.",
+    "related": [
+      2,
+      16
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 8,
+      "typescript": 6,
+      "maintenance": 6,
+      "learning_curve": 7,
+      "community": 6
+    }
+  },
+  {
+    "id": 4,
+    "name": "trekhleb/javascript-algorithms",
+    "url": "https://github.com/trekhleb/javascript-algorithms",
+    "category": "yol-haritalari",
+    "tags": [
+      "algoritma",
+      "veri-yapilari",
+      "javascript",
+      "mulakat"
+    ],
+    "type": "reference",
+    "priority": "medium",
+    "when_to_use": "Performans optimizasyonu gerektiren algoritmik frontend problemlerinde veya işe alım mülakatlarında.",
+    "how_to_use": "src/algorithms/ altındaki her klasörü incele, README'deki açıklamayı ve test dosyasını oku.",
+    "related": [
+      1
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 5,
+      "rsc_compat": 5,
+      "bundle_cost": 10,
+      "typescript": 5,
+      "maintenance": 7,
+      "learning_curve": 7,
+      "community": 7
+    }
+  },
+  {
+    "id": 5,
+    "name": "greensock/GSAP",
+    "url": "https://github.com/greensock/GSAP",
+    "category": "animasyonlar",
+    "tags": [
+      "animation",
+      "timeline",
+      "scrolltrigger",
+      "high-performance",
+      "svg"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Karmaşık timeline animasyonları, scroll-trigger'lı sahneler, SVG morphing, yüksek performanslı sürekli animasyonlar gerektiğinde.",
+    "how_to_use": "src/ dizinindeki plugin'leri incele. Özellikle ScrollTrigger ve Timeline örneklerine bak.",
+    "related": [
+      6,
+      9,
+      28,
+      47,
+      195
+    ],
+    "alternatives": [
+      6,
+      11,
+      21
+    ],
+    "install_command": "npm install gsap",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 27
+  },
+  {
+    "id": 6,
+    "name": "framer/motion",
+    "url": "https://github.com/framer/motion",
+    "category": "animasyonlar",
+    "tags": [
+      "react",
+      "animation",
+      "layout",
+      "gesture",
+      "declarative"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "React projelerinde deklaratif animasyonlar, layout geçişleri, hover/tap gesture'ları gerektiğinde.",
+    "how_to_use": "packages/framer-motion/README.md ve examples/ klasöründen AnimatePresence, layoutId örneklerini incele.",
+    "related": [
+      5,
+      22,
+      35,
+      37
+    ],
+    "alternatives": [
+      5,
+      22
+    ],
+    "install_command": "npm install framer-motion",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 43
+  },
+  {
+    "id": 7,
+    "name": "airbnb/lottie-web",
+    "url": "https://github.com/airbnb/lottie-web",
+    "category": "animasyonlar",
+    "tags": [
+      "lottie",
+      "after-effects",
+      "json",
+      "vektor",
+      "bodymovin"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tasarımcıların After Effects'te hazırladığı vektörel animasyonları web'de kayıpsız oynatmak gerektiğinde.",
+    "how_to_use": "README'deki API dokümanından loadAnimation() metodunu incele, JSON format gereksinimlerine bak.",
+    "related": [
+      5
+    ],
+    "alternatives": [],
+    "install_command": "npm install lottie-web",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 62
+  },
+  {
+    "id": 8,
+    "name": "animate-css/animate.css",
+    "url": "https://github.com/animate-css/animate.css",
+    "category": "animasyonlar",
+    "tags": [
+      "css",
+      "hazir-animasyon",
+      "tak-calistir",
+      "attention-seekers"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Hızlı prototiplemede veya basit giriş/çıkış animasyonları için, JavaScript animasyon kütüphanesi kurmadan önce.",
+    "how_to_use": "docs/ sayfasındaki sınıf isimlerini ve örnekleri incele. animate__animated animate__bounce gibi.",
+    "related": [
+      23
+    ],
+    "alternatives": [],
+    "install_command": "npm install animate.css",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 9,
+    "name": "locomotivemtl/locomotive-scroll",
+    "url": "https://github.com/locomotivemtl/locomotive-scroll",
+    "category": "animasyonlar",
+    "tags": [
+      "scroll",
+      "smooth-scroll",
+      "parallax",
+      "lerp"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Ödüllü Awwwards sitelerindeki gibi akıcı, sinematik scroll deneyimi ve parallax efektleri gerektiğinde.",
+    "how_to_use": "README'deki data-attribute kurulumunu incele. data-scroll-container, data-scroll-speed kullanımını öğren.",
+    "related": [
+      5,
+      28,
+      32
+    ],
+    "alternatives": [
+      28
+    ],
+    "install_command": "npm install locomotive-scroll",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 21
+  },
+  {
+    "id": 10,
+    "name": "jlmakes/scrollreveal",
+    "url": "https://github.com/jlmakes/scrollreveal",
+    "category": "animasyonlar",
+    "tags": [
+      "scroll",
+      "reveal",
+      "hafif",
+      "bagimsiz"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Sayfa kaydırıldıkça elementlerin sırayla belirmesi (reveal) efekti için, bağımlılıksız hafif bir çözüm gerektiğinde.",
+    "how_to_use": "README'deki temel kurulumu incele. ScrollReveal().reveal() API'sini kullan.",
+    "related": [
+      23,
+      28
+    ],
+    "alternatives": [
+      23
+    ],
+    "install_command": "npm install scrollreveal",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 11,
+    "name": "popmotion/popmotion",
+    "url": "https://github.com/popmotion/popmotion",
+    "category": "animasyonlar",
+    "tags": [
+      "fizik",
+      "spring",
+      "physics",
+      "low-level",
+      "motor"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Fizik tabanlı (yaylanma, sürtünme) animasyonları kendi motorunla kontrol etmek istediğinde; Framer Motion'ın da altyapısıdır.",
+    "how_to_use": "packages/popmotion/README.md ve API dokümanından animate, spring, physics fonksiyonlarını incele.",
+    "related": [
+      6,
+      22
+    ],
+    "alternatives": [
+      5,
+      6
+    ],
+    "install_command": "npm install popmotion",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 12,
+    "name": "mrdoob/three.js",
+    "url": "https://github.com/mrdoob/three.js",
+    "category": "3d-webgl",
+    "tags": [
+      "3d",
+      "webgl",
+      "gpu",
+      "render",
+      "sahne"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Tarayıcıda GPU destekli 3D render, gölgelendirme, model yükleme ve interaktif 3D sahneler gerektiğinde.",
+    "how_to_use": "examples/ klasöründeki yüzlerce örneği incele. İhtiyacına en yakın örnekten başla.",
+    "related": [
+      13,
+      14,
+      42,
+      43,
+      177,
+      186
+    ],
+    "alternatives": [
+      186
+    ],
+    "install_command": "npm install three",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 3,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 168
+  },
+  {
+    "id": 13,
+    "name": "pmndrs/react-three-fiber",
+    "url": "https://github.com/pmndrs/react-three-fiber",
+    "category": "3d-webgl",
+    "tags": [
+      "react",
+      "threejs",
+      "3d",
+      "declarative",
+      "r3f"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "React projesinde Three.js kullanırken, 3D sahneleri React bileşenleri gibi deklaratif yazmak gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen Canvas, useFrame, useLoader hook'larını incele. examples/ ile başla.",
+    "related": [
+      12,
+      42,
+      43,
+      177
+    ],
+    "alternatives": [],
+    "install_command": "npm install three @react-three/fiber",
+    "peer_dependencies": [
+      "three",
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 38
+  },
+  {
+    "id": 14,
+    "name": "pixijs/pixijs",
+    "url": "https://github.com/pixijs/pixijs",
+    "category": "3d-webgl",
+    "tags": [
+      "2d",
+      "webgl",
+      "canvas",
+      "sprite",
+      "interaktif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Yüksek performanslı 2D interaktif içerik, sprite tabanlı animasyonlar veya web tabanlı 2D oyunlar gerektiğinde.",
+    "how_to_use": "examples/ klasöründen temel sahne kurulumunu incele. Application, Container, Sprite sınıflarını öğren.",
+    "related": [
+      12,
+      66,
+      85,
+      86
+    ],
+    "alternatives": [
+      66,
+      85
+    ],
+    "install_command": "npm install pixi.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 15,
+    "name": "shadcn-ui/ui",
+    "url": "https://github.com/shadcn-ui/ui",
+    "category": "ui-bilesenler",
+    "tags": [
+      "ui",
+      "react",
+      "tailwind",
+      "radix",
+      "kopyala-yapistir",
+      "ozellestirilebilir"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Modern, tamamen özelleştirilebilir, erişilebilir UI bileşenleri gerektiğinde. Paket olarak değil, kod olarak eklenir.",
+    "how_to_use": "apps/www/registry/ altındaki her bileşeni incele. npx shadcn-ui@latest add komutuyla projeye ekle.",
+    "related": [
+      16,
+      76,
+      105,
+      199
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [
+      "tailwindcss",
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 10,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 0
+  },
+  {
+    "id": 16,
+    "name": "tailwindlabs/tailwindcss",
+    "url": "https://github.com/tailwindlabs/tailwindcss",
+    "category": "ui-bilesenler",
+    "tags": [
+      "css",
+      "utility-first",
+      "responsive",
+      "design-system",
+      "jit"
+    ],
+    "type": "framework",
+    "priority": "high",
+    "when_to_use": "Hızlı UI geliştirme, utility-first yaklaşımıyla stil yönetimi ve özelleştirilebilir tasarım sistemleri için.",
+    "how_to_use": "packages/tailwindcss/README.md ve resmi dökümantasyondan kurulum, config ve utility sınıflarını öğren.",
+    "related": [
+      15,
+      79,
+      161
+    ],
+    "alternatives": [
+      161
+    ],
+    "install_command": "npm install tailwindcss postcss autoprefixer",
+    "peer_dependencies": [
+      "postcss"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    },
+    "bundle_kb_gzip": 8
+  },
+  {
+    "id": 17,
+    "name": "nolimits4web/swiper",
+    "url": "https://github.com/nolimits4web/swiper",
+    "category": "ui-bilesenler",
+    "tags": [
+      "slider",
+      "carousel",
+      "touch",
+      "mobile",
+      "donanim-ivmeli"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Mobil uyumlu, dokunmatik hareketlere duyarlı slider/carousel bileşeni gerektiğinde.",
+    "how_to_use": "src/ klasöründeki modülleri incele. Temel kurulum ve parametreler için README'ye bak.",
+    "related": [
+      15
+    ],
+    "alternatives": [],
+    "install_command": "npm install swiper",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 35
+  },
+  {
+    "id": 18,
+    "name": "d3/d3",
+    "url": "https://github.com/d3/d3",
+    "category": "ui-bilesenler",
+    "tags": [
+      "veri-gorsellestirme",
+      "svg",
+      "canvas",
+      "interaktif",
+      "grafik"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Veriyi dinamik, interaktif ve animasyonlu grafiklere dönüştürmek gerektiğinde. Veri görselleştirmenin temelidir.",
+    "how_to_use": "src/ altındaki her modülü (d3-scale, d3-shape, d3-force vb.) ayrı ayrı incele. Observable examples'a bak.",
+    "related": [
+      70,
+      71,
+      72,
+      196
+    ],
+    "alternatives": [
+      70,
+      71
+    ],
+    "install_command": "npm install d3",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 51
+  },
+  {
+    "id": 19,
+    "name": "atlassian/react-beautiful-dnd",
+    "url": "https://github.com/atlassian/react-beautiful-dnd",
+    "category": "ui-bilesenler",
+    "tags": [
+      "drag-and-drop",
+      "react",
+      "liste",
+      "animasyon",
+      "erisilebilir"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Web uygulamalarında kusursuz, erişilebilir ve animasyonlu sürükle-bırak listeleri gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen DragDropContext, Droppable, Draggable bileşenlerinin kurulumunu öğren.",
+    "related": [
+      30,
+      143,
+      144
+    ],
+    "alternatives": [
+      30,
+      143
+    ],
+    "install_command": "npm install react-beautiful-dnd",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "deprecated",
+    "deprecation_reason": "Bakım dışı — dnd-kit önerilir.",
+    "replaced_by": 143,
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 20,
+    "name": "brillout/awesome-frontend-libraries",
+    "url": "https://github.com/brillout/awesome-frontend-libraries",
+    "category": "ui-bilesenler",
+    "tags": [
+      "koleksiyon",
+      "kutuphane",
+      "kategori",
+      "arşiv",
+      "awesome-list"
+    ],
+    "type": "reference",
+    "priority": "low",
+    "when_to_use": "Belirli bir kategorideki popüler frontend kütüphanelerini keşfetmek veya alternatif aramak gerektiğinde.",
+    "how_to_use": "README.md'deki kategorize listeyi tara, ihtiyacın olan kategoriye git, oradan repo'ları incele.",
+    "related": [
+      1
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 5,
+      "rsc_compat": 5,
+      "bundle_cost": 10,
+      "typescript": 5,
+      "maintenance": 7,
+      "learning_curve": 7,
+      "community": 7
+    }
+  },
+  {
+    "id": 21,
+    "name": "juliangarnier/anime",
+    "url": "https://github.com/juliangarnier/anime",
+    "category": "mikro-etkilesimler",
+    "tags": [
+      "animation",
+      "svg",
+      "css",
+      "dom",
+      "timeline",
+      "hafif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "CSS özellikleri, SVG'ler ve DOM nitelikleri ile karmaşık zamanlamalı animasyonlar için hafif bir motor gerektiğinde.",
+    "how_to_use": "README'deki örneklerden temel anime() fonksiyonu ve timeline kullanımını incele.",
+    "related": [
+      5,
+      11,
+      22,
+      24
+    ],
+    "alternatives": [
+      5,
+      6
+    ],
+    "install_command": "npm install animejs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 22,
+    "name": "pmndrs/react-spring",
+    "url": "https://github.com/pmndrs/react-spring",
+    "category": "mikro-etkilesimler",
+    "tags": [
+      "react",
+      "animation",
+      "spring",
+      "fizik",
+      "declarative"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "React'te fizik tabanlı (yaylanma, sürtünme) doğal ve organik animasyonlar gerektiğinde.",
+    "how_to_use": "packages/react-spring/README.md'den useSpring, useTransition, useChain hook'larını incele.",
+    "related": [
+      6,
+      11,
+      35,
+      37
+    ],
+    "alternatives": [
+      6
+    ],
+    "install_command": "npm install @react-spring/web",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 34
+  },
+  {
+    "id": 23,
+    "name": "michalsnik/aos",
+    "url": "https://github.com/michalsnik/aos",
+    "category": "mikro-etkilesimler",
+    "tags": [
+      "scroll",
+      "reveal",
+      "animate-on-scroll",
+      "basit"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Sayfa kaydırıldıkça elementlerin şık bir şekilde görünmesini sağlamak için en basit çözüm gerektiğinde.",
+    "how_to_use": "README'deki data-aos nitelikleri ve kurulum adımlarını incele.",
+    "related": [
+      10,
+      28
+    ],
+    "alternatives": [
+      10
+    ],
+    "install_command": "npm install aos",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 24,
+    "name": "maxwellito/vivus",
+    "url": "https://github.com/maxwellito/vivus",
+    "category": "mikro-etkilesimler",
+    "tags": [
+      "svg",
+      "cizim",
+      "animasyon",
+      "logo",
+      "ikon"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "SVG grafiklerin ekranda anlık olarak çiziliyormuş gibi görünmesi gerektiğinde (logo animasyonları için ideal).",
+    "how_to_use": "README'deki constructor API'sini ve animasyon tiplerini (delayed, sync, oneByOne) incele.",
+    "related": [
+      5,
+      21
+    ],
+    "alternatives": [],
+    "install_command": "npm install vivus",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 25,
+    "name": "VincentGarreau/particles.js",
+    "url": "https://github.com/VincentGarreau/particles.js",
+    "category": "mikro-etkilesimler",
+    "tags": [
+      "particles",
+      "arka-plan",
+      "interaktif",
+      "canvas"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Stüdyo projelerinin arka planına derinlik katmak için interaktif uçuşan parçacıklar gerektiğinde.",
+    "how_to_use": "README'deki demo ve konfigürasyon seçeneklerini incele. particlesJS() fonksiyonu ile kur.",
+    "related": [
+      12,
+      179
+    ],
+    "alternatives": [],
+    "install_command": "npm install particles.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 26,
+    "name": "wagerfield/parallax",
+    "url": "https://github.com/wagerfield/parallax",
+    "category": "mikro-etkilesimler",
+    "tags": [
+      "parallax",
+      "jiroskop",
+      "fare",
+      "derinlik",
+      "bagimsiz"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Akıllı cihazların jiroskop verilerine veya fare hareketlerine tepki veren derinlik efektleri gerektiğinde.",
+    "how_to_use": "README'deki data-attribute kurulumunu incele. Katman mantığını anlamak için demo sayfasına bak.",
+    "related": [
+      9,
+      32
+    ],
+    "alternatives": [
+      9
+    ],
+    "install_command": "npm install parallax-js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 27,
+    "name": "metafizzy/zdog",
+    "url": "https://github.com/metafizzy/zdog",
+    "category": "mikro-etkilesimler",
+    "tags": [
+      "3d",
+      "vektor",
+      "canvas",
+      "svg",
+      "retro",
+      "illuzyon"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Retro tarzı, yuvarlak hatlı, vektörel 3D modellemeler ve animasyonlar gerektiğinde (Three.js fazla ağır geliyorsa).",
+    "how_to_use": "README ve web sitesindeki örneklerden temel Illustration, Anchor, Shape sınıflarını incele.",
+    "related": [
+      12,
+      14
+    ],
+    "alternatives": [
+      12
+    ],
+    "install_command": "npm install zdog",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 28,
+    "name": "darkroomengineering/lenis",
+    "url": "https://github.com/darkroomengineering/lenis",
+    "category": "ux-araclari",
+    "tags": [
+      "smooth-scroll",
+      "performans",
+      "sinematik",
+      "lerp"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Awwwards kazanan sitelerdeki gibi pürüzsüz, sinematik smooth scroll deneyimi için (Locomotive Scroll'a modern alternatif).",
+    "how_to_use": "README'deki temel kurulum ve raf mantığını incele. requestAnimationFrame ile nasıl entegre olduğunu öğren.",
+    "related": [
+      5,
+      9,
+      32,
+      47
+    ],
+    "alternatives": [
+      9
+    ],
+    "install_command": "npm install lenis",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 7
+  },
+  {
+    "id": 29,
+    "name": "francoischalifour/medium-zoom",
+    "url": "https://github.com/francoischalifour/medium-zoom",
+    "category": "ux-araclari",
+    "tags": [
+      "zoom",
+      "gorsel",
+      "medium",
+      "lightbox",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Medium tarzı, görsellerin üzerine tıklandığında ekranı kaplayacak şekilde büyümesi gerektiğinde.",
+    "how_to_use": "README'deki API'yi incele. Temel kullanım: mediumZoom(selector) veya mediumZoom(ref).",
+    "related": [
+      87
+    ],
+    "alternatives": [],
+    "install_command": "npm install medium-zoom",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 30,
+    "name": "SortableJS/Sortable",
+    "url": "https://github.com/SortableJS/Sortable",
+    "category": "ux-araclari",
+    "tags": [
+      "drag-and-drop",
+      "sirala",
+      "liste",
+      "mobil",
+      "bagimsiz"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Framework bağımsız, mobil uyumlu sürükle-bırak liste sıralama gerektiğinde.",
+    "how_to_use": "README'deki temel Sortable.create() API'sini ve opsiyonlarını incele. examples/ klasörüne bak.",
+    "related": [
+      19,
+      143,
+      144
+    ],
+    "alternatives": [
+      19,
+      143
+    ],
+    "install_command": "npm install sortablejs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 31,
+    "name": "tholman/cursor-effects",
+    "url": "https://github.com/tholman/cursor-effects",
+    "category": "ux-araclari",
+    "tags": [
+      "imlec",
+      "fare",
+      "efekt",
+      "yaratici",
+      "portfoy"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Yaratıcı portföyler veya deneysel siteler için özel fare imleci efektleri gerektiğinde.",
+    "how_to_use": "README'deki her bir efekt sınıfını incele. new emojiCursor(), new fairyDustCursor() vb.",
+    "related": [],
+    "alternatives": [],
+    "install_command": "npm install cursor-effects",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 32,
+    "name": "nk-o/jarallax",
+    "url": "https://github.com/nk-o/jarallax",
+    "category": "ux-araclari",
+    "tags": [
+      "parallax",
+      "video",
+      "youtube",
+      "arka-plan",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Arka plan videoları (YouTube, Vimeo veya yerel) için parallax scroll efekti gerektiğinde.",
+    "how_to_use": "README'deki data-attribute kurulumunu ve JavaScript API'sini incele.",
+    "related": [
+      9,
+      26,
+      28
+    ],
+    "alternatives": [
+      9
+    ],
+    "install_command": "npm install jarallax",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 33,
+    "name": "hakimel/reveal.js",
+    "url": "https://github.com/hakimel/reveal.js",
+    "category": "ux-araclari",
+    "tags": [
+      "sunum",
+      "slayt",
+      "html",
+      "animasyon",
+      "gecis"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "HTML/CSS kullanarak sinematik geçişli, interaktif web tabanlı sunumlar hazırlamak gerektiğinde.",
+    "how_to_use": "README ve demo/ klasöründen temel kurulumu, section yapısını ve geçiş stillerini incele.",
+    "related": [],
+    "alternatives": [],
+    "install_command": "npm install reveal.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 34,
+    "name": "TanStack/table",
+    "url": "https://github.com/TanStack/table",
+    "category": "ux-araclari",
+    "tags": [
+      "tablo",
+      "veri",
+      "headless",
+      "filtreleme",
+      "siralama",
+      "react"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Veri yoğunluklu projelerde karmaşık tablolar, filtreleme, sıralama ve pagination gerektiğinde.",
+    "how_to_use": "packages/react-table/README.md ve examples/ klasöründen useReactTable hook'unu incele.",
+    "related": [
+      36,
+      170,
+      171
+    ],
+    "alternatives": [
+      170
+    ],
+    "install_command": "npm install @tanstack/react-table",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 35,
+    "name": "pmndrs/zustand",
+    "url": "https://github.com/pmndrs/zustand",
+    "category": "state-yonetimi",
+    "tags": [
+      "state",
+      "react",
+      "minimal",
+      "hizli",
+      "hook"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "React'te Redux'ın hantallığı olmadan, hızlı ve minimal global state yönetimi gerektiğinde.",
+    "how_to_use": "README'deki create() fonksiyonu ve useStore hook'unu incele. docs/ klasöründen ileri kullanımlara bak.",
+    "related": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "alternatives": [
+      37,
+      39
+    ],
+    "install_command": "npm install zustand",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 9,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 3
+  },
+  {
+    "id": 36,
+    "name": "TanStack/query",
+    "url": "https://github.com/TanStack/query",
+    "category": "state-yonetimi",
+    "tags": [
+      "server-state",
+      "cache",
+      "fetch",
+      "react",
+      "asenkron"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Sunucudan veri çekme, önbelleğe alma, senkronizasyon ve asenkron state yönetimi gerektiğinde.",
+    "how_to_use": "packages/react-query/README.md ve examples/ klasöründen useQuery, useMutation hook'larını incele.",
+    "related": [
+      35,
+      37,
+      38,
+      34
+    ],
+    "alternatives": [
+      38
+    ],
+    "install_command": "npm install @tanstack/react-query",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 13
+  },
+  {
+    "id": 37,
+    "name": "pmndrs/jotai",
+    "url": "https://github.com/pmndrs/jotai",
+    "category": "state-yonetimi",
+    "tags": [
+      "state",
+      "atomik",
+      "react",
+      "primitive",
+      "recoil"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Atomik state yönetimi ile sadece değişen küçük parçaların render edilmesini sağlamak gerektiğinde (Recoil benzeri).",
+    "how_to_use": "README'deki atom() ve useAtom() kullanımını incele. docs/ klasöründen türev atomları öğren.",
+    "related": [
+      35,
+      36,
+      38
+    ],
+    "alternatives": [
+      35
+    ],
+    "install_command": "npm install jotai",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 38,
+    "name": "vercel/swr",
+    "url": "https://github.com/vercel/swr",
+    "category": "state-yonetimi",
+    "tags": [
+      "data-fetching",
+      "cache",
+      "stale-while-revalidate",
+      "react",
+      "hafif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Stale-while-revalidate stratejisiyle hızlı veri çekme, React için hafif bir çözüm gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen useSWR hook'unu ve mutasyon/önbellek stratejilerini incele.",
+    "related": [
+      36
+    ],
+    "alternatives": [
+      36
+    ],
+    "install_command": "npm install swr",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 39,
+    "name": "reduxjs/redux-toolkit",
+    "url": "https://github.com/reduxjs/redux-toolkit",
+    "category": "state-yonetimi",
+    "tags": [
+      "redux",
+      "state",
+      "kurumsal",
+      "middleware",
+      "immer"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Büyük ölçekli, kurumsal mimaride Redux tabanlı state yönetimi gerektiğinde.",
+    "how_to_use": "packages/toolkit/README.md ve docs/ klasöründen createSlice, configureStore kullanımını incele.",
+    "related": [
+      35,
+      100
+    ],
+    "alternatives": [
+      35
+    ],
+    "install_command": "npm install @reduxjs/toolkit react-redux",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 40,
+    "name": "vanilla-extract-css/vanilla-extract",
+    "url": "https://github.com/vanilla-extract-css/vanilla-extract",
+    "category": "state-yonetimi",
+    "tags": [
+      "css",
+      "typescript",
+      "zero-runtime",
+      "stil",
+      "theme"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "TypeScript ile tür güvenli, çalışma zamanında sıfır maliyetli CSS yazmak ve stil çakışmalarını önlemek gerektiğinde.",
+    "how_to_use": "packages/css/README.md ve site/ klasöründeki örneklerden style(), vars() ve theme kontratını incele.",
+    "related": [
+      77,
+      78,
+      162,
+      163
+    ],
+    "alternatives": [
+      77,
+      78,
+      162
+    ],
+    "install_command": "npm install @vanilla-extract/css",
+    "peer_dependencies": [
+      "typescript"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 41,
+    "name": "oframe/ogl",
+    "url": "https://github.com/oframe/ogl",
+    "category": "webgl-shader",
+    "tags": [
+      "webgl",
+      "minimal",
+      "hafif",
+      "threejs-alternatif",
+      "esnek"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Three.js'in ağır geldiği, daha hafif ve minimal bir WebGL kütüphanesi gerektiğinde.",
+    "how_to_use": "examples/ klasöründen temel Renderer, Camera, Program, Mesh kurulumunu incele.",
+    "related": [
+      12,
+      13
+    ],
+    "alternatives": [
+      12
+    ],
+    "install_command": "npm install ogl",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 42,
+    "name": "pmndrs/drei",
+    "url": "https://github.com/pmndrs/drei",
+    "category": "webgl-shader",
+    "tags": [
+      "react-three-fiber",
+      "yardimci",
+      "kamera",
+      "isik",
+      "3d-metin",
+      "hazir-bilesen"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "React Three Fiber ile çalışırken kamera kontrolleri, ışıklandırma, 3D metin gibi hazır bileşenler gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen OrbitControls, Environment, Text, Float bileşenlerini incele.",
+    "related": [
+      13,
+      43,
+      177
+    ],
+    "alternatives": [],
+    "install_command": "npm install @react-three/drei",
+    "peer_dependencies": [
+      "three",
+      "@react-three/fiber",
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 45
+  },
+  {
+    "id": 43,
+    "name": "pmndrs/postprocessing",
+    "url": "https://github.com/pmndrs/postprocessing",
+    "category": "webgl-shader",
+    "tags": [
+      "webgl",
+      "post-processing",
+      "bloom",
+      "depth-of-field",
+      "glitch"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "3D sahnelerine sinematik sonradan işleme efektleri (bloom, DOF, glitch) eklemek gerektiğinde.",
+    "how_to_use": "README ve demo/ klasöründen EffectComposer, BloomEffect, DepthOfFieldEffect kullanımını incele.",
+    "related": [
+      12,
+      13,
+      42
+    ],
+    "alternatives": [],
+    "install_command": "npm install postprocessing",
+    "peer_dependencies": [
+      "three"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 52
+  },
+  {
+    "id": 44,
+    "name": "aframevr/aframe",
+    "url": "https://github.com/aframevr/aframe",
+    "category": "webgl-shader",
+    "tags": [
+      "vr",
+      "ar",
+      "webgl",
+      "html",
+      "declarative",
+      "sanal-gerceklik"
+    ],
+    "type": "framework",
+    "priority": "medium",
+    "when_to_use": "Sadece HTML etiketleriyle tarayıcıda Sanal Gerçeklik (VR) ve Artırılmış Gerçeklik (AR) deneyimleri oluşturmak gerektiğinde.",
+    "how_to_use": "examples/ klasöründen temel <a-scene>, <a-box>, <a-sky> kullanımını incele.",
+    "related": [
+      12,
+      188,
+      189
+    ],
+    "alternatives": [
+      188
+    ],
+    "install_command": "npm install aframe",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 45,
+    "name": "curtainsjs/curtains",
+    "url": "https://github.com/curtainsjs/curtains",
+    "category": "webgl-shader",
+    "tags": [
+      "webgl",
+      "shader",
+      "gorsel",
+      "video",
+      "dalgalanma",
+      "erime"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Standart resim ve videoları WebGL düzlemlerine dönüştürüp üzerlerinde shader efektleri uygulamak gerektiğinde.",
+    "how_to_use": "examples/ klasöründen temel Plane, ShaderPass ve Texture kurulumunu incele.",
+    "related": [
+      12,
+      13
+    ],
+    "alternatives": [],
+    "install_command": "npm install curtainsjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 46,
+    "name": "google/model-viewer",
+    "url": "https://github.com/google/model-viewer",
+    "category": "webgl-shader",
+    "tags": [
+      "3d-model",
+      "gltf",
+      "glb",
+      "ar",
+      "web-component"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "3D modelleri web sitenize tıpkı bir resim ekler gibi eklemek ve mobilde tek tıkla AR görüntülemek gerektiğinde.",
+    "how_to_use": "packages/modelviewer/README.md'den <model-viewer> web bileşeni niteliklerini incele.",
+    "related": [
+      12,
+      44,
+      188
+    ],
+    "alternatives": [],
+    "install_command": "npm install @google/model-viewer",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 47,
+    "name": "barbajs/barba",
+    "url": "https://github.com/barbajs/barba",
+    "category": "sayfa-gecisleri",
+    "tags": [
+      "sayfa-gecisi",
+      "animasyon",
+      "spa",
+      "pjax",
+      "gecis"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Sayfalar arası gezinirken tarayıcının yenilenmesini engelleyip animasyonlu geçişler yaratmak gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen barba.init(), transitions ve views kavramlarını incele.",
+    "related": [
+      5,
+      6,
+      48,
+      49
+    ],
+    "alternatives": [
+      48
+    ],
+    "install_command": "npm install @barba/core",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 48,
+    "name": "swup/swup",
+    "url": "https://github.com/swup/swup",
+    "category": "sayfa-gecisleri",
+    "tags": [
+      "sayfa-gecisi",
+      "animasyon",
+      "pjax",
+      "eklenti",
+      "alternatif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Barba.js'e alternatif, eklenti ekosistemiyle kolay genişletilebilir sayfa geçişleri gerektiğinde.",
+    "how_to_use": "README ve plugins/ klasöründen temel Swup() kurulumu ve mevcut eklentileri incele.",
+    "related": [
+      47,
+      49
+    ],
+    "alternatives": [
+      47
+    ],
+    "install_command": "npm install swup",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 49,
+    "name": "alvarotrigo/fullPage.js",
+    "url": "https://github.com/alvarotrigo/fullPage.js",
+    "category": "sayfa-gecisleri",
+    "tags": [
+      "fullscreen",
+      "kaydir",
+      "hikaye",
+      "tanitim",
+      "section"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tam ekran, dikey/yatay kayan hikaye odaklı (storytelling) siteler yapmak gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen new fullpage() ve section yapısını incele.",
+    "related": [
+      5,
+      47
+    ],
+    "alternatives": [],
+    "install_command": "npm install fullpage.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 50,
+    "name": "bradley/Blotter",
+    "url": "https://github.com/bradley/Blotter",
+    "category": "sayfa-gecisleri",
+    "tags": [
+      "tipografi",
+      "metin",
+      "webgl",
+      "sivi",
+      "efekt",
+      "deneysel"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Metinlerin içinden sıvı akıyormuş veya pikselleri bozuluyormuş gibi deneysel tipografi efektleri gerektiğinde.",
+    "how_to_use": "README'deki temel Blotter.Text() ve Material API'sini incele.",
+    "related": [
+      89,
+      90
+    ],
+    "alternatives": [],
+    "install_command": "npm install blotterjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 51,
+    "name": "camwiegert/baffle",
+    "url": "https://github.com/camwiegert/baffle",
+    "category": "sayfa-gecisleri",
+    "tags": [
+      "metin",
+      "sifre",
+      "hacker",
+      "siberpunk",
+      "efekt"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Hacker/siberpunk temasına uygun, metinlerin rastgele karakterlerle belirmesi efekti gerektiğinde.",
+    "how_to_use": "README'deki baffle() API'sini ve .reveal() metodunu incele.",
+    "related": [
+      89,
+      90
+    ],
+    "alternatives": [
+      90
+    ],
+    "install_command": "npm install baffle",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 52,
+    "name": "vercel/ai",
+    "url": "https://github.com/vercel/ai",
+    "category": "ai-entegrasyon",
+    "tags": [
+      "ai",
+      "chatgpt",
+      "streaming",
+      "react",
+      "vercel",
+      "llm"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Frontend projelerine ChatGPT tarzı akışkan metin ve yapay zeka sohbet arayüzlerini entegre etmek gerektiğinde.",
+    "how_to_use": "packages/core/README.md ve examples/ klasöründen useChat, useCompletion hook'larını incele.",
+    "related": [
+      53,
+      54,
+      55,
+      184,
+      185
+    ],
+    "alternatives": [],
+    "install_command": "npm install ai",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 18
+  },
+  {
+    "id": 53,
+    "name": "langchain-ai/langchainjs",
+    "url": "https://github.com/langchain-ai/langchainjs",
+    "category": "ai-entegrasyon",
+    "tags": [
+      "ai",
+      "langchain",
+      "llm",
+      "rag",
+      "hafiza",
+      "orkestrasyon"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Yapay zeka modellerine hafıza kazandırmak, RAG pipeline'ları ve karmaşık AI iş akışları yönetmek gerektiğinde.",
+    "how_to_use": "langchain/ klasöründen Chains, Agents, Memory, VectorStores modüllerini incele.",
+    "related": [
+      52,
+      55,
+      184
+    ],
+    "alternatives": [],
+    "install_command": "npm install langchain",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 54,
+    "name": "tensorflow/tfjs",
+    "url": "https://github.com/tensorflow/tfjs",
+    "category": "ai-entegrasyon",
+    "tags": [
+      "tensorflow",
+      "makine-ogrenmesi",
+      "gpu",
+      "wasm",
+      "tarayici"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Görüntü işleme, yüz tanıma veya hareket algılama gibi ML modellerini doğrudan tarayıcıda çalıştırmak gerektiğinde.",
+    "how_to_use": "tfjs-core/ ve tfjs-converter/ README'lerinden model yükleme ve inference API'sini incele.",
+    "related": [
+      55,
+      181,
+      182,
+      183
+    ],
+    "alternatives": [
+      55
+    ],
+    "install_command": "npm install @tensorflow/tfjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 55,
+    "name": "xenova/transformers.js",
+    "url": "https://github.com/xenova/transformers.js",
+    "category": "ai-entegrasyon",
+    "tags": [
+      "transformers",
+      "huggingface",
+      "nlp",
+      "ceviri",
+      "tarayici",
+      "onnx"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Hugging Face modellerini doğrudan tarayıcıda çalıştırarak çeviri, metin özetleme veya görsel analiz yapmak gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen pipeline() API'sini ve kullanılabilir modelleri incele.",
+    "related": [
+      52,
+      53,
+      54,
+      181
+    ],
+    "alternatives": [
+      54
+    ],
+    "install_command": "npm install @xenova/transformers",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 56,
+    "name": "microsoft/monaco-editor",
+    "url": "https://github.com/microsoft/monaco-editor",
+    "category": "ai-entegrasyon",
+    "tags": [
+      "editor",
+      "ide",
+      "kod",
+      "vs-code",
+      "tarayici"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Kullanıcıların tarayıcı üzerinden kod yazabileceği, AI destekli bir web IDE'si oluşturmak gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen temel editor.create() API'sini ve dil/theme konfigürasyonunu incele.",
+    "related": [
+      52,
+      124
+    ],
+    "alternatives": [],
+    "install_command": "npm install monaco-editor",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 57,
+    "name": "goldfire/howler.js",
+    "url": "https://github.com/goldfire/howler.js",
+    "category": "multimedya",
+    "tags": [
+      "ses",
+      "audio",
+      "cross-browser",
+      "ses-efekti",
+      "muzik"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Web sitelerinde tıklama sesleri, arka plan müzikleri veya oyun içi ses efektlerini tarayıcı fark etmeksizin çalmak gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen new Howl() API'sini, sprite ve spatial audio özelliklerini incele.",
+    "related": [
+      58,
+      149
+    ],
+    "alternatives": [],
+    "install_command": "npm install howler",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 58,
+    "name": "Tonejs/Tone.js",
+    "url": "https://github.com/Tonejs/Tone.js",
+    "category": "multimedya",
+    "tags": [
+      "ses",
+      "muzik",
+      "web-audio-api",
+      "sentez",
+      "interaktif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarayıcıda müzik üretmek, ses dalgalarını görselleştirmek veya interaktif ses tasarımı yapmak gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen Synth, Sequence, Transport ve efekt zinciri kurulumunu incele.",
+    "related": [
+      57,
+      149
+    ],
+    "alternatives": [],
+    "install_command": "npm install tone",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 59,
+    "name": "sampotts/plyr",
+    "url": "https://github.com/sampotts/plyr",
+    "category": "multimedya",
+    "tags": [
+      "video",
+      "audio",
+      "oynatici",
+      "html5",
+      "youtube",
+      "vimeo"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "HTML5, YouTube veya Vimeo video oynatıcılarını şık ve modern bir arayüzle göstermek gerektiğinde.",
+    "how_to_use": "README'deki temel new Plyr() kurulumunu ve data-plyr niteliklerini incele.",
+    "related": [
+      60,
+      149
+    ],
+    "alternatives": [
+      60
+    ],
+    "install_command": "npm install plyr",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 60,
+    "name": "videojs/video.js",
+    "url": "https://github.com/videojs/video.js",
+    "category": "multimedya",
+    "tags": [
+      "video",
+      "canli-yayin",
+      "streaming",
+      "oynatici",
+      "profesyonel"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Canlı yayınlar ve ileri düzey video kontrolleri gerektiren profesyonel video platformları için.",
+    "how_to_use": "README ve docs/ klasöründen temel videojs() kurulumu ve eklenti sistemini incele.",
+    "related": [
+      59,
+      149
+    ],
+    "alternatives": [
+      59
+    ],
+    "install_command": "npm install video.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 61,
+    "name": "withastro/astro",
+    "url": "https://github.com/withastro/astro",
+    "category": "performans",
+    "tags": [
+      "ssg",
+      "island-architecture",
+      "hizli",
+      "icerik"
+    ],
+    "type": "framework",
+    "priority": "high",
+    "when_to_use": "Varsayılan olarak sıfır JavaScript gönderen, çok hızlı içerik odaklı web siteleri oluşturmak gerektiğinde.",
+    "how_to_use": "packages/astro/README.md ve docs/ klasöründen .astro dosya yapısını ve component islands'ı incele.",
+    "related": [
+      62,
+      63,
+      117,
+      118
+    ],
+    "alternatives": [
+      117
+    ],
+    "install_command": "npm install astro",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 62,
+    "name": "BuilderIO/qwik",
+    "url": "https://github.com/BuilderIO/qwik",
+    "category": "performans",
+    "tags": [
+      "resumability",
+      "hizli",
+      "framework",
+      "ssr",
+      "etkilesim"
+    ],
+    "type": "framework",
+    "priority": "medium",
+    "when_to_use": "Kullanıcının etkileşime girdiği anda kodun sadece o parçasını indirip çalıştıran framework gerektiğinde.",
+    "how_to_use": "packages/qwik/README.md ve docs/ klasöründen component$, useSignal kurallarını incele.",
+    "related": [
+      61,
+      63,
+      117
+    ],
+    "alternatives": [
+      117
+    ],
+    "install_command": "npm install @builder.io/qwik",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 63,
+    "name": "vitejs/vite",
+    "url": "https://github.com/vitejs/vite",
+    "category": "performans",
+    "tags": [
+      "build",
+      "dev-server",
+      "hmr",
+      "esm",
+      "hizli"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Frontend projelerinin anında ayağa kalkmasını ve geliştirme sürecindeki bekleme sürelerini sıfıra indirmek gerektiğinde.",
+    "how_to_use": "packages/vite/README.md ve docs/ klasöründen vite.config.ts yapısını incele.",
+    "related": [
+      61,
+      62,
+      64,
+      95,
+      117
+    ],
+    "alternatives": [],
+    "install_command": "npm install vite",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 10,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    },
+    "bundle_kb_gzip": 0
+  },
+  {
+    "id": 64,
+    "name": "evanw/esbuild",
+    "url": "https://github.com/evanw/esbuild",
+    "category": "performans",
+    "tags": [
+      "bundler",
+      "go",
+      "hizli",
+      "derleme",
+      "minify"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Webpack'ten yüzlerce kat daha hızlı derleme gerektiğinde (Vite'in de alt yapısıdır).",
+    "how_to_use": "README'deki CLI ve JS API'sini incele. build, serve, transform fonksiyonlarını öğren.",
+    "related": [
+      63,
+      95
+    ],
+    "alternatives": [],
+    "install_command": "npm install esbuild",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 65,
+    "name": "GoogleChrome/web-vitals",
+    "url": "https://github.com/GoogleChrome/web-vitals",
+    "category": "performans",
+    "tags": [
+      "core-web-vitals",
+      "performans",
+      "google",
+      "metrik",
+      "lcp",
+      "cls"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Core Web Vitals metriklerini projede canlı olarak ölçümleyip performans takibi yapmak gerektiğinde.",
+    "how_to_use": "README'deki onCLS, onFID, onLCP fonksiyonlarını incele.",
+    "related": [
+      61,
+      155,
+      179
+    ],
+    "alternatives": [],
+    "install_command": "npm install web-vitals",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 66,
+    "name": "photonstorm/phaser",
+    "url": "https://github.com/photonstorm/phaser",
+    "category": "oyun-motorlari",
+    "tags": [
+      "oyun",
+      "2d",
+      "html5",
+      "canvas",
+      "webgl",
+      "fizik"
+    ],
+    "type": "framework",
+    "priority": "high",
+    "when_to_use": "Web tabanlı 2D oyun geliştirme gerektiğinde, en köklü ve yaygın kullanılan HTML5 oyun framework'ü.",
+    "how_to_use": "examples/ klasöründen temel Scene, Sprite, Physics kurulumunu incele.",
+    "related": [
+      14,
+      67,
+      69
+    ],
+    "alternatives": [
+      67
+    ],
+    "install_command": "npm install phaser",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 67,
+    "name": "excaliburjs/Excalibur",
+    "url": "https://github.com/excaliburjs/Excalibur",
+    "category": "oyun-motorlari",
+    "tags": [
+      "oyun",
+      "2d",
+      "typescript",
+      "modern",
+      "açık-kaynak"
+    ],
+    "type": "framework",
+    "priority": "medium",
+    "when_to_use": "TypeScript ile yazılmış, modern API'li bir 2D web oyun motoru gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen Engine, Actor, Scene kurulumunu incele.",
+    "related": [
+      66,
+      69
+    ],
+    "alternatives": [
+      66
+    ],
+    "install_command": "npm install excalibur",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 68,
+    "name": "playcanvas/engine",
+    "url": "https://github.com/playcanvas/engine",
+    "category": "oyun-motorlari",
+    "tags": [
+      "3d",
+      "oyun",
+      "webgl",
+      "webgpu",
+      "mobil",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Mobil tarayıcılarda bile akıcı çalışan, yüksek performanslı 3D web oyunları gerektiğinde.",
+    "how_to_use": "examples/ klasöründen temel Application, Entity, Script kurulumunu incele.",
+    "related": [
+      12,
+      66,
+      186
+    ],
+    "alternatives": [
+      12,
+      186
+    ],
+    "install_command": "npm install playcanvas",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 69,
+    "name": "tweenjs/tween.js",
+    "url": "https://github.com/tweenjs/tween.js",
+    "category": "oyun-motorlari",
+    "tags": [
+      "tween",
+      "animasyon",
+      "hafif",
+      "bagimsiz",
+      "matematiksel"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Oyun içi veya arayüz animasyonlarında değerlerin bir noktadan diğerine pürüzsüzce geçmesi gerektiğinde.",
+    "how_to_use": "README'deki new TWEEN.Tween() API'sini ve easing fonksiyonlarını incele.",
+    "related": [
+      5,
+      66,
+      67
+    ],
+    "alternatives": [
+      5
+    ],
+    "install_command": "npm install @tweenjs/tween.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 70,
+    "name": "chartjs/Chart.js",
+    "url": "https://github.com/chartjs/Chart.js",
+    "category": "veri-gorsellestirme",
+    "tags": [
+      "grafik",
+      "chart",
+      "canvas",
+      "animasyonlu",
+      "hazir"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Canvas tabanlı, şık, animasyonlu ve hızlı bir şekilde çubuk, pasta, çizgi grafikleri oluşturmak gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen new Chart() API'sini ve grafik tiplerini incele.",
+    "related": [
+      18,
+      71,
+      72
+    ],
+    "alternatives": [
+      18,
+      71
+    ],
+    "install_command": "npm install chart.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 62
+  },
+  {
+    "id": 71,
+    "name": "recharts/recharts",
+    "url": "https://github.com/recharts/recharts",
+    "category": "veri-gorsellestirme",
+    "tags": [
+      "react",
+      "grafik",
+      "d3",
+      "composable",
+      "declarative"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "React projelerinde tamamen bileşen mimarisiyle çalışan, deklaratif grafikler gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen LineChart, BarChart bileşenlerinin kompozisyonunu incele.",
+    "related": [
+      18,
+      70,
+      72
+    ],
+    "alternatives": [
+      70
+    ],
+    "install_command": "npm install recharts",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 47
+  },
+  {
+    "id": 72,
+    "name": "plotly/plotly.js",
+    "url": "https://github.com/plotly/plotly.js",
+    "category": "veri-gorsellestirme",
+    "tags": [
+      "bilimsel",
+      "istatistik",
+      "finans",
+      "3d-grafik",
+      "isi-haritasi"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Bilimsel, istatistiksel ve finansal veri kümelerini tarayıcıda görselleştirmek gerektiğinde.",
+    "how_to_use": "README'deki Plotly.newPlot() API'sini ve farklı trace tiplerini incele.",
+    "related": [
+      18,
+      70,
+      71,
+      73
+    ],
+    "alternatives": [
+      18
+    ],
+    "install_command": "npm install plotly.js-dist",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 73,
+    "name": "visgl/deck.gl",
+    "url": "https://github.com/visgl/deck.gl",
+    "category": "veri-gorsellestirme",
+    "tags": [
+      "buyuk-veri",
+      "webgl",
+      "3d",
+      "harita",
+      "cografi",
+      "uber"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Milyonlarca noktalı coğrafi verileri WebGL hızlandırması ile 3D haritalar üzerinde görselleştirmek gerektiğinde.",
+    "how_to_use": "examples/ klasöründen DeckGL, Layer ve MapView kurulumunu incele.",
+    "related": [
+      12,
+      18,
+      72,
+      74
+    ],
+    "alternatives": [],
+    "install_command": "npm install deck.gl",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 74,
+    "name": "mapbox/mapbox-gl-js",
+    "url": "https://github.com/mapbox/mapbox-gl-js",
+    "category": "harita",
+    "tags": [
+      "harita",
+      "vektor",
+      "webgl",
+      "interaktif",
+      "ozellestirilebilir"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Vektör tabanlı, WebGL ile akıcı, döndürülebilir ve tasarlanabilir interaktif haritalar gerektiğinde.",
+    "how_to_use": "src/ ve docs/ klasöründen mapboxgl.Map() API'sini ve style konfigürasyonlarını incele.",
+    "related": [
+      73,
+      75
+    ],
+    "alternatives": [
+      75
+    ],
+    "install_command": "npm install mapbox-gl",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 75,
+    "name": "Leaflet/Leaflet",
+    "url": "https://github.com/Leaflet/Leaflet",
+    "category": "harita",
+    "tags": [
+      "harita",
+      "2d",
+      "hafif",
+      "mobil",
+      "eklenti",
+      "açık-kaynak"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Harita entegrasyonu için en hafif, mobil dostu ve eklenti ekosistemi en geniş çözüm gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen L.map() API'sini, marker, popup ve tile layer kurulumunu incele.",
+    "related": [
+      74
+    ],
+    "alternatives": [
+      74
+    ],
+    "install_command": "npm install leaflet",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 76,
+    "name": "radix-ui/primitives",
+    "url": "https://github.com/radix-ui/primitives",
+    "category": "erisilebilirlik",
+    "tags": [
+      "react",
+      "headless",
+      "unstyled",
+      "erisilebilir",
+      "wai-aria"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Görünümü tamamen size bırakılmış, klavye ve ekran okuyucu uyumlu temel UI bileşenleri gerektiğinde.",
+    "how_to_use": "packages/react/ altındaki Dialog, Popover, DropdownMenu README'lerini incele.",
+    "related": [
+      15,
+      77,
+      78
+    ],
+    "alternatives": [],
+    "install_command": "npm install @radix-ui/react-dialog @radix-ui/react-dropdown-menu",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 77,
+    "name": "emotion-js/emotion",
+    "url": "https://github.com/emotion-js/emotion",
+    "category": "erisilebilirlik",
+    "tags": [
+      "css-in-js",
+      "react",
+      "performans",
+      "stil",
+      "template-literal"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "JavaScript içine CSS yazmayı sağlayan, yüksek performanslı stil yönetimi gerektiğinde.",
+    "how_to_use": "packages/react/README.md'den css prop ve styled kullanımını incele.",
+    "related": [
+      78,
+      40,
+      162
+    ],
+    "alternatives": [
+      78
+    ],
+    "install_command": "npm install @emotion/react @emotion/styled",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 78,
+    "name": "styled-components/styled-components",
+    "url": "https://github.com/styled-components/styled-components",
+    "category": "erisilebilirlik",
+    "tags": [
+      "css-in-js",
+      "react",
+      "styled",
+      "template-literal",
+      "theme"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "React bileşenlerini doğrudan stillendirilmiş olarak oluşturmak gerektiğinde.",
+    "how_to_use": "packages/styled-components/README.md'den styled.tagname ve ThemeProvider kullanımını incele.",
+    "related": [
+      77,
+      40,
+      162
+    ],
+    "alternatives": [
+      77
+    ],
+    "install_command": "npm install styled-components",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 79,
+    "name": "postcss/postcss",
+    "url": "https://github.com/postcss/postcss",
+    "category": "erisilebilirlik",
+    "tags": [
+      "css",
+      "preprocessor",
+      "eklenti",
+      "autoprefixer",
+      "optimizasyon"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "CSS kodunu JavaScript eklentileriyle dönüştürmek ve optimize etmek gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen postcss.config.js yapısını incele.",
+    "related": [
+      16,
+      161
+    ],
+    "alternatives": [],
+    "install_command": "npm install postcss",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 80,
+    "name": "sass/sass",
+    "url": "https://github.com/sass/sass",
+    "category": "erisilebilirlik",
+    "tags": [
+      "css",
+      "preprocessor",
+      "scss",
+      "variable",
+      "nesting",
+      "mixin"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Değişkenler, iç içe yazım ve fonksiyonlar ekleyerek CSS yazımını programlanabilir hale getirmek gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen .scss sözdizimi, @mixin, @include kullanımını incele.",
+    "related": [
+      16,
+      79
+    ],
+    "alternatives": [],
+    "install_command": "npm install sass",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 81,
+    "name": "socketio/socket.io",
+    "url": "https://github.com/socketio/socket.io",
+    "category": "real-time",
+    "tags": [
+      "websocket",
+      "gercek-zamanli",
+      "sohbet",
+      "cift-yonlu"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Tarayıcı ile sunucu arasında çift yönlü, gerçek zamanlı ve düşük gecikmeli veri akışı gerektiğinde.",
+    "how_to_use": "packages/socket.io-client/README.md ve examples/ klasöründen io() bağlantısını incele.",
+    "related": [
+      82,
+      113,
+      114
+    ],
+    "alternatives": [
+      82
+    ],
+    "install_command": "npm install socket.io-client",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 82,
+    "name": "websockets/ws",
+    "url": "https://github.com/websockets/ws",
+    "category": "real-time",
+    "tags": [
+      "websocket",
+      "nodejs",
+      "hizli",
+      "hafif",
+      "server"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Node.js tarafında hızlı, hafif ve standartlara tam uyumlu WebSocket sunucusu gerektiğinde.",
+    "how_to_use": "README'deki WebSocket.Server() ve WebSocket() API'lerini incele.",
+    "related": [
+      81
+    ],
+    "alternatives": [
+      81
+    ],
+    "install_command": "npm install ws",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 83,
+    "name": "axios/axios",
+    "url": "https://github.com/axios/axios",
+    "category": "real-time",
+    "tags": [
+      "http",
+      "rest",
+      "api",
+      "fetch",
+      "interceptor"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "HTTP istekleri yapmak, interceptors ve hata yönetimi gerektiğinde.",
+    "how_to_use": "lib/ ve examples/ klasöründen axios.create() ve interceptors yapısını incele.",
+    "related": [
+      38,
+      84
+    ],
+    "alternatives": [],
+    "install_command": "npm install axios",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 14
+  },
+  {
+    "id": 84,
+    "name": "graphql/graphql-js",
+    "url": "https://github.com/graphql/graphql-js",
+    "category": "real-time",
+    "tags": [
+      "graphql",
+      "api",
+      "sorgulama",
+      "tip",
+      "referans"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "GraphQL API'lerini anlamak veya referans uygulama olarak kullanmak gerektiğinde.",
+    "how_to_use": "src/ klasöründen graphql() fonksiyonu ve şema oluşturmayı incele.",
+    "related": [
+      83,
+      166,
+      167
+    ],
+    "alternatives": [],
+    "install_command": "npm install graphql",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 85,
+    "name": "fabricjs/fabric.js",
+    "url": "https://github.com/fabricjs/fabric.js",
+    "category": "canvas",
+    "tags": [
+      "canvas",
+      "svg",
+      "nesne",
+      "manipulasyon",
+      "cizim"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "HTML5 Canvas üzerinde nesne tabanlı manipülasyon ve SVG dönüşümleri gerektiğinde.",
+    "how_to_use": "README ve demo/ klasöründen new fabric.Canvas() API'sini incele.",
+    "related": [
+      86,
+      87,
+      88
+    ],
+    "alternatives": [
+      86
+    ],
+    "install_command": "npm install fabric",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 86,
+    "name": "konvajs/konva",
+    "url": "https://github.com/konvajs/konva",
+    "category": "canvas",
+    "tags": [
+      "canvas",
+      "2d",
+      "katman",
+      "animasyon",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Masaüstü ve mobilde 2D Canvas performansı ve katman desteği gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen Stage, Layer, Shape kullanımını incele.",
+    "related": [
+      85,
+      87
+    ],
+    "alternatives": [
+      85
+    ],
+    "install_command": "npm install konva",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 87,
+    "name": "fengyuanchen/cropperjs",
+    "url": "https://github.com/fengyuanchen/cropperjs",
+    "category": "canvas",
+    "tags": [
+      "kirpma",
+      "gorsel",
+      "canvas",
+      "interaktif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Kullanıcıların görselleri tarayıcıda kırpmasını, döndürmesini sağlamak gerektiğinde.",
+    "how_to_use": "README'deki new Cropper() API'sini ve seçeneklerini incele.",
+    "related": [
+      85,
+      88
+    ],
+    "alternatives": [
+      88
+    ],
+    "install_command": "npm install cropperjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 88,
+    "name": "nhn/tui.image-editor",
+    "url": "https://github.com/nhn/tui.image-editor",
+    "category": "canvas",
+    "tags": [
+      "resim-duzenleme",
+      "canvas",
+      "filtre",
+      "cizim"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarayıcıda tam teşekküllü fotoğraf düzenleme arayüzü gerektiğinde.",
+    "how_to_use": "apps/image-editor/ ve docs/ klasöründen ImageEditor sınıfını incele.",
+    "related": [
+      85,
+      87
+    ],
+    "alternatives": [
+      87
+    ],
+    "install_command": "npm install tui-image-editor",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 89,
+    "name": "lukePeavey/SplitType",
+    "url": "https://github.com/lukePeavey/SplitType",
+    "category": "tipografi",
+    "tags": [
+      "metin",
+      "bolme",
+      "animasyon",
+      "karakter",
+      "kelime"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "DOM üzerindeki metinleri kelimelere, satırlara veya harflere bölerek animasyon uygulamak gerektiğinde.",
+    "how_to_use": "README'deki SplitType.create() API'sini incele.",
+    "related": [
+      5,
+      50,
+      90
+    ],
+    "alternatives": [],
+    "install_command": "npm install split-type",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 8,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 4
+  },
+  {
+    "id": 90,
+    "name": "alexmacarthur/typeit",
+    "url": "https://github.com/alexmacarthur/typeit",
+    "category": "tipografi",
+    "tags": [
+      "daktilo",
+      "typewriter",
+      "yazma-efekti",
+      "animasyon"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Daktilo efektini web sitesine entegre etmek gerektiğinde.",
+    "how_to_use": "README'deki new TypeIt() API'sini, .type() ve .pause() metotlarını incele.",
+    "related": [
+      51,
+      91
+    ],
+    "alternatives": [
+      91
+    ],
+    "install_command": "npm install typeit",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 91,
+    "name": "tameemsafi/typewriterjs",
+    "url": "https://github.com/tameemsafi/typewriterjs",
+    "category": "tipografi",
+    "tags": [
+      "daktilo",
+      "typewriter",
+      "hafif",
+      "bagimsiz"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Kod yazılıyormuş hissiyatı yaratmak için hafif daktilo eklentisi gerektiğinde.",
+    "how_to_use": "README'deki new Typewriter() API'sini incele.",
+    "related": [
+      51,
+      90
+    ],
+    "alternatives": [
+      90
+    ],
+    "install_command": "npm install typewriter-effect",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 92,
+    "name": "chinchang/screenfull.js",
+    "url": "https://github.com/chinchang/screenfull.js",
+    "category": "tipografi",
+    "tags": [
+      "fullscreen",
+      "api",
+      "tarayici",
+      "minimal"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Web projelerini tek tıkla tam ekran moduna geçirmek gerektiğinde.",
+    "how_to_use": "README'deki screenfull.request() ve screenfull.exit() API'sini incele.",
+    "related": [
+      33
+    ],
+    "alternatives": [],
+    "install_command": "npm install screenfull",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 93,
+    "name": "cypress-io/cypress",
+    "url": "https://github.com/cypress-io/cypress",
+    "category": "test",
+    "tags": [
+      "e2e",
+      "test",
+      "tarayici",
+      "simulasyon",
+      "arayuz"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Frontend uygulamalarının tarayıcı üzerindeki davranışlarını uçtan uca test etmek gerektiğinde.",
+    "how_to_use": "packages/ ve docs/ klasöründen cy.visit, cy.get API'sini incele.",
+    "related": [
+      94,
+      96
+    ],
+    "alternatives": [
+      94
+    ],
+    "install_command": "npm install cypress",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 94,
+    "name": "microsoft/playwright",
+    "url": "https://github.com/microsoft/playwright",
+    "category": "test",
+    "tags": [
+      "e2e",
+      "test",
+      "cross-browser",
+      "otomasyon",
+      "hizli"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Birden fazla tarayıcıyı eşzamanlı test etmek gerektiğinde.",
+    "how_to_use": "packages/playwright/README.md ve docs/ klasöründen test API'sini incele.",
+    "related": [
+      93,
+      96
+    ],
+    "alternatives": [
+      93
+    ],
+    "install_command": "npm install @playwright/test",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 95,
+    "name": "vitest-dev/vitest",
+    "url": "https://github.com/vitest-dev/vitest",
+    "category": "test",
+    "tags": [
+      "unit-test",
+      "vite",
+      "hizli",
+      "jest-uyumlu"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Vite projelerinde inanılmaz hızlı birim testler için.",
+    "how_to_use": "packages/vitest/README.md ve docs/ klasöründen vitest.config.ts yapısını incele.",
+    "related": [
+      63,
+      93,
+      94
+    ],
+    "alternatives": [],
+    "install_command": "npm install vitest",
+    "peer_dependencies": [
+      "vite"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 96,
+    "name": "puppeteer/puppeteer",
+    "url": "https://github.com/puppeteer/puppeteer",
+    "category": "test",
+    "tags": [
+      "headless-chrome",
+      "otomasyon",
+      "ekran-goruntusu",
+      "pdf",
+      "scraping"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Headless Chrome ile ekran görüntüsü, PDF veya veri kazıma gerektiğinde.",
+    "how_to_use": "docs/ klasöründen puppeteer.launch() ve sayfa API'sini incele.",
+    "related": [
+      93,
+      94
+    ],
+    "alternatives": [
+      94
+    ],
+    "install_command": "npm install puppeteer",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 97,
+    "name": "GoogleChromeLabs/comlink",
+    "url": "https://github.com/GoogleChromeLabs/comlink",
+    "category": "yardimcilar",
+    "tags": [
+      "web-worker",
+      "asenkron",
+      "performans",
+      "thread"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Web Worker kullanımını basitleştirmek ve ağır hesaplamaları ana iş parçacığından ayırmak gerektiğinde.",
+    "how_to_use": "README'deki Comlink.wrap() ve Comlink.expose() API'sini incele.",
+    "related": [
+      100,
+      156
+    ],
+    "alternatives": [],
+    "install_command": "npm install comlink",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 98,
+    "name": "iamkun/dayjs",
+    "url": "https://github.com/iamkun/dayjs",
+    "category": "yardimcilar",
+    "tags": [
+      "tarih",
+      "zaman",
+      "hafif",
+      "moment-alternatif",
+      "immutable"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Sadece 2KB boyutunda tarih/zaman işlemleri gerektiğinde.",
+    "how_to_use": "src/ ve docs/ klasöründen dayjs() API'sini ve eklenti sistemini incele.",
+    "related": [
+      99
+    ],
+    "alternatives": [],
+    "install_command": "npm install dayjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 7
+  },
+  {
+    "id": 99,
+    "name": "lodash/lodash",
+    "url": "https://github.com/lodash/lodash",
+    "category": "yardimcilar",
+    "tags": [
+      "utility",
+      "dizi",
+      "obje",
+      "string",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Dizi, sayı, obje ve string manipülasyonlarını hızlı ve hatasız yapmak gerektiğinde.",
+    "how_to_use": "lib/ altındaki her modülü veya ana lodash dokümanını incele.",
+    "related": [
+      98
+    ],
+    "alternatives": [],
+    "install_command": "npm install lodash",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 4,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 72
+  },
+  {
+    "id": 100,
+    "name": "ReactiveX/rxjs",
+    "url": "https://github.com/ReactiveX/rxjs",
+    "category": "yardimcilar",
+    "tags": [
+      "reaktif",
+      "stream",
+      "asenkron",
+      "observable",
+      "operator"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Karmaşık asenkron olayları bir veri akışı olarak yönetmek gerektiğinde.",
+    "how_to_use": "src/ ve docs/ klasöründen Observable, pipe ve operatör kullanımını incele.",
+    "related": [
+      39,
+      97
+    ],
+    "alternatives": [],
+    "install_command": "npm install rxjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 101,
+    "name": "react-hook-form/react-hook-form",
+    "url": "https://github.com/react-hook-form/react-hook-form",
+    "category": "form",
+    "tags": [
+      "form",
+      "react",
+      "performans",
+      "register",
+      "validation"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Gereksiz render'ları önleyen, maksimum performanslı form yönetimi gerektiğinde.",
+    "how_to_use": "app/ ve docs/ klasöründen useForm() hook'unu ve register, handleSubmit'i incele.",
+    "related": [
+      102,
+      103,
+      104
+    ],
+    "alternatives": [
+      104
+    ],
+    "install_command": "npm install react-hook-form",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 13
+  },
+  {
+    "id": 102,
+    "name": "colinhacks/zod",
+    "url": "https://github.com/colinhacks/zod",
+    "category": "form",
+    "tags": [
+      "typescript",
+      "sema",
+      "dogrulama",
+      "validation",
+      "type-safe"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "TypeScript odaklı şema bildirimi ve tür güvenli veri doğrulama gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen z.object(), z.string() API'sini incele.",
+    "related": [
+      101,
+      103
+    ],
+    "alternatives": [
+      103
+    ],
+    "install_command": "npm install zod",
+    "peer_dependencies": [
+      "typescript"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 14
+  },
+  {
+    "id": 103,
+    "name": "jquense/yup",
+    "url": "https://github.com/jquense/yup",
+    "category": "form",
+    "tags": [
+      "validation",
+      "sema",
+      "obje",
+      "form",
+      "dogrulama"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Nesne şeması tabanlı veri doğrulama kuralları gerektiğinde.",
+    "how_to_use": "README'deki yup.object() ve string/email/test zincirleme API'sini incele.",
+    "related": [
+      101,
+      102
+    ],
+    "alternatives": [
+      102
+    ],
+    "install_command": "npm install yup",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 104,
+    "name": "formium/formik",
+    "url": "https://github.com/jaredpalmer/formik",
+    "category": "form",
+    "tags": [
+      "form",
+      "react",
+      "state",
+      "classic",
+      "validasyon"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "React'te form state'ini ve asenkron gönderim süreçlerini yönetmek için klasik çözüm gerektiğinde.",
+    "how_to_use": "packages/formik/README.md'den useFormik() hook'unu incele.",
+    "related": [
+      101,
+      103
+    ],
+    "alternatives": [
+      101
+    ],
+    "install_command": "npm install formik",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 105,
+    "name": "lucide-icons/lucide",
+    "url": "https://github.com/lucide-icons/lucide",
+    "category": "ikon-svg",
+    "tags": [
+      "ikon",
+      "svg",
+      "react",
+      "modern",
+      "temiz"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Modern, temiz ve özelleştirilebilir vektörel ikon seti gerektiğinde.",
+    "how_to_use": "packages/lucide-react/README.md'den import yapısını incele.",
+    "related": [
+      15,
+      107
+    ],
+    "alternatives": [
+      107
+    ],
+    "install_command": "npm install lucide-react",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 10,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 1
+  },
+  {
+    "id": 106,
+    "name": "svg/svgo",
+    "url": "https://github.com/svg/svgo",
+    "category": "ikon-svg",
+    "tags": [
+      "svg",
+      "optimizasyon",
+      "nodejs",
+      "temizleme",
+      "minify"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "SVG dosyalarının gereksiz kodlarını temizleyip boyutunu küçültmek gerektiğinde.",
+    "how_to_use": "README ve lib/ klasöründen svgo.config.js yapısını incele.",
+    "related": [
+      108
+    ],
+    "alternatives": [],
+    "install_command": "npm install svgo",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 107,
+    "name": "feathericons/feather",
+    "url": "https://github.com/feathericons/feather",
+    "category": "ikon-svg",
+    "tags": [
+      "ikon",
+      "svg",
+      "minimal",
+      "hafif",
+      "açık-kaynak"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Minimalist tasarımlar için hafif bir açık kaynaklı ikon seti gerektiğinde.",
+    "how_to_use": "README'deki feather.icons objesinden ikon seçimini incele.",
+    "related": [
+      105
+    ],
+    "alternatives": [
+      105
+    ],
+    "install_command": "npm install feather-icons",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 108,
+    "name": "gregberge/svgr",
+    "url": "https://github.com/gregberge/svgr",
+    "category": "ikon-svg",
+    "tags": [
+      "svg",
+      "react",
+      "component",
+      "donusturme",
+      "build"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Ham SVG dosyalarını React bileşenlerine dönüştürmek gerektiğinde.",
+    "how_to_use": "packages/webpack/README.md ve docs/ klasöründen SVGR yapılandırmasını incele.",
+    "related": [
+      106,
+      105
+    ],
+    "alternatives": [],
+    "install_command": "npm install @svgr/webpack",
+    "peer_dependencies": [
+      "webpack"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 109,
+    "name": "vercel/turbo",
+    "url": "https://github.com/vercel/turbo",
+    "category": "mikro-frontend",
+    "tags": [
+      "monorepo",
+      "turborepo",
+      "build",
+      "cache",
+      "hizli"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Birden fazla uygulamanın aynı depo içinde hızlı derlenmesi gerektiğinde.",
+    "how_to_use": "docs/ klasöründen turbo.json yapısını ve pipeline stratejilerini incele.",
+    "related": [
+      110,
+      112,
+      63
+    ],
+    "alternatives": [
+      110,
+      112
+    ],
+    "install_command": "npm install turbo",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 110,
+    "name": "nrwl/nx",
+    "url": "https://github.com/nrwl/nx",
+    "category": "mikro-frontend",
+    "tags": [
+      "monorepo",
+      "build",
+      "kurumsal",
+      "testing",
+      "generator"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Farklı projeleri tek çatı altında kurumsal seviyede yönetmek gerektiğinde.",
+    "how_to_use": "packages/nx/README.md ve docs/ klasöründen workspace.json yapısını incele.",
+    "related": [
+      109,
+      112
+    ],
+    "alternatives": [
+      109
+    ],
+    "install_command": "npm install nx",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 111,
+    "name": "single-spa/single-spa",
+    "url": "https://github.com/single-spa/single-spa",
+    "category": "mikro-frontend",
+    "tags": [
+      "mikro-frontend",
+      "framework-agnostic",
+      "router"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Farklı framework'lerle yazılmış frontend parçalarını tek sayfada birleştirmek gerektiğinde.",
+    "how_to_use": "docs/ klasöründen root config, application ve parcel kavramlarını incele.",
+    "related": [
+      109,
+      110
+    ],
+    "alternatives": [],
+    "install_command": "npm install single-spa",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 112,
+    "name": "lerna/lerna",
+    "url": "https://github.com/lerna/lerna",
+    "category": "mikro-frontend",
+    "tags": [
+      "monorepo",
+      "versioning",
+      "publishing",
+      "classic"
+    ],
+    "type": "tool",
+    "priority": "low",
+    "when_to_use": "Birden fazla paketin versiyonlaması ve yayınlanması gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen lerna.json yapısını incele.",
+    "related": [
+      109,
+      110
+    ],
+    "alternatives": [
+      109
+    ],
+    "install_command": "npm install lerna",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 113,
+    "name": "feross/simple-peer",
+    "url": "https://github.com/feross/simple-peer",
+    "category": "webrtc",
+    "tags": [
+      "webrtc",
+      "p2p",
+      "video",
+      "ses",
+      "veri"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarayıcılar arası doğrudan video, ses ve veri aktarımı gerektiğinde.",
+    "how_to_use": "README'deki new Peer() API'sini ve signal/stream olaylarını incele.",
+    "related": [
+      114,
+      115,
+      150
+    ],
+    "alternatives": [
+      114
+    ],
+    "install_command": "npm install simple-peer",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 114,
+    "name": "peers/peerjs",
+    "url": "https://github.com/peers/peerjs",
+    "category": "webrtc",
+    "tags": [
+      "webrtc",
+      "p2p",
+      "bulut",
+      "esleme"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "PeerJS sunucusu üzerinden kullanıcıları eşleştirerek WebRTC bağlantıları kurmak gerektiğinde.",
+    "how_to_use": "packages/peerjs/README.md'den new Peer() API'sini incele.",
+    "related": [
+      113,
+      115
+    ],
+    "alternatives": [
+      113
+    ],
+    "install_command": "npm install peerjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 115,
+    "name": "miroslavpejic85/mirotalk",
+    "url": "https://github.com/miroslavpejic85/mirotalk",
+    "category": "webrtc",
+    "tags": [
+      "webrtc",
+      "goruntulu-konusma",
+      "canli-yayin",
+      "açık-kaynak"
+    ],
+    "type": "reference",
+    "priority": "low",
+    "when_to_use": "Kendi görüntülü konuşma platformunun altyapısını incelemek gerektiğinde.",
+    "how_to_use": "README ve app/ klasöründen oda yönetimi ve sinyalleşme yapısını incele.",
+    "related": [
+      113,
+      114
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 5,
+      "rsc_compat": 5,
+      "bundle_cost": 10,
+      "typescript": 5,
+      "maintenance": 7,
+      "learning_curve": 7,
+      "community": 7
+    }
+  },
+  {
+    "id": 116,
+    "name": "muaz-khan/RecordRTC",
+    "url": "https://github.com/muaz-khan/RecordRTC",
+    "category": "webrtc",
+    "tags": [
+      "kayit",
+      "medya",
+      "kamera",
+      "mikrofon",
+      "ekran"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Kullanıcının kamera, mikrofon veya ekranından yüksek kaliteli kayıt almak gerektiğinde.",
+    "how_to_use": "README'deki RecordRTC() API'sini ve kayıt seçeneklerini incele.",
+    "related": [
+      113,
+      149
+    ],
+    "alternatives": [],
+    "install_command": "npm install recordrtc",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 117,
+    "name": "vercel/next.js",
+    "url": "https://github.com/vercel/next.js",
+    "category": "ssg-ssr",
+    "tags": [
+      "react",
+      "ssr",
+      "ssg",
+      "framework",
+      "full-stack",
+      "app-router"
+    ],
+    "type": "framework",
+    "priority": "high",
+    "when_to_use": "SSR ve SSG gerektiren ana projeleri inşa etmek için endüstri standardı.",
+    "how_to_use": "packages/next/README.md ve docs/ klasöründen App Router yapısını incele.",
+    "related": [
+      61,
+      62,
+      63,
+      118
+    ],
+    "alternatives": [
+      61,
+      118
+    ],
+    "install_command": "npm install next",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 4,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    },
+    "bundle_kb_gzip": 90
+  },
+  {
+    "id": 118,
+    "name": "nuxt/nuxt",
+    "url": "https://github.com/nuxt/nuxt",
+    "category": "ssg-ssr",
+    "tags": [
+      "vue",
+      "ssr",
+      "ssg",
+      "framework",
+      "meta-framework"
+    ],
+    "type": "framework",
+    "priority": "medium",
+    "when_to_use": "Vue.js tarafında Next.js benzeri SEO ve hız optimizasyonları gerektiğinde.",
+    "how_to_use": "packages/nuxt/README.md ve docs/ klasöründen sayfa yapısını incele.",
+    "related": [
+      117
+    ],
+    "alternatives": [
+      117
+    ],
+    "install_command": "npm install nuxt",
+    "peer_dependencies": [
+      "vue"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 119,
+    "name": "facebook/docusaurus",
+    "url": "https://github.com/facebook/docusaurus",
+    "category": "ssg-ssr",
+    "tags": [
+      "dokumantasyon",
+      "react",
+      "statik-site",
+      "blog",
+      "mdx"
+    ],
+    "type": "framework",
+    "priority": "medium",
+    "when_to_use": "Stüdyonun iç süreçlerini belgelendirmek için statik site oluşturmak gerektiğinde.",
+    "how_to_use": "packages/docusaurus/README.md'den docusaurus.config.js yapısını incele.",
+    "related": [
+      120
+    ],
+    "alternatives": [],
+    "install_command": "npm install @docusaurus/core",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 120,
+    "name": "netlify/decap-cms",
+    "url": "https://github.com/netlify/decap-cms",
+    "category": "ssg-ssr",
+    "tags": [
+      "cms",
+      "git-tabanli",
+      "headless",
+      "netlify"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Veritabanı kurmadan Git deposu üzerinden çalışan CMS arayüzü gerektiğinde.",
+    "how_to_use": "packages/decap-cms/README.md ve docs/ klasöründen config.yml yapısını incele.",
+    "related": [
+      119,
+      164,
+      165
+    ],
+    "alternatives": [
+      164
+    ],
+    "install_command": "npm install decap-cms-app",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 121,
+    "name": "storybookjs/storybook",
+    "url": "https://github.com/storybookjs/storybook",
+    "category": "tasarim-sistemleri",
+    "tags": [
+      "storybook",
+      "ui",
+      "bilesen",
+      "izole",
+      "test",
+      "dokumantasyon"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "UI bileşenlerini projeden izole ortamda geliştirmek ve görsel olarak test etmek gerektiğinde.",
+    "how_to_use": "code/ klasöründen .stories.tsx yapısını, args ve decorator kavramlarını incele.",
+    "related": [
+      122,
+      123,
+      15
+    ],
+    "alternatives": [
+      122
+    ],
+    "install_command": "npm install storybook",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 122,
+    "name": "styleguidist/react-styleguidist",
+    "url": "https://github.com/styleguidist/react-styleguidist",
+    "category": "tasarim-sistemleri",
+    "tags": [
+      "stil-rehberi",
+      "react",
+      "izole",
+      "dokumantasyon"
+    ],
+    "type": "tool",
+    "priority": "low",
+    "when_to_use": "Kod yorumlarından otomatik canlı stil rehberi oluşturmak gerektiğinde.",
+    "how_to_use": "docs/ ve examples/ klasöründen styleguide.config.js yapısını incele.",
+    "related": [
+      121,
+      123
+    ],
+    "alternatives": [
+      121
+    ],
+    "install_command": "npm install react-styleguidist",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 123,
+    "name": "teambit/bit",
+    "url": "https://github.com/teambit/bit",
+    "category": "tasarim-sistemleri",
+    "tags": [
+      "bilesen",
+      "paylasim",
+      "versioning",
+      "bagimsiz"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Bağımsız bileşenleri geliştirip farklı projeler arasında paylaşmak gerektiğinde.",
+    "how_to_use": "docs/ klasöründen bit create, bit tag, bit export komutlarını incele.",
+    "related": [
+      121,
+      109
+    ],
+    "alternatives": [],
+    "install_command": "npm install @teambit/bit",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 124,
+    "name": "ueberdosis/tiptap",
+    "url": "https://github.com/ueberdosis/tiptap",
+    "category": "metin-editor",
+    "tags": [
+      "rich-text",
+      "editor",
+      "headless",
+      "react",
+      "vue",
+      "prosemirror"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Tamamen özelleştirilebilir, headless ve modern framework'lerle entegre zengin metin editörü gerektiğinde.",
+    "how_to_use": "packages/ ve demos/ klasöründen useEditor() hook'unu ve Extension sistemini incele.",
+    "related": [
+      125,
+      126,
+      127
+    ],
+    "alternatives": [
+      125,
+      126
+    ],
+    "install_command": "npm install @tiptap/react @tiptap/starter-kit",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 125,
+    "name": "ianstormtaylor/slate",
+    "url": "https://github.com/ianstormtaylor/slate",
+    "category": "metin-editor",
+    "tags": [
+      "rich-text",
+      "editor",
+      "react",
+      "esnek",
+      "ozellestirilebilir"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Slack/Medium benzeri, kuralları tamamen belirlenebilen esnek metin editörü altyapısı gerektiğinde.",
+    "how_to_use": "docs/ ve examples/ klasöründen createEditor, Transforms ve Element yapısını incele.",
+    "related": [
+      124,
+      126
+    ],
+    "alternatives": [
+      124
+    ],
+    "install_command": "npm install slate slate-react",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 126,
+    "name": "quilljs/quill",
+    "url": "https://github.com/quilljs/quill",
+    "category": "metin-editor",
+    "tags": [
+      "rich-text",
+      "editor",
+      "api-odakli",
+      "modern",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "API odaklı, genişletilebilir ve performanslı bir zengin metin editörü gerektiğinde.",
+    "how_to_use": "packages/quill/README.md'den new Quill() API'sini ve delta yapısını incele.",
+    "related": [
+      124,
+      127
+    ],
+    "alternatives": [
+      124
+    ],
+    "install_command": "npm install quill",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 127,
+    "name": "ckeditor/ckeditor5",
+    "url": "https://github.com/ckeditor/ckeditor5",
+    "category": "metin-editor",
+    "tags": [
+      "rich-text",
+      "editor",
+      "collaborative",
+      "google-docs",
+      "kurumsal"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Google Docs benzeri eşzamanlı ve işbirliğine dayalı düzenleme yetenekleri gerektiğinde.",
+    "how_to_use": "packages/ckeditor5-build-classic/ ve docs/ klasöründen ClassicEditor.create() API'sini incele.",
+    "related": [
+      124
+    ],
+    "alternatives": [],
+    "install_command": "npm install ckeditor5",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 128,
+    "name": "preactjs/preact",
+    "url": "https://github.com/preactjs/preact",
+    "category": "minimal-framework",
+    "tags": [
+      "react",
+      "alternatif",
+      "3kb",
+      "hafif",
+      "hizli",
+      "uyumlu"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "React ile aynı API'ye sahip ancak sadece 3KB boyutunda hafif çözüm gerektiğinde.",
+    "how_to_use": "compat/ klasöründen preact/compat modülü ile React uyumluluğunu incele.",
+    "related": [
+      129,
+      130,
+      131
+    ],
+    "alternatives": [
+      129
+    ],
+    "install_command": "npm install preact",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 129,
+    "name": "solidjs/solid",
+    "url": "https://github.com/solidjs/solid",
+    "category": "minimal-framework",
+    "tags": [
+      "reaktif",
+      "framework",
+      "performans",
+      "virtual-dom-yok",
+      "signals"
+    ],
+    "type": "framework",
+    "priority": "medium",
+    "when_to_use": "Sanal DOM kullanmayan, state değişikliklerini doğrudan gerçek DOM'a yansıtan framework gerektiğinde.",
+    "how_to_use": "packages/solid/README.md'den createSignal, createEffect yapısını incele.",
+    "related": [
+      128,
+      130
+    ],
+    "alternatives": [
+      128
+    ],
+    "install_command": "npm install solid-js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 130,
+    "name": "sveltejs/svelte",
+    "url": "https://github.com/sveltejs/svelte",
+    "category": "minimal-framework",
+    "tags": [
+      "svelte",
+      "framework",
+      "build-time",
+      "reaktif",
+      "derleyici"
+    ],
+    "type": "framework",
+    "priority": "medium",
+    "when_to_use": "Derleme aşamasında optimize edilmiş saf JavaScript'e dönüştüren framework gerektiğinde.",
+    "how_to_use": "packages/svelte/README.md ve docs/ klasöründen .svelte dosya yapısını incele.",
+    "related": [
+      128,
+      129
+    ],
+    "alternatives": [],
+    "install_command": "npm install svelte",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 131,
+    "name": "alpinejs/alpine",
+    "url": "https://github.com/alpinejs/alpine",
+    "category": "minimal-framework",
+    "tags": [
+      "hafif",
+      "html-odakli",
+      "javascript",
+      "tailwind-ruhu"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "HTML'den ayrılmadan küçük etkileşimler eklemek gerektiğinde.",
+    "how_to_use": "packages/alpinejs/README.md'den x-data, x-bind, x-on direktiflerini incele.",
+    "related": [
+      132,
+      133
+    ],
+    "alternatives": [
+      132
+    ],
+    "install_command": "npm install alpinejs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 132,
+    "name": "bigskysoftware/htmx",
+    "url": "https://github.com/bigskysoftware/htmx",
+    "category": "minimal-framework",
+    "tags": [
+      "html",
+      "ajax",
+      "css-gecis",
+      "websocket",
+      "hateoas"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Doğrudan HTML nitelikleri üzerinden AJAX ve dinamik arayüzler kurmak gerektiğinde.",
+    "how_to_use": "www/ ve docs/ klasöründen hx-get, hx-post, hx-swap niteliklerini incele.",
+    "related": [
+      131,
+      133
+    ],
+    "alternatives": [],
+    "install_command": "npm install htmx.org",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 133,
+    "name": "hotwired/stimulus",
+    "url": "https://github.com/hotwired/stimulus",
+    "category": "minimal-framework",
+    "tags": [
+      "html",
+      "controller",
+      "mutevazi",
+      "javascript",
+      "turbo"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "HTML'i merkeze alan, DOM elemanlarına küçük JS denetleyicileri bağlamak gerektiğinde.",
+    "how_to_use": "packages/@hotwired/stimulus/README.md'den data-controller yapısını incele.",
+    "related": [
+      131,
+      132
+    ],
+    "alternatives": [],
+    "install_command": "npm install @hotwired/stimulus",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 134,
+    "name": "localForage/localForage",
+    "url": "https://github.com/localForage/localForage",
+    "category": "tarayici-depolama",
+    "tags": [
+      "storage",
+      "indexeddb",
+      "websql",
+      "offline",
+      "asenkron"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "localStorage basitliğinde ama IndexedDB gücünde tarayıcı depolama gerektiğinde.",
+    "how_to_use": "lib/ ve docs/ klasöründen localforage.setItem() ve getItem() API'sini incele.",
+    "related": [
+      135,
+      136
+    ],
+    "alternatives": [
+      135
+    ],
+    "install_command": "npm install localforage",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 9
+  },
+  {
+    "id": 135,
+    "name": "dexie/Dexie.js",
+    "url": "https://github.com/dexie/Dexie.js",
+    "category": "tarayici-depolama",
+    "tags": [
+      "indexeddb",
+      "wrapper",
+      "asenkron",
+      "sorgu",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "IndexedDB API'sini okunabilir ve kolay kullanılabilir hale getirmek gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen new Dexie() API'sini ve where() sorgularını incele.",
+    "related": [
+      134,
+      136
+    ],
+    "alternatives": [],
+    "install_command": "npm install dexie",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 136,
+    "name": "sql-js/sql.js",
+    "url": "https://github.com/sql-js/sql.js",
+    "category": "tarayici-depolama",
+    "tags": [
+      "sqlite",
+      "wasm",
+      "sql",
+      "tarayici",
+      "veritabani"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarayıcı üzerinde gerçek bir SQLite veritabanı çalıştırmak gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen initSqlJs() ve db.run() API'lerini incele.",
+    "related": [
+      134,
+      135,
+      168
+    ],
+    "alternatives": [
+      135
+    ],
+    "install_command": "npm install sql.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 137,
+    "name": "mozilla/pdf.js",
+    "url": "https://github.com/mozilla/pdf.js",
+    "category": "dosya-pdf",
+    "tags": [
+      "pdf",
+      "render",
+      "canvas",
+      "görüntüleme",
+      "mozilla"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "PDF dosyalarını tarayıcıda eklenti gerektirmeden görüntülemek gerektiğinde.",
+    "how_to_use": "src/ ve web/ klasöründen pdfjsLib.getDocument() API'sini incele.",
+    "related": [
+      138
+    ],
+    "alternatives": [],
+    "install_command": "npm install pdfjs-dist",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 138,
+    "name": "Hopding/pdf-lib",
+    "url": "https://github.com/Hopding/pdf-lib",
+    "category": "dosya-pdf",
+    "tags": [
+      "pdf",
+      "olusturma",
+      "duzenleme",
+      "form",
+      "programatik"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarayıcıda sıfırdan PDF oluşturmak veya mevcut PDF'leri düzenlemek gerektiğinde.",
+    "how_to_use": "README ve apps/ klasöründen PDFDocument.create() API'sini incele.",
+    "related": [
+      137
+    ],
+    "alternatives": [],
+    "install_command": "npm install pdf-lib",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 139,
+    "name": "Stuk/jszip",
+    "url": "https://github.com/Stuk/jszip",
+    "category": "dosya-pdf",
+    "tags": [
+      "zip",
+      "sikistirma",
+      "client-side",
+      "dosya"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Sunucuya göndermeden istemci tarafında .zip dosyaları oluşturmak gerektiğinde.",
+    "how_to_use": "README ve test/ klasöründen new JSZip() API'sini ve .generateAsync() metodunu incele.",
+    "related": [
+      140
+    ],
+    "alternatives": [],
+    "install_command": "npm install jszip",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 140,
+    "name": "nodeca/pako",
+    "url": "https://github.com/nodeca/pako",
+    "category": "dosya-pdf",
+    "tags": [
+      "sikistirma",
+      "zlib",
+      "gzip",
+      "deflate",
+      "inflate",
+      "hizli"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Büyük veri setlerini tarayıcıda hızlıca sıkıştırmak ve açmak gerektiğinde.",
+    "how_to_use": "README'deki pako.deflate() ve pako.inflate() API'sini incele.",
+    "related": [
+      139
+    ],
+    "alternatives": [],
+    "install_command": "npm install pako",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 141,
+    "name": "i18next/i18next",
+    "url": "https://github.com/i18next/i18next",
+    "category": "i18n",
+    "tags": [
+      "ceviri",
+      "i18n",
+      "framework-agnostic",
+      "yerellestirme",
+      "dil"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Frontend projelerini birden fazla dile çevirmek için endüstri standardı çözüm gerektiğinde.",
+    "how_to_use": "packages/i18next/README.md'den i18next.init() ve t() fonksiyonlarını incele.",
+    "related": [
+      142
+    ],
+    "alternatives": [],
+    "install_command": "npm install i18next react-i18next",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 18
+  },
+  {
+    "id": 142,
+    "name": "formatjs/formatjs",
+    "url": "https://github.com/formatjs/formatjs",
+    "category": "i18n",
+    "tags": [
+      "i18n",
+      "intl",
+      "react",
+      "tarih",
+      "para",
+      "sayi"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarih, saat, para birimi ve metin çevirilerini bölgesel ayarlara göre standartlaştırmak gerektiğinde.",
+    "how_to_use": "packages/react-intl/README.md'den IntlProvider ve FormattedMessage API'sini incele.",
+    "related": [
+      141
+    ],
+    "alternatives": [
+      141
+    ],
+    "install_command": "npm install react-intl",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 143,
+    "name": "clauderic/dnd-kit",
+    "url": "https://github.com/clauderic/dnd-kit",
+    "category": "drag-drop",
+    "tags": [
+      "drag-and-drop",
+      "react",
+      "hafif",
+      "erisilebilir",
+      "esnek"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Modern React projeleri için hafif ve erişilebilirliği yüksek sürükle-bırak altyapısı gerektiğinde.",
+    "how_to_use": "packages/core/ ve stories/ klasöründen DndContext, useDraggable API'sini incele.",
+    "related": [
+      19,
+      30,
+      144,
+      145
+    ],
+    "alternatives": [
+      19,
+      30
+    ],
+    "install_command": "npm install @dnd-kit/core @dnd-kit/sortable",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 144,
+    "name": "react-grid-layout/react-grid-layout",
+    "url": "https://github.com/react-grid-layout/react-grid-layout",
+    "category": "drag-drop",
+    "tags": [
+      "grid",
+      "dashboard",
+      "surukle-birak",
+      "responsive",
+      "widget"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Dashboard için widget'ların sürüklenip boyutlandırılabileceği ızgara düzeni gerektiğinde.",
+    "how_to_use": "test/ ve examples/ klasöründen GridLayout bileşenini ve layout prop yapısını incele.",
+    "related": [
+      143,
+      19
+    ],
+    "alternatives": [],
+    "install_command": "npm install react-grid-layout",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 145,
+    "name": "react-dropzone/react-dropzone",
+    "url": "https://github.com/react-dropzone/react-dropzone",
+    "category": "drag-drop",
+    "tags": [
+      "dosya-yukleme",
+      "drag-and-drop",
+      "react"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Dosya yükleme için kullanıcının bilgisayarından sürükle-bırak yapması gerektiğinde.",
+    "how_to_use": "src/ ve examples/ klasöründen useDropzone() hook'unu incele.",
+    "related": [
+      143,
+      101
+    ],
+    "alternatives": [],
+    "install_command": "npm install react-dropzone",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 146,
+    "name": "nextauthjs/next-auth",
+    "url": "https://github.com/nextauthjs/next-auth",
+    "category": "auth",
+    "tags": [
+      "auth",
+      "nextjs",
+      "oauth",
+      "google",
+      "github"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Next.js projeleri için OAuth sağlayıcılarıyla kimlik doğrulama gerektiğinde.",
+    "how_to_use": "packages/next-auth/README.md ve docs/ klasöründen [...nextauth].js route'unu incele.",
+    "related": [
+      117,
+      147,
+      148
+    ],
+    "alternatives": [
+      147,
+      148
+    ],
+    "install_command": "npm install next-auth",
+    "peer_dependencies": [
+      "next",
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 147,
+    "name": "auth0/auth0-react",
+    "url": "https://github.com/auth0/auth0-react",
+    "category": "auth",
+    "tags": [
+      "auth",
+      "auth0",
+      "react",
+      "kurumsal",
+      "oidc"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Kurumsal seviyede Auth0 kimlik doğrulama çözümünü React'e entegre etmek gerektiğinde.",
+    "how_to_use": "src/ ve docs/ klasöründen Auth0Provider ve useAuth0() hook'unu incele.",
+    "related": [
+      146,
+      148
+    ],
+    "alternatives": [
+      146
+    ],
+    "install_command": "npm install @auth0/auth0-react",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 148,
+    "name": "supabase/supabase",
+    "url": "https://github.com/supabase/supabase",
+    "category": "auth",
+    "tags": [
+      "baas",
+      "firebase-alternatif",
+      "auth",
+      "postgresql",
+      "realtime"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Firebase'e açık kaynaklı alternatif, auth, gerçek zamanlı ve depolama sunan BaaS gerektiğinde.",
+    "how_to_use": "packages/supabase-js/README.md'den createClient() API'sini incele.",
+    "related": [
+      146,
+      81,
+      135
+    ],
+    "alternatives": [
+      146
+    ],
+    "install_command": "npm install @supabase/supabase-js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 149,
+    "name": "ffmpegwasm/ffmpeg.wasm",
+    "url": "https://github.com/ffmpegwasm/ffmpeg.wasm",
+    "category": "medya-isleme",
+    "tags": [
+      "ffmpeg",
+      "video",
+      "wasm",
+      "format-donusturme",
+      "tarayici"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "FFmpeg video ve ses işleme motorunu WebAssembly ile tarayıcıda çalıştırmak gerektiğinde.",
+    "how_to_use": "packages/ffmpeg/README.md'den FFmpeg.load() ve ffmpeg.run() API'sini incele.",
+    "related": [
+      57,
+      59,
+      60,
+      168
+    ],
+    "alternatives": [],
+    "install_command": "npm install @ffmpeg/ffmpeg",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 150,
+    "name": "webrtc/adapter",
+    "url": "https://github.com/webrtc/adapter",
+    "category": "medya-isleme",
+    "tags": [
+      "webrtc",
+      "polyfill",
+      "cross-browser",
+      "chrome",
+      "firefox",
+      "safari"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Farklı tarayıcıların WebRTC uygulamalarındaki tutarsızlıklarını gidermek gerektiğinde.",
+    "how_to_use": "src/ klasöründen adapter.js shim'ini ve tarayıcı farklılıklarını incele.",
+    "related": [
+      113,
+      114,
+      116
+    ],
+    "alternatives": [],
+    "install_command": "npm install webrtc-adapter",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 151,
+    "name": "eslint/eslint",
+    "url": "https://github.com/eslint/eslint",
+    "category": "kod-kalitesi",
+    "tags": [
+      "lint",
+      "javascript",
+      "typescript",
+      "statik-analiz",
+      "bug"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Koddaki sözdizimi hatalarını ve potansiyel bug'ları yazım aşamasında yakalamak gerektiğinde.",
+    "how_to_use": "docs/ klasöründen .eslintrc.js yapısını ve rules sistemini incele.",
+    "related": [
+      152,
+      153
+    ],
+    "alternatives": [],
+    "install_command": "npm install eslint",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 152,
+    "name": "prettier/prettier",
+    "url": "https://github.com/prettier/prettier",
+    "category": "kod-kalitesi",
+    "tags": [
+      "format",
+      "prettier",
+      "stil",
+      "standard",
+      "opinionated"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Ekip içindeki kod yazım stillerindeki farklılıkları tek standarda oturtmak gerektiğinde.",
+    "how_to_use": "docs/ klasöründen .prettierrc.js yapısını incele.",
+    "related": [
+      151,
+      153
+    ],
+    "alternatives": [],
+    "install_command": "npm install prettier",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 153,
+    "name": "lint-staged/lint-staged",
+    "url": "https://github.com/lint-staged/lint-staged",
+    "category": "kod-kalitesi",
+    "tags": [
+      "lint",
+      "staged",
+      "commit",
+      "git",
+      "pre-commit"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Git commit öncesi sadece değişen dosyalarda Linter ve Prettier çalıştırmak gerektiğinde.",
+    "how_to_use": "README'deki .lintstagedrc.js yapısını incele.",
+    "related": [
+      151,
+      152,
+      154
+    ],
+    "alternatives": [],
+    "install_command": "npm install lint-staged",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 154,
+    "name": "typicode/husky",
+    "url": "https://github.com/typicode/husky",
+    "category": "kod-kalitesi",
+    "tags": [
+      "git",
+      "hooks",
+      "commit",
+      "otomasyon",
+      "pre-push"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Git kancalarını yönetmeyi kolaylaştırmak, commit kurallarını otomatikleştirmek gerektiğinde.",
+    "how_to_use": "README'deki .husky/ klasör yapısını ve pre-commit/pre-push hook'larını incele.",
+    "related": [
+      153
+    ],
+    "alternatives": [],
+    "install_command": "npm install husky",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 155,
+    "name": "GoogleChrome/workbox",
+    "url": "https://github.com/GoogleChrome/workbox",
+    "category": "pwa",
+    "tags": [
+      "service-worker",
+      "pwa",
+      "offline",
+      "cache",
+      "google"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Web sitelerinin çevrimdışı çalışmasını ve mobil uygulama gibi davranmasını sağlamak gerektiğinde.",
+    "how_to_use": "packages/workbox-build/ ve docs/ klasöründen precaching ve routing stratejilerini incele.",
+    "related": [
+      65,
+      156
+    ],
+    "alternatives": [],
+    "install_command": "npm install workbox-webpack-plugin",
+    "peer_dependencies": [
+      "webpack"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 156,
+    "name": "BuilderIO/partytown",
+    "url": "https://github.com/BuilderIO/partytown",
+    "category": "pwa",
+    "tags": [
+      "performans",
+      "web-worker",
+      "third-party",
+      "analytics"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Google Analytics gibi üçüncü taraf kodları ana iş parçacığından Web Worker'a taşımak gerektiğinde.",
+    "how_to_use": "packages/partytown/README.md'den @partytown/react kullanımını incele.",
+    "related": [
+      97,
+      65
+    ],
+    "alternatives": [],
+    "install_command": "npm install @builder.io/partytown",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 157,
+    "name": "fkhadra/react-toastify",
+    "url": "https://github.com/fkhadra/react-toastify",
+    "category": "bildirimler",
+    "tags": [
+      "toast",
+      "bildirim",
+      "react",
+      "animasyon",
+      "ozellestirilebilir"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Projelere saniyeler içinde şık toast bildirimleri eklemek gerektiğinde.",
+    "how_to_use": "src/ ve docs/ klasöründen ToastContainer ve toast() API'sini incele.",
+    "related": [
+      158,
+      159,
+      160
+    ],
+    "alternatives": [
+      159
+    ],
+    "install_command": "npm install react-toastify",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 158,
+    "name": "sweetalert2/sweetalert2",
+    "url": "https://github.com/sweetalert2/sweetalert2",
+    "category": "bildirimler",
+    "tags": [
+      "modal",
+      "alert",
+      "confirm",
+      "popup",
+      "diyalog"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Tarayıcının varsayılan alert() pencereleri yerine harika tasarımlı modallar gerektiğinde.",
+    "how_to_use": "README'deki Swal.fire() API'sini incele.",
+    "related": [
+      157,
+      160
+    ],
+    "alternatives": [],
+    "install_command": "npm install sweetalert2",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 159,
+    "name": "emilkowalski/sonner",
+    "url": "https://github.com/emilkowalski/sonner",
+    "category": "bildirimler",
+    "tags": [
+      "toast",
+      "react",
+      "minimal",
+      "performans",
+      "modern"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "React için son derece performanslı, minimalist modern toast bildirimleri gerektiğinde.",
+    "how_to_use": "src/ ve README'den <Toaster /> ve toast() API'sini incele.",
+    "related": [
+      15,
+      157
+    ],
+    "alternatives": [
+      157
+    ],
+    "install_command": "npm install sonner",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 8,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 5
+  },
+  {
+    "id": 160,
+    "name": "reactjs/react-modal",
+    "url": "https://github.com/reactjs/react-modal",
+    "category": "bildirimler",
+    "tags": [
+      "modal",
+      "popup",
+      "react",
+      "erisilebilir",
+      "odak-yonetimi"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Ekran okuyucular ile tam uyumlu, yönetimi kolay açılır pencereler gerektiğinde.",
+    "how_to_use": "docs/ ve examples/ klasöründen <Modal /> bileşenini, isOpen prop'unu incele.",
+    "related": [
+      76,
+      157
+    ],
+    "alternatives": [
+      76
+    ],
+    "install_command": "npm install react-modal",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 161,
+    "name": "unocss/unocss",
+    "url": "https://github.com/unocss/unocss",
+    "category": "css-motorlari",
+    "tags": [
+      "css",
+      "atomic",
+      "tailwind-alternatif",
+      "aninda",
+      "esnek"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Tailwind'in felsefesini bir adım öteye taşıyan, anında çalışan atomik CSS motoru gerektiğinde.",
+    "how_to_use": "packages/unocss/README.md ve docs/ klasöründen uno.config.ts yapısını incele.",
+    "related": [
+      16,
+      63
+    ],
+    "alternatives": [
+      16
+    ],
+    "install_command": "npm install unocss",
+    "peer_dependencies": [
+      "vite"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 162,
+    "name": "linariajs/linaria",
+    "url": "https://github.com/linariajs/linaria",
+    "category": "css-motorlari",
+    "tags": [
+      "css-in-js",
+      "zero-runtime",
+      "build-time",
+      "babel"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Geliştirme aşamasında CSS-in-JS yazıp derleme sonucunda sıfır maliyetli statik CSS üretmek gerektiğinde.",
+    "how_to_use": "docs/ klasöründen styled() API'sini ve babel/webpack kurulumunu incele.",
+    "related": [
+      40,
+      77,
+      78,
+      163
+    ],
+    "alternatives": [
+      40,
+      77,
+      78
+    ],
+    "install_command": "npm install @linaria/core @linaria/react",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 163,
+    "name": "css-modules/css-modules",
+    "url": "https://github.com/css-modules/css-modules",
+    "category": "css-motorlari",
+    "tags": [
+      "css",
+      "modules",
+      "scoped",
+      "kapsulleme"
+    ],
+    "type": "reference",
+    "priority": "medium",
+    "when_to_use": "CSS sınıflarını yerel olarak kapsülleyerek büyük projelerde çakışmaları önlemek gerektiğinde.",
+    "how_to_use": "README ve docs/ klasöründen *.module.css yapısını ve composes özelliğini incele.",
+    "related": [
+      40,
+      162
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 5,
+      "rsc_compat": 5,
+      "bundle_cost": 10,
+      "typescript": 5,
+      "maintenance": 7,
+      "learning_curve": 7,
+      "community": 7
+    }
+  },
+  {
+    "id": 164,
+    "name": "strapi/strapi",
+    "url": "https://github.com/strapi/strapi",
+    "category": "headless-cms",
+    "tags": [
+      "cms",
+      "headless",
+      "api",
+      "nodejs",
+      "rest",
+      "graphql"
+    ],
+    "type": "tool",
+    "priority": "high",
+    "when_to_use": "Frontend projeleri için kendi API'sini saniyeler içinde oluşturan lider açık kaynaklı Headless CMS gerektiğinde.",
+    "how_to_use": "packages/core/ ve docs/ klasöründen content-type builder ve API endpoints'ları incele.",
+    "related": [
+      120,
+      165
+    ],
+    "alternatives": [
+      120,
+      165
+    ],
+    "install_command": "npx create-strapi-app",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 165,
+    "name": "sanity-io/sanity",
+    "url": "https://github.com/sanity-io/sanity",
+    "category": "headless-cms",
+    "tags": [
+      "cms",
+      "headless",
+      "react",
+      "gercek-zamanli"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "İçeriği gerçek zamanlı işbirliği ile yönetmek, arayüzü React tabanlı ve özelleştirilebilir CMS gerektiğinde.",
+    "how_to_use": "packages/sanity/ ve docs/ klasöründen sanity.config.ts ve GROQ sorgularını incele.",
+    "related": [
+      120,
+      164
+    ],
+    "alternatives": [
+      164
+    ],
+    "install_command": "npm install sanity",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 166,
+    "name": "apollographql/apollo-client",
+    "url": "https://github.com/apollographql/apollo-client",
+    "category": "graphql-istemci",
+    "tags": [
+      "graphql",
+      "apollo",
+      "cache",
+      "state",
+      "istemci",
+      "react"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "GraphQL API'leri ile çalışırken veri çekme, önbelleğe alma ve yerel state yönetimini tek çatıda toplamak gerektiğinde.",
+    "how_to_use": "packages/client/ ve docs/ klasöründen ApolloClient, InMemoryCache ve useQuery hook'unu incele.",
+    "related": [
+      84,
+      167,
+      36
+    ],
+    "alternatives": [
+      167
+    ],
+    "install_command": "npm install @apollo/client",
+    "peer_dependencies": [
+      "react",
+      "graphql"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 42
+  },
+  {
+    "id": 167,
+    "name": "urql-graphql/urql",
+    "url": "https://github.com/urql-graphql/urql",
+    "category": "graphql-istemci",
+    "tags": [
+      "graphql",
+      "istemci",
+      "hafif",
+      "moduler",
+      "eklenti"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Apollo'ya kıyasla daha hafif, modüler ve eklenti tabanlı bir GraphQL istemcisi gerektiğinde.",
+    "how_to_use": "packages/react-urql/README.md'den createClient ve useQuery hook'unu incele.",
+    "related": [
+      84,
+      166
+    ],
+    "alternatives": [
+      166
+    ],
+    "install_command": "npm install urql",
+    "peer_dependencies": [
+      "react",
+      "graphql"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 168,
+    "name": "rustwasm/wasm-pack",
+    "url": "https://github.com/rustwasm/wasm-pack",
+    "category": "wasm",
+    "tags": [
+      "wasm",
+      "webassembly",
+      "rust",
+      "build",
+      "performans"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "C/C++ veya Rust'ta yazılmış kodları derleyip frontend'de JavaScript modülü gibi kullanmak gerektiğinde.",
+    "how_to_use": "docs/ klasöründen wasm-pack build komutunu ve Cargo.toml yapılandırmasını incele.",
+    "related": [
+      149,
+      169,
+      136
+    ],
+    "alternatives": [],
+    "install_command": "cargo install wasm-pack",
+    "peer_dependencies": [
+      "rust"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 169,
+    "name": "yewstack/yew",
+    "url": "https://github.com/yewstack/yew",
+    "category": "wasm",
+    "tags": [
+      "rust",
+      "wasm",
+      "framework",
+      "frontend",
+      "performans"
+    ],
+    "type": "framework",
+    "priority": "low",
+    "when_to_use": "Rust dili ile tarayıcıda çalışan, WebAssembly tabanlı frontend framework'ü gerektiğinde.",
+    "how_to_use": "packages/yew/ ve examples/ klasöründen yew::Component ve html! makro yapısını incele.",
+    "related": [
+      168
+    ],
+    "alternatives": [],
+    "install_command": "cargo install trunk",
+    "peer_dependencies": [
+      "rust",
+      "wasm-pack"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 8,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 8,
+      "maintenance": 8,
+      "learning_curve": 5,
+      "community": 8
+    }
+  },
+  {
+    "id": 170,
+    "name": "TanStack/virtual",
+    "url": "https://github.com/TanStack/virtual",
+    "category": "sanallastirma",
+    "tags": [
+      "virtualization",
+      "headless",
+      "performans",
+      "buyuk-liste"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Binlerce satırlık veri listelerini sadece görünen kısımlarını render ederek yönetmek gerektiğinde.",
+    "how_to_use": "packages/react-virtual/README.md'den useVirtualizer hook'unu incele.",
+    "related": [
+      34,
+      171
+    ],
+    "alternatives": [
+      171
+    ],
+    "install_command": "npm install @tanstack/react-virtual",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 8,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 5
+  },
+  {
+    "id": 171,
+    "name": "bvaughn/react-window",
+    "url": "https://github.com/bvaughn/react-window",
+    "category": "sanallastirma",
+    "tags": [
+      "virtualization",
+      "react",
+      "liste",
+      "grid",
+      "performans"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Devasa listeleri ve grid yapılarını minimum DOM elementi kullanarak render etmek gerektiğinde.",
+    "how_to_use": "README'deki FixedSizeList ve VariableSizeList bileşenlerini incele.",
+    "related": [
+      170
+    ],
+    "alternatives": [
+      170
+    ],
+    "install_command": "npm install react-window",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 172,
+    "name": "lovell/sharp",
+    "url": "https://github.com/lovell/sharp",
+    "category": "gorsel-optimizasyon",
+    "tags": [
+      "gorsel",
+      "optimizasyon",
+      "webp",
+      "avif",
+      "resize",
+      "nodejs"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Derleme aşamasında devasa görselleri WebP/AVIF gibi modern formatlara dönüştürmek gerektiğinde.",
+    "how_to_use": "docs/ klasöründen sharp() API'sini, resize() ve toFormat() metodlarını incele.",
+    "related": [
+      173
+    ],
+    "alternatives": [],
+    "install_command": "npm install sharp",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 173,
+    "name": "thumbor/thumbor",
+    "url": "https://github.com/thumbor/thumbor",
+    "category": "gorsel-optimizasyon",
+    "tags": [
+      "gorsel",
+      "on-demand",
+      "resize",
+      "crop",
+      "yuz-tanima"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Görselleri anında yeniden boyutlandıran ve yüz tanıma ile otomatik odaklama yapan sunucu gerektiğinde.",
+    "how_to_use": "docs/ klasöründen thumbor.conf yapılandırmasını ve URL tabanlı API'yi incele.",
+    "related": [
+      172
+    ],
+    "alternatives": [],
+    "install_command": "pip install thumbor",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  },
+  {
+    "id": 174,
+    "name": "xyflow/xyflow",
+    "url": "https://github.com/xyflow/xyflow",
+    "category": "node-editor",
+    "tags": [
+      "react",
+      "node-editor",
+      "akis-semasi",
+      "gorsel-programlama"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Düğüm tabanlı arayüzler, interaktif akış şemaları ve görsel programlama araçları oluşturmak gerektiğinde.",
+    "how_to_use": "packages/react/README.md ve examples/ klasöründen <ReactFlow /> bileşenini incele.",
+    "related": [
+      175,
+      176
+    ],
+    "alternatives": [],
+    "install_command": "npm install @xyflow/react",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 175,
+    "name": "craftzdog/craft.js",
+    "url": "https://github.com/craftzdog/craft.js",
+    "category": "node-editor",
+    "tags": [
+      "page-builder",
+      "surukle-birak",
+      "react",
+      "editor"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Kullanıcıların bileşenleri sürükleyip bırakarak kendi sayfalarını tasarlayabileceği arayüz gerektiğinde.",
+    "how_to_use": "packages/core/ ve docs/ klasöründen Editor, Frame ve Element yapısını incele.",
+    "related": [
+      143,
+      174,
+      176
+    ],
+    "alternatives": [],
+    "install_command": "npm install @craftjs/core",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 176,
+    "name": "excalidraw/excalidraw",
+    "url": "https://github.com/excalidraw/excalidraw",
+    "category": "node-editor",
+    "tags": [
+      "beyaz-tahta",
+      "cizim",
+      "diyagram",
+      "collaborative"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Elle çizilmiş hissi veren diyagramlar ve işbirliğine dayalı sanal beyaz tahta gerektiğinde.",
+    "how_to_use": "src/packages/excalidraw/ ve docs/ klasöründen <Excalidraw /> bileşenini incele.",
+    "related": [
+      174,
+      197
+    ],
+    "alternatives": [
+      197
+    ],
+    "install_command": "npm install @excalidraw/excalidraw",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 177,
+    "name": "schteppe/cannon.js",
+    "url": "https://github.com/schteppe/cannon.js",
+    "category": "fizik-motorlari",
+    "tags": [
+      "3d",
+      "fizik",
+      "yercekimi",
+      "carpisma",
+      "threejs"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Three.js ile oluşturulan 3D sahnelerde fizik simülasyonu gerektiğinde.",
+    "how_to_use": "src/ ve examples/ klasöründen World, Body ve Material sınıflarını incele.",
+    "related": [
+      12,
+      13,
+      178,
+      194
+    ],
+    "alternatives": [
+      194
+    ],
+    "install_command": "npm install cannon-es",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 178,
+    "name": "liabru/matter-js",
+    "url": "https://github.com/liabru/matter-js",
+    "category": "fizik-motorlari",
+    "tags": [
+      "2d",
+      "fizik",
+      "dom",
+      "canvas",
+      "etkilesim"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "2D DOM veya Canvas elementlerine fizik kurallarını uygulamak gerektiğinde.",
+    "how_to_use": "src/ ve examples/ klasöründen Engine, World ve Bodies API'sini incele.",
+    "related": [
+      177
+    ],
+    "alternatives": [],
+    "install_command": "npm install matter-js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 179,
+    "name": "mrdoob/stats.js",
+    "url": "https://github.com/mrdoob/stats.js",
+    "category": "fizik-motorlari",
+    "tags": [
+      "performans",
+      "fps",
+      "monitor",
+      "threejs",
+      "render"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Yoğun animasyonlu ve 3D projelerde FPS ve bellek kullanımını canlı izlemek gerektiğinde.",
+    "how_to_use": "README'deki Stats() sınıfını ve begin()/end() metotlarını incele.",
+    "related": [
+      12,
+      13,
+      65
+    ],
+    "alternatives": [],
+    "install_command": "npm install stats.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 180,
+    "name": "jquense/react-big-calendar",
+    "url": "https://github.com/jquense/react-big-calendar",
+    "category": "takvim",
+    "tags": [
+      "takvim",
+      "etkinlik",
+      "google-calendar",
+      "surukle-birak",
+      "react"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Google Calendar benzeri, etkinlik yönetimi ve sürükle-bırak desteği sunan takvim gerektiğinde.",
+    "how_to_use": "src/ ve examples/ klasöründen Calendar bileşenini ve event prop yapısını incele.",
+    "related": [
+      143,
+      98
+    ],
+    "alternatives": [],
+    "install_command": "npm install react-big-calendar moment",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 181,
+    "name": "tensorflow/tfjs-models",
+    "url": "https://github.com/tensorflow/tfjs-models",
+    "category": "tarayici-ai",
+    "tags": [
+      "tensorflowjs",
+      "modeller",
+      "yuz-tanima",
+      "poz-tahmini"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Sunucuya ihtiyaç duymadan tarayıcıda çalışan önceden eğitilmiş AI modelleri gerektiğinde.",
+    "how_to_use": "Her modelin kendi README'sini incele. face-landmarks-detection, hand-pose-detection.",
+    "related": [
+      54,
+      182,
+      183
+    ],
+    "alternatives": [
+      182
+    ],
+    "install_command": "npm install @tensorflow-models/face-landmarks-detection",
+    "peer_dependencies": [
+      "@tensorflow/tfjs-core"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 182,
+    "name": "ml5js/ml5-library",
+    "url": "https://github.com/ml5js/ml5-library",
+    "category": "tarayici-ai",
+    "tags": [
+      "makine-ogrenmesi",
+      "yaratici",
+      "sanat",
+      "tensorflowjs"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Web üzerinde makine öğrenmesini sanatçılar ve yaratıcı kodlayıcılar için erişilebilir kılmak gerektiğinde.",
+    "how_to_use": "docs/ ve examples/ klasöründen ml5.imageClassifier() gibi üst düzey API'leri incele.",
+    "related": [
+      54,
+      181,
+      183,
+      191
+    ],
+    "alternatives": [
+      181
+    ],
+    "install_command": "npm install ml5",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 183,
+    "name": "BrainJS/brain.js",
+    "url": "https://github.com/BrainJS/brain.js",
+    "category": "tarayici-ai",
+    "tags": [
+      "sinir-agi",
+      "javascript",
+      "gpu",
+      "ogrenme",
+      "hafif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Frontend projelerinde basit sinir ağları eğitmek ve çalıştırmak gerektiğinde.",
+    "how_to_use": "README'deki brain.NeuralNetwork() API'sini, train() ve run() metotlarını incele.",
+    "related": [
+      54,
+      181
+    ],
+    "alternatives": [],
+    "install_command": "npm install brain.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 184,
+    "name": "mckaywrigley/chatbot-ui",
+    "url": "https://github.com/mckaywrigley/chatbot-ui",
+    "category": "tarayici-ai",
+    "tags": [
+      "chatgpt",
+      "arayuz",
+      "sohbet",
+      "ai",
+      "açık-kaynak",
+      "nextjs"
+    ],
+    "type": "reference",
+    "priority": "high",
+    "when_to_use": "Projelere saniyeler içinde entegre edilebilecek, modern açık kaynaklı AI sohbet arayüzü gerektiğinde.",
+    "how_to_use": "app/ ve components/ klasöründen sohbet arayüzünün yapısını ve prompt yönetimini incele.",
+    "related": [
+      52,
+      53,
+      185
+    ],
+    "alternatives": [],
+    "install_command": null,
+    "peer_dependencies": [
+      "next",
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 5,
+      "rsc_compat": 5,
+      "bundle_cost": 10,
+      "typescript": 5,
+      "maintenance": 7,
+      "learning_curve": 7,
+      "community": 7
+    }
+  },
+  {
+    "id": 185,
+    "name": "ollama/ollama-js",
+    "url": "https://github.com/ollama/ollama-js",
+    "category": "tarayici-ai",
+    "tags": [
+      "ollama",
+      "llm",
+      "yerel",
+      "llama",
+      "mistral",
+      "istemci"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Yerel makinede veya kapalı sunucularda çalışan açık kaynaklı dil modellerini frontend'e bağlamak gerektiğinde.",
+    "how_to_use": "README'deki ollama.chat() ve ollama.generate() API'lerini, streaming seçeneklerini incele.",
+    "related": [
+      52,
+      53,
+      184
+    ],
+    "alternatives": [],
+    "install_command": "npm install ollama",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 186,
+    "name": "BabylonJS/Babylon.js",
+    "url": "https://github.com/BabylonJS/Babylon.js",
+    "category": "3d-ar",
+    "tags": [
+      "3d",
+      "webgl",
+      "webgpu",
+      "oyun",
+      "kurumsal",
+      "render"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Three.js'in en büyük alternatifi, karmaşık tarayıcı oyunları ve kurumsal 3D uygulamalar gerektiğinde.",
+    "how_to_use": "packages/ ve docs/ klasöründen Engine, Scene ve Mesh API'sini incele.",
+    "related": [
+      12,
+      13,
+      68,
+      187
+    ],
+    "alternatives": [
+      12
+    ],
+    "install_command": "npm install @babylonjs/core",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 3,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 312
+  },
+  {
+    "id": 187,
+    "name": "gkjohnson/three-mesh-bvh",
+    "url": "https://github.com/gkjohnson/three-mesh-bvh",
+    "category": "3d-ar",
+    "tags": [
+      "threejs",
+      "carpisma",
+      "raycasting",
+      "optimizasyon",
+      "bvh"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Three.js sahnelerinde karmaşık çarpışma algılamasını hızlandırmak gerektiğinde.",
+    "how_to_use": "README ve src/ klasöründen MeshBVH ve acceleratedRaycast kullanımını incele.",
+    "related": [
+      12,
+      13,
+      177
+    ],
+    "alternatives": [],
+    "install_command": "npm install three-mesh-bvh",
+    "peer_dependencies": [
+      "three"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 188,
+    "name": "AR-js-org/AR.js",
+    "url": "https://github.com/AR-js-org/AR.js",
+    "category": "3d-ar",
+    "tags": [
+      "ar",
+      "augmented-reality",
+      "marker",
+      "konum",
+      "60fps"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarayıcıda kamera erişimiyle işaretçi veya konum tabanlı Artırılmış Gerçeklik deneyimleri gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen <a-marker> ve <a-entity> bileşenlerini incele.",
+    "related": [
+      44,
+      46,
+      189
+    ],
+    "alternatives": [],
+    "install_command": "npm install ar.js",
+    "peer_dependencies": [
+      "three"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 189,
+    "name": "jeeliz/jeelizFaceFilter",
+    "url": "https://github.com/jeeliz/jeelizFaceFilter",
+    "category": "3d-ar",
+    "tags": [
+      "yuz-takibi",
+      "ar",
+      "filtre",
+      "kamera",
+      "webgl",
+      "hafif"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Tarayıcı kamerasıyla anlık yüz takibi, 3D maskeleme ve AR filtreleri uygulamak gerektiğinde.",
+    "how_to_use": "README ve helpers/ klasöründen JEEFACEFILTERAPI.init() yapısını incele.",
+    "related": [
+      44,
+      188,
+      181
+    ],
+    "alternatives": [],
+    "install_command": "npm install facefilter",
+    "peer_dependencies": [
+      "three"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 190,
+    "name": "pmndrs/leva",
+    "url": "https://github.com/pmndrs/leva",
+    "category": "3d-ar",
+    "tags": [
+      "gui",
+      "kontrol-paneli",
+      "debug",
+      "3d",
+      "react"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "3D sahnelerin veya animasyonların değişkenlerini canlı olarak değiştirmek için kontrol paneli gerektiğinde.",
+    "how_to_use": "packages/leva/README.md'den useControls() hook'unu ve folder yapısını incele.",
+    "related": [
+      13,
+      12,
+      42
+    ],
+    "alternatives": [],
+    "install_command": "npm install leva",
+    "peer_dependencies": [
+      "react",
+      "react-dom",
+      "three"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 191,
+    "name": "processing/p5.js",
+    "url": "https://github.com/processing/p5.js",
+    "category": "yaratici-kodlama",
+    "tags": [
+      "yaratici-kodlama",
+      "sanat",
+      "canvas",
+      "generative-art",
+      "egitim"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Sanatçılar ve tasarımcılar için kod yazarak interaktif görsel sanatlar üretmek gerektiğinde.",
+    "how_to_use": "src/ ve docs/ klasöründen setup(), draw() döngüsünü ve createCanvas() API'sini incele.",
+    "related": [
+      192,
+      182
+    ],
+    "alternatives": [],
+    "install_command": "npm install p5",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 3,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 184
+  },
+  {
+    "id": 192,
+    "name": "paperjs/paper.js",
+    "url": "https://github.com/paperjs/paper.js",
+    "category": "yaratici-kodlama",
+    "tags": [
+      "vektor",
+      "svg",
+      "cizim",
+      "egri",
+      "manipulasyon",
+      "canvas"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Vektörel grafikleri kod üzerinden esnek bir şekilde manipüle etmek gerektiğinde.",
+    "how_to_use": "src/ ve examples/ klasöründen paper.Path ve paper.CompoundPath sınıflarını incele.",
+    "related": [
+      191,
+      193
+    ],
+    "alternatives": [],
+    "install_command": "npm install paper",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 193,
+    "name": "josdejong/mathjs",
+    "url": "https://github.com/josdejong/mathjs",
+    "category": "yaratici-kodlama",
+    "tags": [
+      "matematik",
+      "matris",
+      "trigonometri",
+      "karmasik",
+      "hesaplama"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "Karmaşık matris hesaplamaları, trigonometrik işlemler ve ileri matematiksel fonksiyonlar gerektiğinde.",
+    "how_to_use": "docs/ klasöründen math.matrix(), math.complex() ve aritmetik fonksiyonları incele.",
+    "related": [
+      191,
+      194
+    ],
+    "alternatives": [],
+    "install_command": "npm install mathjs",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 194,
+    "name": "kripken/ammo.js",
+    "url": "https://github.com/kripken/ammo.js",
+    "category": "yaratici-kodlama",
+    "tags": [
+      "fizik",
+      "3d",
+      "bullet",
+      "wasm",
+      "carpisma",
+      "simulasyon"
+    ],
+    "type": "library",
+    "priority": "medium",
+    "when_to_use": "C++ Bullet fizik motorunun tarayıcıda çalışması, ağır çarpışma testleri gerektiğinde.",
+    "how_to_use": "README ve examples/ klasöründen Ammo.btDiscreteDynamicsWorld ve rigid body kurulumunu incele.",
+    "related": [
+      177,
+      12
+    ],
+    "alternatives": [
+      177
+    ],
+    "install_command": "npm install ammo.js",
+    "peer_dependencies": [
+      "three"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 195,
+    "name": "kociunda/kute.js",
+    "url": "https://github.com/kociunda/kute.js",
+    "category": "yaratici-kodlama",
+    "tags": [
+      "svg",
+      "morphing",
+      "animasyon",
+      "performans",
+      "bagimsiz"
+    ],
+    "type": "library",
+    "priority": "low",
+    "when_to_use": "Karmaşık SVG yollarını bir şekilden diğerine pürüzsüzce dönüştürmek (SVG morphing) gerektiğinde.",
+    "how_to_use": "README'deki KUTE.fromTo() API'sini ve svgMorph eklentisini incele.",
+    "related": [
+      5,
+      21
+    ],
+    "alternatives": [
+      5
+    ],
+    "install_command": "npm install kute.js",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 196,
+    "name": "plouc/nivo",
+    "url": "https://github.com/plouc/nivo",
+    "category": "studyo-standartlari",
+    "tags": [
+      "react",
+      "d3",
+      "grafik",
+      "dashboard",
+      "estetik",
+      "sunum"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "D3.js'in veri hesaplama gücünü React bileşenleriyle birleştiren profesyonel grafikler gerektiğinde.",
+    "how_to_use": "packages/nivo/ ve storybook/ klasöründen ResponsiveBar, ResponsivePie bileşenlerini incele.",
+    "related": [
+      18,
+      71,
+      197
+    ],
+    "alternatives": [
+      71
+    ],
+    "install_command": "npm install @nivo/core @nivo/bar @nivo/pie",
+    "peer_dependencies": [
+      "react"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 5,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 68
+  },
+  {
+    "id": 197,
+    "name": "tldraw/tldraw",
+    "url": "https://github.com/tldraw/tldraw",
+    "category": "studyo-standartlari",
+    "tags": [
+      "beyaz-tahta",
+      "cizim",
+      "collaboration",
+      "açık-kaynak"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Stüdyonun kendi işbirliği araçlarını üretmesi veya projelere interaktif tahta eklemesi gerektiğinde.",
+    "how_to_use": "apps/dotcom/ ve docs/ klasöründen <Tldraw /> bileşenini ve store API'sini incele.",
+    "related": [
+      176,
+      174
+    ],
+    "alternatives": [
+      176
+    ],
+    "install_command": "npm install tldraw",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 6,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    }
+  },
+  {
+    "id": 198,
+    "name": "floating-ui/floating-ui",
+    "url": "https://github.com/floating-ui/floating-ui",
+    "category": "studyo-standartlari",
+    "tags": [
+      "pozisyonlama",
+      "tooltip",
+      "popover",
+      "dropdown",
+      "matematik"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Açılır menüler, tooltip ve popover'ların ekran sınırlarına çarpmadan doğru konumda kalması gerektiğinde.",
+    "how_to_use": "packages/react/README.md'den useFloating() hook'unu, shift ve flip middleware'lerini incele.",
+    "related": [
+      15,
+      76
+    ],
+    "alternatives": [],
+    "install_command": "npm install @floating-ui/react",
+    "peer_dependencies": [
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 8
+  },
+  {
+    "id": 199,
+    "name": "pacocoursey/next-themes",
+    "url": "https://github.com/pacocoursey/next-themes",
+    "category": "studyo-standartlari",
+    "tags": [
+      "nextjs",
+      "tema",
+      "dark-mode",
+      "light-mode",
+      "flicker",
+      "ssr"
+    ],
+    "type": "library",
+    "priority": "high",
+    "when_to_use": "Next.js projelerinde tema yanıp sönmesi problemini çözen Dark/Light/Sistem modu geçişleri gerektiğinde.",
+    "how_to_use": "README'deki <ThemeProvider> ve useTheme() hook'unu incele.",
+    "related": [
+      117,
+      15,
+      16
+    ],
+    "alternatives": [],
+    "install_command": "npm install next-themes",
+    "peer_dependencies": [
+      "next",
+      "react",
+      "react-dom"
+    ],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 7,
+      "rsc_compat": 6,
+      "bundle_cost": 9,
+      "typescript": 7,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 7
+    },
+    "bundle_kb_gzip": 3
+  },
+  {
+    "id": 200,
+    "name": "BuilderIO/mitosis",
+    "url": "https://github.com/BuilderIO/mitosis",
+    "category": "studyo-standartlari",
+    "tags": [
+      "cross-framework",
+      "derleyici",
+      "react",
+      "vue",
+      "svelte",
+      "angular"
+    ],
+    "type": "tool",
+    "priority": "medium",
+    "when_to_use": "Tek bir arayüz bileşenini yazıp otomatik olarak React, Vue, Svelte, Angular koduna çevirmek gerektiğinde.",
+    "how_to_use": "packages/core/ ve docs/ klasöründen useStore() ve component yapısını incele.",
+    "related": [
+      128,
+      129,
+      130
+    ],
+    "alternatives": [],
+    "install_command": "npm install @builder.io/mitosis",
+    "peer_dependencies": [],
+    "lifecycle": "active",
+    "scores": {
+      "ssr_compat": 6,
+      "rsc_compat": 6,
+      "bundle_cost": 7,
+      "typescript": 6,
+      "maintenance": 7,
+      "learning_curve": 6,
+      "community": 6
+    }
+  }
+]

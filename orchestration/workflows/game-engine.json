@@ -1,0 +1,29 @@
+{
+  "workflow": "game-engine",
+  "version": "1.0.0",
+  "description": "Tarayıcı tabanlı 2D oyun geliştirme. Phaser ile hızlı prototipleme, Excalibur ile TypeScript-first oyun motoru.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 66,
+      "name": "Phaser Oyun Motoru",
+      "purpose": "Hızlı 2D oyun prototipi için Phaser kur.",
+      "instruction": "photonstorm/phaser reposuna git. Game config oluştur: renderer, fizik, sahne. Scene lifecycle'ını (preload, create, update) öğren. Sprite, tween ve fizik gövdeleri ekle.",
+      "expected_output": "Çalışan Phaser sahnesi, fizik destekli hareketli sprite."
+    },
+    {
+      "order": 2,
+      "tool_id": 67,
+      "name": "Excalibur TypeScript Oyunu",
+      "purpose": "Tip-güvenli oyun geliştirme için Excalibur kur.",
+      "instruction": "excaliburjs/Excalibur reposuna git. Engine ve Scene oluştur. Actor sınıfını genişlet. Collision grubu, tag sistemi ve kaynak yöneticisini yapılandır.",
+      "expected_output": "TypeScript sınıflarıyla yapılandırılmış Excalibur oyunu."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "workflow": "roadmap",
+  "version": "1.0.0",
+  "description": "Öğrenme yol haritası ve başlangıç kaynakları. Roadmap.sh, MDN ve JavaScript Algorithms ile temel kavramları öğren.",
+  "prerequisites": {
+    "framework": "Herhangi",
+    "language": "JavaScript/TypeScript",
+    "styling": "Herhangi",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 1,
+      "name": "Frontend Yol Haritası",
+      "purpose": "Hangi teknolojileri hangi sırayla öğreneceğini belirle.",
+      "instruction": "kamranahmedse/developer-roadmap reposuna git. frontend.md yol haritasını incele. Bilinen ve öğrenilecek konuları işaretle. Öğrenme öncelik sırasını belirle.",
+      "expected_output": "Kişiselleştirilmiş frontend öğrenme planı, öncelik sırası belli."
+    },
+    {
+      "order": 2,
+      "tool_id": 2,
+      "name": "MDN Referans Dokümantasyonu",
+      "purpose": "Web API'leri ve standartlar için birincil kaynak.",
+      "instruction": "mdn/content reposuna git. HTML, CSS, JavaScript referans bölümlerini yer imlerine ekle. Web API'leri için tarayıcı uyumluluk tablolarını kullan.",
+      "expected_output": "MDN yer imleri, sık kullanılan API referansları hazır."
+    },
+    {
+      "order": 3,
+      "tool_id": 4,
+      "name": "Algoritma Pratikleri",
+      "purpose": "Veri yapıları ve algoritmalarla problem çözme becerisi kazan.",
+      "instruction": "trekhleb/javascript-algorithms reposunu incele. Sıralama, arama ve dinamik programlama örneklerini çalıştır. Her algoritmayı kendi yaptığın test vakaları ile doğrula.",
+      "expected_output": "Temel algoritmaların JavaScript implementasyonları çalışır halde."
+    }
+  ]
+}

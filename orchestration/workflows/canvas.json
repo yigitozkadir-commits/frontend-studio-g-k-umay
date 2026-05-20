@@ -1,0 +1,37 @@
+{
+  "workflow": "canvas",
+  "version": "1.0.0",
+  "description": "Canvas tabanlı interaktif grafik uygulaması. Fabric.js ile çizim, Konva ile katmanlı grafik ve görüntü işleme içerir.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 85,
+      "name": "Fabric.js Canvas",
+      "purpose": "İnteraktif canvas nesneleri için Fabric.js kur.",
+      "instruction": "fabricjs/fabric.js reposuna git. Canvas başlat, temel şekiller (Rect, Circle, Text) ekle. Nesne seçme, taşıma, boyutlandırma olaylarını bağla. JSON serialize/deserialize öğren.",
+      "expected_output": "Sürüklenebilir/boyutlandırılabilir nesnelerle çalışan canvas."
+    },
+    {
+      "order": 2,
+      "tool_id": 86,
+      "name": "Konva Katman Sistemi",
+      "purpose": "Performanslı katmanlı grafik için Konva kur.",
+      "instruction": "konvajs/konva reposuna git. Stage, Layer, Group hiyerarşisini kur. react-konva entegrasyonu ekle. Animasyon ve Transformer bileşenini kullan.",
+      "expected_output": "Katmanlı Konva sahnesi, transformer ile nesne düzenleme."
+    },
+    {
+      "order": 3,
+      "tool_id": 87,
+      "name": "Görüntü Kırpma",
+      "purpose": "Kullanıcı görüntüsü yükleme ve kırpma için Cropper.js ekle.",
+      "instruction": "fengyuanchen/cropperjs reposuna git. React wrapper ile dosya yükleme, kırpma arayüzü oluştur. Canvas'a export et. Aspect ratio kilitleme seçeneği ekle.",
+      "expected_output": "Dosya yükleme, kırpma ve canvas'a aktarma akışı."
+    }
+  ]
+}

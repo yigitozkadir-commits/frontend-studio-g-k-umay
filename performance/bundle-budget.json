@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "title": "AI Frontend Studio — Performans Bütçesi",
+    "description": "Her aracın tarayıcıya eklediği yaklaşık KB miktarı (gzip sonrası). Proje bütçesi aşılmadan önce kontrol et.",
+    "unit": "KB (gzip)",
+    "last_updated": "2026-05"
+  },
+  "budgets": {
+    "landing-page": {
+      "target_total_kb": 250,
+      "target_lcp_ms": 1500,
+      "target_fid_ms": 50,
+      "target_cls": 0.05
+    },
+    "dashboard": {
+      "target_total_kb": 500,
+      "target_lcp_ms": 2000,
+      "target_fid_ms": 100,
+      "target_cls": 0.1
+    },
+    "3d-scene": {
+      "target_total_kb": 800,
+      "target_lcp_ms": 3000,
+      "target_fid_ms": 100,
+      "target_cls": 0.05
+    },
+    "ai-chat": {
+      "target_total_kb": 200,
+      "target_lcp_ms": 1800,
+      "target_fid_ms": 80,
+      "target_cls": 0.05
+    },
+    "animation": {
+      "target_total_kb": 350,
+      "target_lcp_ms": 2000,
+      "target_fid_ms": 100,
+      "target_cls": 0.05
+    },
+    "figma-to-code": {
+      "target_total_kb": 300,
+      "target_lcp_ms": 1800,
+      "target_fid_ms": 80,
+      "target_cls": 0.05
+    },
+    "testing": {
+      "target_total_kb": 100,
+      "target_lcp_ms": 1500,
+      "target_fid_ms": 50,
+      "target_cls": 0.05
+    },
+    "i18n": {
+      "target_total_kb": 250,
+      "target_lcp_ms": 1800,
+      "target_fid_ms": 80,
+      "target_cls": 0.1
+    },
+    "pwa": {
+      "target_total_kb": 220,
+      "target_lcp_ms": 1500,
+      "target_fid_ms": 50,
+      "target_cls": 0.05
+    },
+    "micro-frontend": {
+      "target_total_kb": 180,
+      "target_lcp_ms": 2000,
+      "target_fid_ms": 100,
+      "target_cls": 0.1
+    },
+    "headless-cms": {
+      "target_total_kb": 280,
+      "target_lcp_ms": 2000,
+      "target_fid_ms": 100,
+      "target_cls": 0.1
+    },
+    "wasm": {
+      "target_total_kb": 600,
+      "target_lcp_ms": 3000,
+      "target_fid_ms": 150,
+      "target_cls": 0.05
+    }
+  },
+  "packages": [
+    {
+      "id": 5,
+      "name": "gsap",
+      "gzip_kb": 27,
+      "treeshakeable": true,
+      "notes": "ScrollTrigger +8KB, sadece gerekli plugin'leri import et"
+    },
+    {
+      "id": 6,
+      "name": "framer-motion",
+      "gzip_kb": 43,
+      "treeshakeable": true,
+      "notes": "Lazy import ile bölünebilir. m.div kullanımı paketi küçültür"
+    },
+    {
+      "id": 7,
+      "name": "lottie-web",
+      "gzip_kb": 62,
+      "treeshakeable": false,
+      "notes": "Büyük! lottie-light kullan (canvas yok), -20KB tasarruf"
+    },
+    {
+      "id": 9,
+      "name": "locomotive-scroll",
+      "gzip_kb": 21,
+      "treeshakeable": false,
+      "notes": "Lenis ile değiştirmeyi düşün (7KB)"
+    },
+    {
+      "id": 12,
+      "name": "three",
+      "gzip_kb": 168,
+      "treeshakeable": true,
+      "notes": "Sadece kullanılan modülleri import et. Tüm three import etme."
+    },
+    {
+      "id": 13,
+      "name": "@react-three/fiber",
+      "gzip_kb": 38,
+      "treeshakeable": true,
+      "notes": "three ile birlikte gelir, ayrı sayılmaz"
+    },
+    {
+      "id": 15,
+      "name": "shadcn/ui",
+      "gzip_kb": 0,
+      "treeshakeable": true,
+      "notes": "Kod olarak eklenir, her bileşen ayrı. Kullanılmayan eklenmez."
+    },
+    {
+      "id": 16,
+      "name": "tailwindcss",
+      "gzip_kb": 8,
+      "treeshakeable": true,
+      "notes": "PurgeCSS sonrası sadece kullanılan class'lar kalır. ~8KB tipik"
+    },
+    {
+      "id": 17,
+      "name": "swiper",
+      "gzip_kb": 35,
+      "treeshakeable": true,
+      "notes": "Sadece kullanılan modülleri import et: swiper/react, swiper/modules"
+    },
+    {
+      "id": 18,
+      "name": "d3",
+      "gzip_kb": 51,
+      "treeshakeable": true,
+      "notes": "Asla 'd3' olarak import etme. Sadece ihtiyacın olan: 'd3-scale' vb."
+    },
+    {
+      "id": 22,
+      "name": "@react-spring/web",
+      "gzip_kb": 34,
+      "treeshakeable": true,
+      "notes": "Framer Motion'a alternatif, daha hafif"
+    },
+    {
+      "id": 28,
+      "name": "lenis",
+      "gzip_kb": 7,
+      "treeshakeable": false,
+      "notes": "Locomotive Scroll'dan çok daha hafif"
+    },
+    {
+      "id": 35,
+      "name": "zustand",
+      "gzip_kb": 3,
+      "treeshakeable": true,
+      "notes": "En hafif state yöneticilerinden biri"
+    },
+    {
+      "id": 36,
+      "name": "@tanstack/react-query",
+      "gzip_kb": 13,
+      "treeshakeable": true,
+      "notes": "Ağ katmanı için bu boyut makul"
+    },
+    {
+      "id": 42,
+      "name": "@react-three/drei",
+      "gzip_kb": 45,
+      "treeshakeable": true,
+      "notes": "Sadece kullandığın bileşenleri import et"
+    },
+    {
+      "id": 43,
+      "name": "postprocessing",
+      "gzip_kb": 52,
+      "treeshakeable": true,
+      "notes": "Sadece ihtiyaçsın efektleri import et"
+    },
+    {
+      "id": 52,
+      "name": "ai (vercel)",
+      "gzip_kb": 18,
+      "treeshakeable": true,
+      "notes": "Client ve server ayrı bundle'lara gider"
+    },
+    {
+      "id": 63,
+      "name": "vite",
+      "gzip_kb": 0,
+      "treeshakeable": false,
+      "notes": "Build tool, bundle'a girmez"
+    },
+    {
+      "id": 70,
+      "name": "chart.js",
+      "gzip_kb": 62,
+      "treeshakeable": true,
+      "notes": "Sadece kullanılan chart tiplerini import et"
+    },
+    {
+      "id": 71,
+      "name": "recharts",
+      "gzip_kb": 47,
+      "treeshakeable": true,
+      "notes": "React projelerinde chart.js'ye iyi alternatif"
+    },
+    {
+      "id": 83,
+      "name": "axios",
+      "gzip_kb": 14,
+      "treeshakeable": false,
+      "notes": "Native fetch kullanmayı düşün, sıfır KB"
+    },
+    {
+      "id": 89,
+      "name": "split-type",
+      "gzip_kb": 4,
+      "treeshakeable": false,
+      "notes": "Çok hafif metin bölme kütüphanesi"
+    },
+    {
+      "id": 98,
+      "name": "dayjs",
+      "gzip_kb": 7,
+      "treeshakeable": true,
+      "notes": "moment.js'nin 1/40'ı kadar"
+    },
+    {
+      "id": 99,
+      "name": "lodash",
+      "gzip_kb": 72,
+      "treeshakeable": true,
+      "notes": "ASLA 'lodash' import etme. 'lodash/debounce' gibi spesifik import et."
+    },
+    {
+      "id": 101,
+      "name": "react-hook-form",
+      "gzip_kb": 13,
+      "treeshakeable": true,
+      "notes": "Formik'ten çok daha hafif"
+    },
+    {
+      "id": 102,
+      "name": "zod",
+      "gzip_kb": 14,
+      "treeshakeable": true,
+      "notes": "TypeScript şema doğrulama için standart"
+    },
+    {
+      "id": 105,
+      "name": "lucide-react",
+      "gzip_kb": 1,
+      "treeshakeable": true,
+      "notes": "Her ikon ayrı import edilir, kullanılmayanlar bundle'a girmez"
+    },
+    {
+      "id": 117,
+      "name": "next",
+      "gzip_kb": 90,
+      "treeshakeable": true,
+      "notes": "App Router ile automatic code splitting çalışır"
+    },
+    {
+      "id": 134,
+      "name": "localforage",
+      "gzip_kb": 9,
+      "treeshakeable": false,
+      "notes": "IndexedDB wrapper, makul boyut"
+    },
+    {
+      "id": 141,
+      "name": "i18next",
+      "gzip_kb": 18,
+      "treeshakeable": true,
+      "notes": "react-i18next +6KB"
+    },
+    {
+      "id": 159,
+      "name": "sonner",
+      "gzip_kb": 5,
+      "treeshakeable": false,
+      "notes": "React Toastify'dan çok daha hafif"
+    },
+    {
+      "id": 166,
+      "name": "@apollo/client",
+      "gzip_kb": 42,
+      "treeshakeable": true,
+      "notes": "GraphQL kullanmıyorsan urql daha hafif (12KB)"
+    },
+    {
+      "id": 170,
+      "name": "@tanstack/react-virtual",
+      "gzip_kb": 5,
+      "treeshakeable": true,
+      "notes": "Büyük listeler için zorunlu, maliyete değer"
+    },
+    {
+      "id": 186,
+      "name": "@babylonjs/core",
+      "gzip_kb": 312,
+      "treeshakeable": true,
+      "notes": "Three.js'ten büyük. Sadece 3D oyun gerekiyorsa tercih et."
+    },
+    {
+      "id": 191,
+      "name": "p5",
+      "gzip_kb": 184,
+      "treeshakeable": false,
+      "notes": "Çok büyük! Sadece creative coding projeleri için"
+    },
+    {
+      "id": 196,
+      "name": "@nivo/core + bar + pie",
+      "gzip_kb": 68,
+      "treeshakeable": true,
+      "notes": "Her @nivo paketi ayrı. Sadece kullandığını ekle."
+    },
+    {
+      "id": 198,
+      "name": "@floating-ui/react",
+      "gzip_kb": 8,
+      "treeshakeable": true,
+      "notes": "Tooltip/dropdown için çok hafif"
+    },
+    {
+      "id": 199,
+      "name": "next-themes",
+      "gzip_kb": 3,
+      "treeshakeable": false,
+      "notes": "Tema yönetimi için en hafif çözüm"
+    }
+  ],
+  "optimization_rules": [
+    {
+      "rule": "three.js wildcard import yasak",
+      "bad": "import * as THREE from 'three'",
+      "good": "import { Mesh, BoxGeometry, MeshStandardMaterial } from 'three'",
+      "saving_kb": 80
+    },
+    {
+      "rule": "lodash wildcard import yasak",
+      "bad": "import _ from 'lodash'",
+      "good": "import debounce from 'lodash/debounce'",
+      "saving_kb": 65
+    },
+    {
+      "rule": "d3 wildcard import yasak",
+      "bad": "import * as d3 from 'd3'",
+      "good": "import { scaleLinear } from 'd3-scale'",
+      "saving_kb": 40
+    },
+    {
+      "rule": "Nivo dynamic import zorunlu",
+      "bad": "import { ResponsiveBar } from '@nivo/bar'",
+      "good": "const ResponsiveBar = dynamic(() => import('@nivo/bar').then(m => m.ResponsiveBar), { ssr: false })",
+      "saving_kb": 0,
+      "reason": "SSR crash önler"
+    },
+    {
+      "rule": "axios yerine fetch kullan",
+      "bad": "import axios from 'axios'",
+      "good": "const res = await fetch(url); const data = await res.json()",
+      "saving_kb": 14
+    }
+  ],
+  "scripts": {
+    "analyze_bundle": "ANALYZE=true next build",
+    "check_budget": "node scripts/check-budget.js",
+    "install_analyzer": "pnpm add -D @next/bundle-analyzer"
+  }
+}

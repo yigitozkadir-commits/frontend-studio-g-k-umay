@@ -1,0 +1,43 @@
+{
+  "workflow": "wasm",
+  "version": "1.0.0",
+  "description": "WebAssembly entegrasyonu: Rust → wasm-pack ile derlenen bir modülü React component'inde kullanma. Image processing örneği üzerinden ağır işlemleri tarayıcıda hızlandırma.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router) veya Vite + React",
+    "language": "TypeScript + Rust",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "tags": [
+    "wasm",
+    "rust",
+    "performance"
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 168,
+      "name": "Rust + wasm-pack Kurulumu",
+      "purpose": "Rust toolchain ve wasm-pack kur.",
+      "instruction": "rustup install stable; cargo install wasm-pack. packages/wasm-core/ altında cargo new --lib oluştur.",
+      "expected_output": "wasm-pack build ile .wasm + JS glue üretilebiliyor.",
+      "selection_rationale": "wasm-pack, Rust → bundler-uyumlu WASM için endüstri standardı."
+    },
+    {
+      "order": 2,
+      "tool_id": 169,
+      "name": "WASM Modül Yazımı",
+      "purpose": "Bir image-grayscale fonksiyonu Rust'ta yaz.",
+      "instruction": "wasm-bindgen ile #[wasm_bindgen] fn grayscale(bytes: &[u8]) -> Vec<u8> export et. wasm-pack build --target web.",
+      "expected_output": "pkg/ klasöründe .wasm + .d.ts dosyaları."
+    }
+  ],
+  "final_output": "Rust'ta yazılmış WASM modülü, React component'inde async yüklenen, JS fallback'li image processing örneği.",
+  "estimated_time": "Her adım ~15 dakika, toplam ~75 dakika",
+  "test_checklist": [
+    "WASM modülü tarayıcıda yükleniyor mu?",
+    "Bytes işleme JS'e göre belirgin hızlı mı?",
+    "WASM bulunamadığında fallback çalışıyor mu?",
+    "Production build'de WASM doğru emit ediliyor mu?"
+  ]
+}

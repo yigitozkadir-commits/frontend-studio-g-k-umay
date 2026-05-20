@@ -1,0 +1,40 @@
+{
+  "name": "ai-frontend-studio-meta",
+  "version": "4.0.0",
+  "description": "AI Frontend Studio — orkestrasyon, CLI, MCP server, wizard, generator ve katalog (v4)",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.0.0",
+  "workspaces": [
+    "cli",
+    "mcp-server",
+    "wizard",
+    "ai-workflow-generator",
+    "packages/*",
+    "catalog",
+    "starters/*"
+  ],
+  "scripts": {
+    "build": "pnpm -r --filter=!@ai-frontend-studio/catalog build",
+    "test": "pnpm -r test --if-present && node --test tests/smoke/",
+    "test:smoke": "node --test tests/smoke/",
+    "validate:schemas": "node scripts/validate-schemas.js",
+    "enrich": "node scripts/enrich-metadata.js",
+    "coverage:report": "node scripts/category-coverage.js",
+    "doctor": "node cli/dist/index.js doctor",
+    "audit:repo": "node cli/dist/index.js audit",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

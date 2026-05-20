@@ -1,0 +1,96 @@
+{
+  "workflow": "animation",
+  "version": "1.0.0",
+  "description": "GSAP ScrollTrigger, Lenis smooth scroll, Lottie, parallax ve metin efektleriyle zenginleştirilmiş, Awwwards seviyesinde yaratıcı bir animasyonlu sayfa oluşturur. Hikaye odaklı bölümler, scroll ile tetiklenen sahneler ve mikro etkileşimler içerir.",
+  "prerequisites": {
+    "framework": "Next.js 14+ veya Astro",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 16,
+      "name": "Stil Altyapısı",
+      "purpose": "Sayfanın temel stil yapısını ve animasyon için gerekli CSS değişkenlerini kur.",
+      "instruction": "tailwindlabs/tailwindcss reposuna git. tailwind.config.ts'de animation, keyframes ve transition sürelerini özelleştir. CSS custom properties tanımla. Her section tam ekran yükseklikte olacak.",
+      "expected_output": "Animasyon için optimize edilmiş Tailwind CSS yapılandırması."
+    },
+    {
+      "order": 2,
+      "tool_id": 28,
+      "name": "Smooth Scroll (Lenis)",
+      "purpose": "Tüm sayfaya sinematik smooth scroll ve scroll verisi sağla.",
+      "instruction": "darkroomengineering/lenis reposuna git. Lenis'i başlat, raf mantığını incele. scroll event'inden gelen progress, velocity ve direction verilerini bir state'te tut.",
+      "expected_output": "Sayfa genelinde pürüzsüz smooth scroll ve scroll verisi state'i."
+    },
+    {
+      "order": 3,
+      "tool_id": 5,
+      "name": "ScrollTrigger Sahneleri",
+      "purpose": "Scroll ile tetiklenen timeline animasyonları oluştur.",
+      "instruction": "greensock/GSAP reposuna git. ScrollTrigger plugin'ini, timeline ve scrub özelliğini incele. Her section için bir ScrollTrigger sahnesi oluştur: metin reveal, parallax görsel, yatay scroll galeri, pin'lenmiş video.",
+      "expected_output": "4 farklı scroll-tabanlı animasyon sahnesi."
+    },
+    {
+      "order": 4,
+      "tool_id": 89,
+      "name": "Metin Efektleri",
+      "purpose": "Başlık ve metinlere karakter/harf tabanlı giriş animasyonları ekle.",
+      "instruction": "lukePeavey/SplitType reposuna git. SplitType.create() ile metinleri karakterlere böl. GSAP ile her karakteri staggered animasyonla göster. ScrollTrigger ile tetikle.",
+      "expected_output": "Metinlerin karakter karakter belirdiği etkileyici reveal animasyonları."
+    },
+    {
+      "order": 5,
+      "tool_id": 7,
+      "name": "Lottie Animasyonları",
+      "purpose": "Vektörel Lottie animasyonlarını sayfaya entegre et.",
+      "instruction": "airbnb/lottie-web reposuna git. loadAnimation() API'sini ve kontrol metotlarını incele. Bir section'a büyük bir Lottie animasyonu yerleştir. Scroll ile animasyonun ilerlemesini kontrol et.",
+      "expected_output": "Scroll ile kontrol edilen Lottie vektör animasyonu."
+    },
+    {
+      "order": 6,
+      "tool_id": 32,
+      "name": "Parallax Arka Plan Videosu",
+      "purpose": "Bir section'a parallax efektli arka plan videosu ekle.",
+      "instruction": "nk-o/jarallax reposuna git. Video arka plan için data-attribute kurulumunu ve JavaScript API'sini incele. Lenis ile uyumlu çalışmasını sağla.",
+      "expected_output": "Parallax efektli, akıcı arka plan videosu."
+    },
+    {
+      "order": 7,
+      "tool_id": 6,
+      "name": "Mikro Etkileşimler",
+      "purpose": "Buton hover, imleç takibi ve geçiş animasyonlarını ekle.",
+      "instruction": "framer/motion reposuna git. whileHover, whileTap ve useMotionValue hook'larını incele. Butonlara hover glow efekti, CTA'ya magnetic hover, görsellere hover zoom ekle.",
+      "expected_output": "Tüm interaktif elementlerde hover ve tıklama mikro etkileşimleri."
+    },
+    {
+      "order": 8,
+      "tool_id": 65,
+      "name": "Performans ve Final Kontrol",
+      "purpose": "Yoğun animasyonlu sayfanın performansını ölç ve optimize et.",
+      "instruction": "GoogleChrome/web-vitals reposuna git. LCP, INP ve CLS metriklerini izle. Görselleri optimize et, Lottie ve parallax yüklemesini lazy yap. Mobilde ağır efektleri devre dışı bırak.",
+      "expected_output": "60 FPS hedefine yakın, mobilde optimize edilmiş animasyonlu sayfa."
+    }
+  ],
+  "final_output": "GSAP ScrollTrigger sahneleri, Lenis smooth scroll, Lottie vektör animasyonları, parallax video, metin reveal efektleri ve mikro etkileşimlerle zenginleştirilmiş Awwwards kalitesinde yaratıcı animasyonlu sayfa.",
+  "estimated_time": "Her adım ~10 dakika, toplam ~80 dakika",
+  "alternative_setups": [
+    {
+      "name": "hafif-versiyon",
+      "description": "Video ve Lottie olmadan, sadece scroll animasyonları",
+      "skip_steps": [5, 6]
+    }
+  ],
+  "test_checklist": [
+    "Smooth scroll tüm tarayıcılarda akıcı mı?",
+    "ScrollTrigger sahneleri doğru zamanda tetikleniyor mu?",
+    "Metinler karakter karakter beliriyor mu?",
+    "Lottie animasyonu scroll ile kontrol ediliyor mu?",
+    "Parallax video arka planı çalışıyor mu?",
+    "Mobilde performans düşüşü kabul edilebilir mi?",
+    "Hover efektleri gecikmesiz çalışıyor mu?",
+    "Tüm animasyonlar smooth ve jank-free mi?"
+  ]
+}

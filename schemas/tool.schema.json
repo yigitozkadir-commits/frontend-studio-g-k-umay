@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-frontend-studio.dev/schemas/tool.schema.json",
+  "title": "AI Frontend Studio Tool Metadata (v4)",
+  "description": "Each entry in orchestration/index.json. v4 introduces richer metadata for the scoring engine.",
+  "type": "object",
+  "required": ["id", "name", "url", "category", "type", "priority"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "name": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "category": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "type": { "enum": ["library", "framework", "tool", "reference", "template", "service", "spec"] },
+    "priority": { "enum": ["critical", "high", "medium", "low"] },
+    "when_to_use": { "type": "string" },
+    "how_to_use": { "type": "string" },
+    "related": { "type": "array", "items": { "type": "integer" } },
+    "alternatives": { "type": "array", "items": { "type": "integer" } },
+    "install_command": { "type": ["string", "null"] },
+    "peer_dependencies": { "type": "array", "items": { "type": "string" } },
+
+    "lifecycle": {
+      "enum": ["active", "maintenance", "legacy", "deprecated"],
+      "default": "active",
+      "description": "v4 — lifecycle marker. 'deprecated' tools are filtered out of new workflows."
+    },
+    "replaced_by": {
+      "type": ["integer", "null"],
+      "description": "If deprecated, the tool id to use instead."
+    },
+    "scores": {
+      "type": "object",
+      "description": "v4 — 0-10 scores feeding the recommendation engine.",
+      "properties": {
+        "ssr_compat":      { "type": "integer", "minimum": 0, "maximum": 10 },
+        "rsc_compat":      { "type": "integer", "minimum": 0, "maximum": 10 },
+        "bundle_cost":     { "type": "integer", "minimum": 0, "maximum": 10, "description": "Lower = larger bundle. 10 = ~0KB." },
+        "typescript":      { "type": "integer", "minimum": 0, "maximum": 10 },
+        "maintenance":     { "type": "integer", "minimum": 0, "maximum": 10 },
+        "learning_curve":  { "type": "integer", "minimum": 0, "maximum": 10, "description": "10 = trivial to learn." },
+        "community":       { "type": "integer", "minimum": 0, "maximum": 10 }
+      }
+    },
+    "bundle_kb_gzip": { "type": "number", "minimum": 0 }
+  },
+  "additionalProperties": true
+}

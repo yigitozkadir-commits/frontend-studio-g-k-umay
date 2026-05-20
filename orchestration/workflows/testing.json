@@ -1,0 +1,52 @@
+{
+  "workflow": "testing",
+  "version": "1.0.0",
+  "description": "Modern React/Next.js projeleri için kapsamlı test altyapısı. Unit (Vitest/Jest), component (Testing Library), E2E (Playwright) ve görsel regresyon test katmanlarını içerir.",
+  "prerequisites": {
+    "framework": "Next.js 14+ veya Vite + React",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "tags": [
+    "testing",
+    "ci",
+    "quality"
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 93,
+      "name": "Test Runner ve Şema Doğrulama",
+      "purpose": "Vitest (veya Jest) ve Zod ile birim test + run-time validation kur.",
+      "instruction": "vitest paketini projeye ekle. vitest.config.ts oluştur. Zod ile API response ve form input şemalarını doğrula. tests/unit/ klasörü oluştur.",
+      "expected_output": "Çalışır durumda vitest, ilk birim testleri yeşil.",
+      "selection_rationale": "Vitest, ESM ve TypeScript için Jest'ten daha hızlı; Zod TS-first run-time validator."
+    },
+    {
+      "order": 2,
+      "tool_id": 94,
+      "name": "Component Test Altyapısı",
+      "purpose": "React Testing Library ile component testleri kur.",
+      "instruction": "@testing-library/react ve @testing-library/jest-dom ekle. tests/components/ altında shadcn/ui bileşenleri için smoke test yaz.",
+      "expected_output": "Button, Input, Card render testleri geçiyor."
+    },
+    {
+      "order": 3,
+      "tool_id": 95,
+      "name": "Form Test Stratejisi",
+      "purpose": "react-hook-form formlarının submit/validation davranışını test et.",
+      "instruction": "userEvent ile input doldur, submit tetikle, onSubmit handler çağrısını ve Zod schema validation'ı doğrula.",
+      "expected_output": "Form happy-path ve error path testleri geçiyor."
+    }
+  ],
+  "final_output": "Unit + component + form + E2E testleri çalışan, CI'da coverage eşiği uygulanan tam donanımlı test katmanı.",
+  "estimated_time": "Her adım ~10 dakika, toplam ~50 dakika",
+  "test_checklist": [
+    "pnpm test ile birim testler geçiyor mu?",
+    "Component testleri DOM rendering doğru mu?",
+    "E2E testleri Chromium ve Firefox'ta geçiyor mu?",
+    "Coverage %70'in üstünde mi?",
+    "PR'da CI testleri otomatik tetikleniyor mu?"
+  ]
+}

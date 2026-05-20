@@ -1,0 +1,37 @@
+{
+  "workflow": "text-editor",
+  "version": "1.0.0",
+  "description": "Zengin metin editörü entegrasyonu. TipTap tabanlı blok editör, işbirlikçi düzenleme ve içerik export desteği içerir.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 124,
+      "name": "TipTap Editör Kurulumu",
+      "purpose": "Temel zengin metin editörünü kur.",
+      "instruction": "ueberdosis/tiptap reposuna git. StarterKit extension'ını ekle. Toolbar bileşeni oluştur: Bold, Italic, Heading, Link, BulletList. EditorContent bileşenini render et.",
+      "expected_output": "Çalışan zengin metin editörü, temel biçimlendirme kontrolleri."
+    },
+    {
+      "order": 2,
+      "tool_id": 125,
+      "name": "Slate Editör (Alternatif)",
+      "purpose": "Daha özelleştirilebilir editör yapısı için Slate kullan.",
+      "instruction": "ianstormtaylor/slate reposuna git. Custom element ve leaf renderer'lar oluştur. Klavye kısayolları ekle. Serileştirme/deserileştirme mantığını kur.",
+      "expected_output": "Özelleştirilmiş Slate editörü, HTML/Markdown export."
+    },
+    {
+      "order": 3,
+      "tool_id": 126,
+      "name": "İşbirlikçi Düzenleme",
+      "purpose": "Birden fazla kullanıcının aynı anda düzenlemesi için Quill kur.",
+      "instruction": "quilljs/quill reposuna git. Delta formatını öğren. Socket.io ile gerçek zamanlı değişiklik senkronizasyonu ekle. Çakışma çözümleme stratejisini uygula.",
+      "expected_output": "Birden fazla kullanıcının eş zamanlı düzenleyebildiği editör."
+    }
+  ]
+}

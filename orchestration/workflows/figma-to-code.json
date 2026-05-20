@@ -1,0 +1,108 @@
+{
+  "workflow": "figma-to-code",
+  "version": "1.0.0",
+  "description": "Figma tasarımından üretime hazır Next.js + Tailwind + shadcn/ui koduna geçiş. Token çıkarma, bileşen haritalama ve responsive implementasyon adımlarını kapsar.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm",
+    "additional": "Figma dosyasına erişim ve tasarım token'larının (renk, tipografi, spacing) export edilmiş olması"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 16,
+      "name": "Tasarım Token'larını Tailwind'e Aktar",
+      "purpose": "Figma'daki renk, tipografi ve spacing değerlerini Tailwind config'e taşı.",
+      "instruction": "tailwindlabs/tailwindcss reposuna git. tailwind.config.ts'deki theme.extend yapısını incele. Figma'daki renk paletini (primary, secondary, accent, neutral) CSS custom property olarak tanımla. Tipografi ölçeklerini (font-size, line-height, letter-spacing) ve spacing grid'ini ekle. globals.css'e :root ve .dark değişkenlerini yaz.",
+      "expected_output": "Figma tasarımındaki tüm renk ve tipografi değerleri Tailwind config'e aktarılmış, dark mode değişkenleri tanımlanmış."
+    },
+    {
+      "order": 2,
+      "tool_id": 15,
+      "name": "shadcn/ui Bileşenlerini Tema ile Kur",
+      "purpose": "Projeyi shadcn/ui ile başlat ve tasarıma uygun tema uygula.",
+      "instruction": "shadcn-ui/ui reposuna git. apps/www/registry/themes/ klasöründen özel tema yapısını incele. components.json dosyasını oluştur, CSS değişkenlerini Figma token'larına göre ayarla. Figma'daki her UI bileşeni için (Button, Input, Card, Dialog vb.) shadcn'den karşılığını ekle.",
+      "expected_output": "Figma tasarımıyla renk ve şekil olarak eşleşen, kurulmuş shadcn/ui tema."
+    },
+    {
+      "order": 3,
+      "tool_id": 105,
+      "name": "İkon Setini Eşleştir",
+      "purpose": "Figma'daki ikonları lucide-react karşılıklarıyla eşleştir.",
+      "instruction": "lucide-icons/lucide reposuna git. lucide.dev üzerinden Figma'daki her ikonu lucide karşılığıyla eşleştir. Eşleşme bulunamayan ikonlar için SVG export al ve public/icons/ klasörüne ekle. Eşleşme tablosunu bir yorum dosyasında tut.",
+      "expected_output": "Her Figma ikonu için lucide-react karşılığı veya SVG dosyası hazır."
+    },
+    {
+      "order": 4,
+      "tool_id": 76,
+      "name": "Etkileşimli Bileşenleri Radix ile Kur",
+      "purpose": "Figma'daki dropdown, modal, tooltip gibi bileşenlerin erişilebilir altyapısını kur.",
+      "instruction": "radix-ui/primitives reposuna git. packages/react/ altında Dialog, DropdownMenu, Tooltip, Select, Popover bileşenlerini incele. Figma'daki her interaktif element için uygun Radix primitive seç ve shadcn bileşeniyle sarmalanmış versiyonunu yaz.",
+      "expected_output": "Klavye ve ekran okuyucu uyumlu, Figma'daki her interaktif bileşen implement edilmiş."
+    },
+    {
+      "order": 5,
+      "tool_id": 6,
+      "name": "Geçiş ve Hover Animasyonları",
+      "purpose": "Figma prototype'taki geçişleri Framer Motion ile kodla.",
+      "instruction": "framer/motion reposuna git. Figma prototype'taki her geçiş türünü (slide, fade, scale, spring) Framer Motion karşılığına çevir. Hover state'leri whileHover ile, focus state'leri whileFocus ile kodla. AnimatePresence ile mount/unmount geçişleri ekle.",
+      "expected_output": "Figma prototype'taki her animasyon ve geçiş, kod olarak implement edilmiş."
+    },
+    {
+      "order": 6,
+      "tool_id": 79,
+      "name": "Responsive Breakpoint Kontrolü",
+      "purpose": "Figma'daki mobil/tablet/masaüstü varyantlarını Tailwind breakpoint'leriyle implement et.",
+      "instruction": "postcss/postcss reposuna git. Tailwind'in sm/md/lg/xl breakpoint değerlerini incele. Figma'daki her ekran genişliği için layout değişikliklerini (grid sütun sayısı, font boyutu, padding) Tailwind responsive prefix'leriyle kodla. Container genişliklerini max-w değerleriyle sınırla.",
+      "expected_output": "Figma'daki 3 ekran boyutunun tamamı (mobil, tablet, masaüstü) pixel-perfect implement edilmiş."
+    },
+    {
+      "order": 7,
+      "tool_id": 172,
+      "name": "Görsel Optimizasyonu",
+      "purpose": "Figma'dan export edilen görselleri web için optimize et.",
+      "instruction": "lovell/sharp reposuna git. docs/ klasöründen resize(), toWebp(), toAvif() metodlarını incele. Figma'dan export edilen PNG/JPG dosyaları için bir optimizasyon script'i yaz. next/image ile optimize edilmiş görsel bileşeni oluştur. Blur placeholder için base64 placeholder üret.",
+      "expected_output": "Tüm görseller WebP/AVIF formatına dönüştürülmüş, next/image ile optimize edilmiş."
+    },
+    {
+      "order": 8,
+      "tool_id": 199,
+      "name": "Dark Mode Implementasyonu",
+      "purpose": "Figma'daki dark mode varyantlarını kodla.",
+      "instruction": "pacocoursey/next-themes reposuna git. ThemeProvider kurulumunu incele. globals.css'teki .dark class değişkenlerini Figma'nın dark mode renk paleti ile doldur. Her bileşenin dark mode'da doğru göründüğünü kontrol et.",
+      "expected_output": "Figma'nın dark mode tasarımıyla birebir eşleşen tema geçişi."
+    },
+    {
+      "order": 9,
+      "tool_id": 151,
+      "name": "Kod Kalitesi ve Final",
+      "purpose": "Oluşturulan kodun kalite standartlarını kontrol et.",
+      "instruction": "eslint/eslint reposuna git. .eslintrc.json ve prettier.config.js dosyalarını kur. Tüm bileşenleri lint et ve format et. TypeScript strict mode hatalarını düzelt. Kullanılmayan import'ları temizle.",
+      "related_tool_id": 152,
+      "related_instruction": "prettier/prettier reposuna git. .prettierrc.json yapısını incele ve projeye ekle.",
+      "expected_output": "Lint hatası sıfır, formatlanmış, type-safe kod tabanı."
+    }
+  ],
+  "final_output": "Figma tasarımından pixel-perfect, erişilebilir, responsive, dark mode destekli ve performans optimize edilmiş Next.js uygulama kodu.",
+  "estimated_time": "Her adım ~10 dakika, toplam ~90 dakika",
+  "figma_export_checklist": [
+    "Renk stilleri Design Tokens formatında export edildi mi?",
+    "Tüm ikonlar SVG olarak export edildi mi?",
+    "Görseller 2x (@2x) çözünürlükte export edildi mi?",
+    "Mobil, tablet ve masaüstü frame'ler ayrı ayrı export edildi mi?",
+    "Font aileleri Google Fonts veya yerel olarak temin edildi mi?",
+    "Prototype geçişleri (ease tipi, süre) not alındı mı?"
+  ],
+  "test_checklist": [
+    "Tailwind config'teki renkler Figma renkleriyle birebir eşleşiyor mu?",
+    "Tüm ikonlar doğru ve doğru boyutta görünüyor mu?",
+    "Hover ve geçiş animasyonları Figma prototype ile aynı mı?",
+    "Mobil görünüm Figma'daki mobil frame ile eşleşiyor mu?",
+    "Dark mode'da tüm metinler okunabilir mi?",
+    "Görseller WebP formatında ve lazy load çalışıyor mu?",
+    "Lighthouse accessibility skoru 90+ mı?",
+    "Lint ve TypeScript hataları sıfır mı?"
+  ]
+}

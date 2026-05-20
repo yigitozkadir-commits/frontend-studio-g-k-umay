@@ -1,0 +1,96 @@
+{
+  "workflow": "3d-scene",
+  "version": "1.0.0",
+  "description": "React Three Fiber ile interaktif bir 3D ürün görselleştirme sahnesi oluşturur. Model yükleme, ışıklandırma, post-processing efektleri, kontroller ve animasyonlar içerir.",
+  "prerequisites": {
+    "framework": "Next.js 14+ veya Vite + React",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm",
+    "additional": "three, @react-three/fiber, @react-three/drei kurulu olmalı"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 12,
+      "name": "Three.js Temellerini İncele",
+      "purpose": "Sahne, kamera, renderer ve temel 3D kavramlarını anla.",
+      "instruction": "mrdoob/three.js reposuna git. examples/ klasöründen webgl_loader_gltf ve webgl_animation örneklerini incele. Scene, PerspectiveCamera, WebGLRenderer sınıflarının nasıl kullanıldığını öğren.",
+      "expected_output": "Three.js'in temel yapı taşları hakkında bilgi edinilmiş olacak."
+    },
+    {
+      "order": 2,
+      "tool_id": 13,
+      "name": "React Three Fiber ile Temel Sahne",
+      "purpose": "R3F ile deklaratif bir 3D sahne iskeleti kur.",
+      "instruction": "pmndrs/react-three-fiber reposuna git. Canvas, useFrame ve useLoader hook'larını incele. Bir <Canvas> bileşeni oluştur, içine ambient ve directional ışık ve bir zemin düzlemi ekle.",
+      "expected_output": "Tarayıcıda görünen, ışıklandırılmış temel bir 3D sahne."
+    },
+    {
+      "order": 3,
+      "tool_id": 42,
+      "name": "Drei ile Sahneyi Zenginleştir",
+      "purpose": "Hazır bileşenlerle sahneye kamera kontrolü, çevre ışığı ve zemin ekle.",
+      "instruction": "pmndrs/drei reposuna git. OrbitControls, Environment, ContactShadows bileşenlerini incele. Sahneye kısıtlı OrbitControls, stüdyo aydınlatması için Environment ve ContactShadows ekle.",
+      "expected_output": "Kullanıcının fareyle döndürebildiği, profesyonel ışıklandırmalı 3D sahne."
+    },
+    {
+      "order": 4,
+      "tool_id": 46,
+      "name": "3D Model Yükleme",
+      "purpose": "GLTF/GLB formatında bir 3D modeli sahneye yükle.",
+      "instruction": "google/model-viewer reposuna git. GLTF/GLB format gereksinimlerini incele. R3F'te useGLTF hook'u (drei'den) ile bir .glb modelini yükle. Modeli sahneye uygun pozisyona yerleştir.",
+      "expected_output": "Sahneye başarıyla yüklenmiş ve görünen bir 3D model."
+    },
+    {
+      "order": 5,
+      "tool_id": 43,
+      "name": "Post-Processing Efektleri",
+      "purpose": "Sahneye sinematik sonradan işleme efektleri ekle.",
+      "instruction": "pmndrs/postprocessing reposuna git. EffectComposer, BloomEffect, VignetteEffect kullanımını incele. R3F sahnesine hafif bir bloom ve vignette efekti ekle.",
+      "expected_output": "Bloom ve vignette efektleriyle sinematik görünen 3D sahne."
+    },
+    {
+      "order": 6,
+      "tool_id": 190,
+      "name": "Kontrol Paneli (GUI)",
+      "purpose": "Sahne parametrelerini canlı değiştirmek için bir kontrol paneli ekle.",
+      "instruction": "pmndrs/leva reposuna git. useControls() hook'unu incele. Modelin dönüş hızı, bloom yoğunluğu ve ışık rengi için slider kontrolleri ekle.",
+      "expected_output": "Canlı parametre değişikliği yapılabilen şık bir kontrol paneli."
+    },
+    {
+      "order": 7,
+      "tool_id": 5,
+      "name": "Model Animasyonları",
+      "purpose": "Modele yükleme sonrası giriş animasyonu ve hover etkileşimi ekle.",
+      "instruction": "greensock/GSAP reposuna git. gsap.to() ve timeline kullanımını incele. Model yüklendiğinde scale 0→1 animasyonu yap. Fare modelin üzerine geldiğinde hafif scale büyümesi ekle.",
+      "expected_output": "Model yükleme animasyonu ve hover etkileşimi çalışıyor."
+    },
+    {
+      "order": 8,
+      "tool_id": 6,
+      "name": "UI Overlay ve Yükleme Durumu",
+      "purpose": "3D sahnenin üzerine bilgi overlay'i ve yükleme göstergesi ekle.",
+      "instruction": "framer/motion reposuna git. AnimatePresence ve motion.div kullanımını incele. Model yüklenirken loading spinner, yüklendikten sonra ürün bilgisi overlay'i ekle.",
+      "expected_output": "Yükleme göstergesi ve animasyonlu bilgi overlay'i."
+    }
+  ],
+  "final_output": "Model yükleme, orbit kontrol, bloom/vignette efektleri, GUI kontrol paneli, yükleme animasyonları ve UI overlay içeren tam fonksiyonel interaktif 3D ürün görselleştirme sahnesi.",
+  "estimated_time": "Her adım ~8 dakika, toplam ~65 dakika",
+  "alternative_setups": [
+    {
+      "name": "hafif-versiyon",
+      "description": "Post-processing olmadan, sadece temel model görüntüleme",
+      "skip_steps": [5, 6]
+    }
+  ],
+  "test_checklist": [
+    "3D model sahneye yükleniyor ve görünüyor mu?",
+    "OrbitControls ile model döndürülebiliyor mu?",
+    "Bloom ve vignette efektleri çalışıyor mu?",
+    "Kontrol panelinden parametreler değiştirilebiliyor mu?",
+    "Model yükleme animasyonu oynuyor mu?",
+    "UI overlay bilgileri doğru mu?",
+    "Hover efekti çalışıyor mu?"
+  ]
+}

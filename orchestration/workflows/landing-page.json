@@ -1,0 +1,110 @@
+{
+  "workflow": "landing-page",
+  "version": "1.0.0",
+  "description": "Awwwards seviyesinde, modern, animasyonlu, smooth scroll'lu ve 3D elementler içeren bir landing page oluşturur. Hero section, özellikler, CTA ve footer bölümlerini kapsar.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router) veya Astro",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 16,
+      "name": "Tailwind CSS Kurulumu",
+      "purpose": "Tüm sayfanın stil altyapısını utility-first yaklaşımla kur.",
+      "instruction": "tailwindlabs/tailwindcss reposuna git. tailwind.config.ts'de content, theme.extend (font, renk paleti, spacing) yapılandırmasını incele. Landing page için özel bir renk paleti ve font ailesi tanımla.",
+      "expected_output": "Tailwind CSS yapılandırması hazır, özel renk ve font tanımları yapılmış."
+    },
+    {
+      "order": 2,
+      "tool_id": 15,
+      "name": "Temel UI Bileşenleri",
+      "purpose": "Button, Navigation Menu, Card gibi temel bileşenleri projeye ekle.",
+      "instruction": "shadcn-ui/ui reposuna git. Button, NavigationMenu, Card, Badge, Separator bileşenlerini projeye ekle. Her birinin Tailwind ile nasıl özelleştirildiğini registry'den incele.",
+      "expected_output": "Projeye eklenmiş shadcn/ui bileşenleri, landing page'de kullanıma hazır."
+    },
+    {
+      "order": 3,
+      "tool_id": 5,
+      "name": "Hero Section Animasyonu",
+      "purpose": "Sayfanın en üst kısmındaki hero section'a yüksek etkili giriş animasyonları ekle.",
+      "instruction": "greensock/GSAP reposuna git. ScrollTrigger ve timeline kullanımını incele. Hero başlığı için staggered metin animasyonu, alt başlık için fade-in, CTA butonu için scale-in animasyonu yap.",
+      "expected_output": "Sayfa yüklendiğinde başlık, alt başlık ve CTA'nın sırayla belirdiği etkileyici hero animasyonu."
+    },
+    {
+      "order": 4,
+      "tool_id": 28,
+      "name": "Smooth Scroll Deneyimi",
+      "purpose": "Tüm sayfaya akıcı ve sinematik bir kaydırma deneyimi ekle.",
+      "instruction": "darkroomengineering/lenis reposuna git. Lenis'i başlat, raf mantığını incele. Sayfadaki tüm scroll olaylarının Lenis üzerinden yönetilmesini sağla. GSAP ScrollTrigger ile Lenis'i entegre et.",
+      "expected_output": "Sayfa genelinde pürüzsüz, lerp tabanlı smooth scroll deneyimi."
+    },
+    {
+      "order": 5,
+      "tool_id": 6,
+      "name": "Scroll-Tabanlı Element Animasyonları",
+      "purpose": "Özellikler ve içerik bölümlerinin scroll ile görünür olmasını sağla.",
+      "instruction": "framer/motion reposuna git. useInView hook'unu ve whileInView prop'unu incele. Özellik kartları için soldan/sağdan kayma, istatistikler için sayı sayma animasyonu, görseller için scale-in efekti yap.",
+      "expected_output": "Her bölümün scroll ile tetiklenen, akıcı giriş animasyonları."
+    },
+    {
+      "order": 6,
+      "tool_id": 13,
+      "name": "3D Arka Plan Elementi (Opsiyonel)",
+      "purpose": "Hero section arka planına interaktif bir 3D element ekle.",
+      "instruction": "pmndrs/react-three-fiber reposuna git. Canvas, useFrame ve useLoader hook'larını incele. Hero arka planına dönen bir 3D geometrik şekil ekle. Fare hareketine tepki veren hafif bir parallax efekti ver.",
+      "expected_output": "Hero arka planında çalışan, hafif ve interaktif 3D görsel element."
+    },
+    {
+      "order": 7,
+      "tool_id": 17,
+      "name": "Carousel / Slider Bölümü",
+      "purpose": "Referanslar veya özellikler için bir slider bölümü ekle.",
+      "instruction": "nolimits4web/swiper reposuna git. Swiper'ı React için kur. Autoplay, pagination ve fade effect ile bir testimonial/özellik slider'ı oluştur. Mobilde touch desteğinin çalıştığını kontrol et.",
+      "expected_output": "Otomatik oynayan, sayfalama noktalı, mobil uyumlu slider."
+    },
+    {
+      "order": 8,
+      "tool_id": 65,
+      "name": "Performans ve SEO Kontrolü",
+      "purpose": "Sayfanın performans metriklerini ölç ve optimize et.",
+      "instruction": "GoogleChrome/web-vitals reposuna git. onLCP, onFID, onCLS metriklerini projeye ekle. Görselleri next/image ile optimize et. Gereksiz JavaScript'i temizle.",
+      "expected_output": "90+ Lighthouse skoruna sahip, performans metrikleri izlenen landing page."
+    },
+    {
+      "order": 9,
+      "tool_id": 199,
+      "name": "Tema ve Son Dokunuşlar",
+      "purpose": "Tema desteği ekle ve final rötuşları yap.",
+      "instruction": "pacocoursey/next-themes reposuna git. ThemeProvider ekle. Tüm bileşenlerin dark mode'da doğru göründüğünden emin ol. Mobil responsive kontrolü yap.",
+      "expected_output": "Dark/light tema destekli, mobil uyumlu, tamamlanmış modern landing page."
+    }
+  ],
+  "final_output": "GSAP + Framer Motion + Lenis + R3F ile zenginleştirilmiş, Awwwards kalitesinde modern landing page.",
+  "estimated_time": "Her adım ~7 dakika, toplam ~65 dakika",
+  "alternative_setups": [
+    {
+      "name": "hafif-versiyon",
+      "description": "3D olmadan, sadece animasyon ve smooth scroll",
+      "skip_steps": [6]
+    },
+    {
+      "name": "statik-versiyon",
+      "description": "Astro ile sıfır JS hedefleyen hafif landing page",
+      "replace_framework": "astro",
+      "skip_steps": [6, 7]
+    }
+  ],
+  "test_checklist": [
+    "Hero animasyonu sayfa yüklenince çalışıyor mu?",
+    "Smooth scroll tüm tarayıcılarda akıcı mı?",
+    "Slider otomatik oynuyor ve swipe çalışıyor mu?",
+    "Mobilde tüm bölümler düzgün görünüyor mu?",
+    "Dark mode'a geçince tüm elementler okunabilir mi?",
+    "Lighthouse performans skoru 90+ mı?",
+    "Scroll ile tetiklenen animasyonlar gecikmesiz çalışıyor mu?",
+    "CTA butonları tıklanabilir ve doğru yere yönleniyor mu?"
+  ]
+}

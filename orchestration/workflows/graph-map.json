@@ -1,0 +1,37 @@
+{
+  "workflow": "graph-map",
+  "version": "1.0.0",
+  "description": "Harita görselleştirme ve GraphQL veri katmanı. Mapbox GL ile interaktif harita, Apollo Client ile GraphQL sorgular.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 74,
+      "name": "Mapbox GL Harita",
+      "purpose": "Yüksek performanslı interaktif harita için Mapbox GL kur.",
+      "instruction": "mapbox/mapbox-gl-js reposuna git. API token yapılandır. Map başlat: merkez, zoom, stil. Marker, Popup ve Layer ekle. Coğrafi veri (GeoJSON) görselleştir.",
+      "expected_output": "Interaktif harita, marker popup'ları, katman kontrolleri."
+    },
+    {
+      "order": 2,
+      "tool_id": 75,
+      "name": "Leaflet Alternatifi",
+      "purpose": "Açık kaynak hafif harita için Leaflet kur.",
+      "instruction": "Leaflet/Leaflet reposuna git. react-leaflet wrapper'ı kullan. OpenStreetMap tile katmanı ekle. Özel ikon ve cluster eklentileri uygula.",
+      "expected_output": "OpenStreetMap tabanlı harita, özel marker ikonları."
+    },
+    {
+      "order": 3,
+      "tool_id": 166,
+      "name": "Apollo Client GraphQL",
+      "purpose": "Harita verilerini GraphQL API'den çekmek için Apollo Client kur.",
+      "instruction": "apollographql/apollo-client reposuna git. ApolloProvider'ı kur. useQuery hook'u ile konum verisi çek. Cache politikasını ve loading state'i yönet.",
+      "expected_output": "GraphQL'den gelen konum verileriyle doldurulan harita."
+    }
+  ]
+}

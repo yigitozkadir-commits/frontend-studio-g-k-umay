@@ -1,0 +1,37 @@
+{
+  "workflow": "css-engine",
+  "version": "1.0.0",
+  "description": "Gelişmiş CSS çözümleri. UnoCSS ile atomic CSS üretimi, Linaria ile sıfır runtime CSS-in-JS, CSS Modules ile kapsamlı stiller.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 161,
+      "name": "UnoCSS Atomic CSS",
+      "purpose": "İstek üzerine üretilen atomic CSS için UnoCSS kur.",
+      "instruction": "unocss/unocss reposuna git. Vite/Next.js plugin'ini kur. Tailwind preset'i veya Wind preset'i seç. Özel kurallar ve kısayollar tanımla.",
+      "expected_output": "Kullanılan sınıflara göre otomatik üretilen, minimize edilmiş CSS."
+    },
+    {
+      "order": 2,
+      "tool_id": 162,
+      "name": "Linaria Sıfır Runtime",
+      "purpose": "Build zamanında CSS çıkaran CSS-in-JS için Linaria kur.",
+      "instruction": "linariajs/linaria reposuna git. Babel/SWC plugin'ini ekle. styled ve css tag'larını kullan. Dinamik prop'ları CSS değişkenleriyle yönet.",
+      "expected_output": "Runtime overhead'i olmayan, statik CSS dosyaları üreten bileşenler."
+    },
+    {
+      "order": 3,
+      "tool_id": 163,
+      "name": "CSS Modules Kapsamlama",
+      "purpose": "Otomatik kapsam sağlayan CSS Modules kullan.",
+      "instruction": "css-modules/css-modules reposunu incele. .module.css dosyaları oluştur. composes ile stil kalıtımını uygula. TypeScript için typed-css-modules ekle.",
+      "expected_output": "Hash'li sınıf adlarıyla tamamen izole bileşen stilleri."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-05-18T18:36:35.794Z",
+  "total": 2,
+  "flagged": [
+    {
+      "id": 9,
+      "name": "locomotivemtl/locomotive-scroll",
+      "reason": "Bakım yavaşladı. Lenis daha hafif ve aktif.",
+      "severity": "medium",
+      "replacement_name": "darkroomengineering/lenis",
+      "replacement_id": 28
+    },
+    {
+      "id": 19,
+      "name": "atlassian/react-beautiful-dnd",
+      "reason": "Atlassian aktif bakımı bıraktı.",
+      "severity": "high",
+      "replacement_name": "clauderic/dnd-kit",
+      "replacement_id": 143
+    }
+  ]
+}

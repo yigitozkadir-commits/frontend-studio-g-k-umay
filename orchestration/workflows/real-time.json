@@ -1,0 +1,53 @@
+{
+  "workflow": "real-time",
+  "version": "1.0.0",
+  "description": "WebSocket ve WebRTC ile gerçek zamanlı iletişim altyapısı kurar. Canlı bildirimler, sohbet odaları ve P2P video görüşmesi destekler.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 81,
+      "name": "WebSocket Sunucusu",
+      "purpose": "Gerçek zamanlı mesajlaşma için Socket.io sunucusu kur.",
+      "instruction": "socketio/socket.io reposuna git. Next.js App Router ile custom server kur. Oda sistemi, event broadcasting ve bağlantı yönetimi örneklerini incele.",
+      "expected_output": "Çalışan Socket.io sunucusu, bağlantı/ayrılma logları."
+    },
+    {
+      "order": 2,
+      "tool_id": 82,
+      "name": "WebSocket İstemcisi",
+      "purpose": "Tarayıcı tarafında WebSocket bağlantısı kur.",
+      "instruction": "websockets/ws reposuna git. istemci hook'u yaz: bağlantı kurma, mesaj gönderme, otomatik yeniden bağlanma mantığını ekle.",
+      "expected_output": "useWebSocket hook'u, bağlantı durumu göstergesi."
+    },
+    {
+      "order": 3,
+      "tool_id": 83,
+      "name": "P2P Bağlantısı",
+      "purpose": "Tarayıcılar arası doğrudan P2P iletişim için SimplePeer kur.",
+      "instruction": "feross/simple-peer reposuna git. STUN/TURN sunucu yapılandırmasını öğren. Veri kanalı üzerinden mesaj ve dosya aktarımı örneğini incele.",
+      "expected_output": "İki tarayıcı arasında çalışan P2P veri kanalı."
+    },
+    {
+      "order": 4,
+      "tool_id": 84,
+      "name": "Video/Ses Akışı",
+      "purpose": "WebRTC video görüşmesi için PeerJS kur.",
+      "instruction": "peers/peerjs reposuna git. getUserMedia ile kamera/mikrofon erişimi sağla. PeerJS ile video stream'i karşı tarafa ilet. Basit görüntülü görüşme arayüzü oluştur.",
+      "expected_output": "Çalışan video görüşmesi, kamera/mikrofon açma/kapama kontrolleri."
+    },
+    {
+      "order": 5,
+      "tool_id": 113,
+      "name": "WebRTC Peer Bağlantısı",
+      "purpose": "Tarayıcılar arası doğrudan P2P iletişim kur.",
+      "instruction": "feross/simple-peer veya peers/peerjs reposuna git. RTCPeerConnection ile signaling sunucusu üzerinden bağlantı kur. ICE candidate değişimini tamamla. Veri kanalı aç.",
+      "expected_output": "İki tarayıcı arasında aktif P2P bağlantısı."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "workflow": "ai-chat",
+  "version": "1.0.0",
+  "description": "Modern, akıcı ve tam fonksiyonel bir AI sohbet arayüzü oluşturur. Streaming yanıtlar, mesaj geçmişi, tema desteği ve animasyonlu geçişler içerir.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 15,
+      "name": "Temel UI Bileşenleri",
+      "purpose": "Sohbet arayüzünün iskeletini oluşturacak temel bileşenleri kur.",
+      "instruction": "shadcn-ui/ui reposuna git. Input, Button, ScrollArea, Avatar, Card bileşenlerini projeye ekle. Registry'deki her bileşenin nasıl kurulduğunu ve kullanıldığını README'den öğren.",
+      "expected_output": "Projeye eklenmiş ve çalışır durumda Input, Button, ScrollArea, Avatar, Card bileşenleri."
+    },
+    {
+      "order": 2,
+      "tool_id": 52,
+      "name": "AI Streaming Entegrasyonu",
+      "purpose": "Vercel AI SDK ile streaming sohbet altyapısını kur.",
+      "instruction": "vercel/ai reposuna git. useChat hook'unu incele. API route (app/api/chat/route.ts) oluştur. Streaming yanıtları karşılayacak bir Chat component'i yaz. Mesajların akış halinde görünmesini sağla.",
+      "expected_output": "/api/chat endpoint'i ve useChat hook'u ile çalışan, streaming mesaj gösteren bir Chat bileşeni."
+    },
+    {
+      "order": 3,
+      "tool_id": 159,
+      "name": "Toast Bildirimleri",
+      "purpose": "Hata, başarı ve bilgi bildirimleri için toast sistemi kur.",
+      "instruction": "emilkowalski/sonner reposuna git. <Toaster /> bileşenini root layout'a ekle. Hata yakalama için try/catch bloklarında toast.error(), başarılı işlemler için toast.success() kullan.",
+      "expected_output": "Root layout'a eklenmiş Toaster ve hata/başarı durumlarında çalışan toast bildirimleri."
+    },
+    {
+      "order": 4,
+      "tool_id": 6,
+      "name": "Animasyonlu Mesaj Geçişleri",
+      "purpose": "Mesaj baloncuklarının akıcı giriş/çıkış animasyonlarını yap.",
+      "instruction": "framer/motion reposuna git. AnimatePresence ile mesaj listesini sarmala. Her mesaj baloncuğuna motion.div ile scale ve opacity animasyonu ekle. Yeni mesaj geldiğinde scroll'u animasyonlu şekilde aşağı kaydır.",
+      "expected_output": "Mesajların yumuşak scale+fade ile belirdiği, akıcı geçişli sohbet arayüzü."
+    },
+    {
+      "order": 5,
+      "tool_id": 134,
+      "name": "Sohbet Geçmişi Depolama",
+      "purpose": "Kullanıcının sohbet geçmişini tarayıcıda kalıcı olarak sakla.",
+      "instruction": "localForage/localForage reposuna git. Her mesaj gönderildiğinde veya alındığında localforage.setItem() ile kaydet. Sayfa yüklendiğinde localforage.getItem() ile geçmişi geri yükle. Sohbet silme özelliği ekle.",
+      "expected_output": "Sayfa yenilense bile kaybolmayan, IndexedDB'de saklanan sohbet geçmişi."
+    },
+    {
+      "order": 6,
+      "tool_id": 199,
+      "name": "Tema Desteği",
+      "purpose": "Karanlık/Aydınlık/Sistem teması ekle.",
+      "instruction": "pacocoursey/next-themes reposuna git. ThemeProvider'ı root layout'a ekle. Tema değiştirme butonu yap. Tüm shadcn/ui bileşenlerinin ve sohbet baloncuklarının temaya uyum sağladığından emin ol.",
+      "expected_output": "Karanlık/aydınlık/sistem modu arasında geçiş yapabilen, flicker olmayan tema sistemi."
+    },
+    {
+      "order": 7,
+      "tool_id": 105,
+      "name": "İkonlar ve Son Dokunuşlar",
+      "purpose": "Arayüze ikonlar ekle ve son rötuşları yap.",
+      "instruction": "lucide-icons/lucide reposuna git. Gönder butonu için Send, kullanıcı avatarı için User, AI için Bot, tema değiştirme için Sun/Moon, silme için Trash2 ikonlarını ekle. Mobil responsive tasarımı kontrol et.",
+      "expected_output": "İkonlarla zenginleştirilmiş, mobil uyumlu, tamamlanmış AI sohbet arayüzü."
+    }
+  ],
+  "final_output": "Tam fonksiyonel, animasyonlu, tema destekli, geçmişi saklayan, streaming AI sohbet arayüzü.",
+  "estimated_time": "Her adım ~5 dakika, toplam ~35 dakika",
+  "test_checklist": [
+    "Mesaj gönderilebiliyor mu?",
+    "AI yanıtı streaming geliyor mu?",
+    "Karanlık moda geçince arayüz düzgün görünüyor mu?",
+    "Sayfa yenilenince sohbet geçmişi geri geliyor mu?",
+    "Sohbet silinebiliyor mu?",
+    "Mobilde düzgün görünüyor mu?",
+    "Toast bildirimleri çalışıyor mu?"
+  ]
+}

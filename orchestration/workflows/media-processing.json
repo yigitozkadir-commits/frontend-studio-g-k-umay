@@ -1,0 +1,37 @@
+{
+  "workflow": "media-processing",
+  "version": "1.0.0",
+  "description": "Tarayıcıda video/ses işleme. FFmpeg.wasm ile video dönüştürme, kesme ve format değiştirme işlemleri.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 149,
+      "name": "FFmpeg.wasm Kurulumu",
+      "purpose": "Tarayıcıda video işleme için FFmpeg.wasm kur.",
+      "instruction": "ffmpegwasm/ffmpeg.wasm reposuna git. SharedArrayBuffer için COOP/COEP başlıklarını Next.js'te yapılandır. FFmpeg örneğini başlat. fetchFile ile video yükle.",
+      "expected_output": "Tarayıcıda çalışan FFmpeg, video yükleme ve işleme hazır."
+    },
+    {
+      "order": 2,
+      "tool_id": 149,
+      "name": "Video Dönüştürme",
+      "purpose": "Format dönüştürme ve video kesme işlemlerini uygula.",
+      "instruction": "ffmpeg.exec() ile komut çalıştır: format dönüştürme (mp4→webm), video kesme (-ss, -t parametreleri), küçük resim üretme. İlerleme çubuğu için onProgress callback kullan.",
+      "expected_output": "Kullanıcı seçtiği videoyu dönüştürüp indirebilir, ilerleme göstergesi var."
+    },
+    {
+      "order": 3,
+      "tool_id": 150,
+      "name": "WebRTC Adaptör",
+      "purpose": "Tarayıcı uyumluluğu için WebRTC adapter ekle.",
+      "instruction": "webrtc/adapter reposuna git. adapter.js'i import et. getUserMedia ve RTCPeerConnection API'lerini normalleştir. Safari, Firefox ve Chrome arasındaki farklılıkları kapsa.",
+      "expected_output": "Tüm modern tarayıcılarda tutarlı çalışan WebRTC kodu."
+    }
+  ]
+}

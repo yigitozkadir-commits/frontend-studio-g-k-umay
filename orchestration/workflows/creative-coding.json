@@ -1,0 +1,37 @@
+{
+  "workflow": "creative-coding",
+  "version": "1.0.0",
+  "description": "Yaratıcı kodlama ve generatif sanat. p5.js ile interaktif sketch, Paper.js ile vektör grafik, mathjs ile matematiksel görselleştirme.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 191,
+      "name": "p5.js Sketch",
+      "purpose": "İnteraktif generatif sanat için p5.js kur.",
+      "instruction": "processing/p5.js reposuna git. Next.js'te p5.js instance modunda kullan (SSR uyumluluğu için). setup() ve draw() döngüsünü kur. Mouse ve klavye olaylarını bağla.",
+      "expected_output": "Canvas üzerinde çalışan, kullanıcı etkileşimli p5.js sketch."
+    },
+    {
+      "order": 2,
+      "tool_id": 192,
+      "name": "Paper.js Vektörler",
+      "purpose": "Vektör grafik ve yol manipülasyonu için Paper.js kur.",
+      "instruction": "paperjs/paper.js reposuna git. paper.setup() ile canvas başlat. Path, Shape ve PointText nesneleri oluştur. Hit testing ve mouse tool'larını uygula.",
+      "expected_output": "Çizilebilir, etkileşimli vektör canvas."
+    },
+    {
+      "order": 3,
+      "tool_id": 193,
+      "name": "Matematiksel Görselleştirme",
+      "purpose": "Karmaşık matematiksel formülleri görselleştirmek için mathjs kur.",
+      "instruction": "josdejong/mathjs reposuna git. math.evaluate() ile formül hesapla. Parametrik eğriler ve fraktal örüntüler için veri üret. p5.js veya Canvas API ile görselleştir.",
+      "expected_output": "Canlı formül görselleştirici, parametreler kaydırıcıyla kontrol edilebilir."
+    }
+  ]
+}

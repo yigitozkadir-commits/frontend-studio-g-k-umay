@@ -1,0 +1,12 @@
+{
+  "name": "@ai-frontend-studio/ai-workflow-generator",
+  "version": "4.0.0",
+  "description": "AI Frontend Studio — Doğal Dilden Workflow Üreteci",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "bin": { "aifs-generate": "./index.js" },
+  "scripts": { "start": "node index.js" },
+  "dependencies": { "chalk": "^5.3.0" },
+  "engines": { "node": ">=18.0.0" }
+}

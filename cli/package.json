@@ -1,0 +1,37 @@
+{
+  "name": "@ai-frontend-studio/cli",
+  "version": "2.0.0",
+  "description": "AI Frontend Studio CLI — npx aifs create ile proje başlat (v4)",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "aifs": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "jest",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "execa": "^8.0.0",
+    "inquirer": "^9.2.0",
+    "ora": "^8.0.0",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.0",
+    "@types/inquirer": "^9.0.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

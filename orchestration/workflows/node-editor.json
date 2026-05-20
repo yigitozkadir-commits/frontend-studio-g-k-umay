@@ -1,0 +1,37 @@
+{
+  "workflow": "node-editor",
+  "version": "1.0.0",
+  "description": "Görsel node/akış editörü. React Flow ile sürükle-bırak node bağlantıları, özel node tipleri ve minimap.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 174,
+      "name": "React Flow Kurulumu",
+      "purpose": "Temel node editörü altyapısı için React Flow kur.",
+      "instruction": "xyflow/xyflow reposuna git. ReactFlow provider'ı kur. Başlangıç node ve edge'leri tanımla. onConnect, onNodesChange, onEdgesChange handler'larını yaz.",
+      "expected_output": "Sürüklenebilir node'lar, bağlantı edge'leri, panning/zooming."
+    },
+    {
+      "order": 2,
+      "tool_id": 175,
+      "name": "Özel Node Tipleri",
+      "purpose": "Uygulamaya özel node bileşenleri oluştur.",
+      "instruction": "React Flow'un custom node API'sini kullan. Handle pozisyonları, data props ve özel form elementleri ekle. nodeTypes prop ile kaydet.",
+      "expected_output": "Form input'ları olan özel node tipleri, dinamik handle'lar."
+    },
+    {
+      "order": 3,
+      "tool_id": 176,
+      "name": "Excalidraw Whiteboard",
+      "purpose": "Serbest çizim ve diyagram tahtası için Excalidraw entegre et.",
+      "instruction": "excalidraw/excalidraw reposuna git. Excalidraw bileşenini lazy load et (SSR sorunlarını önlemek için). initialData prop ile önceden kaydedilmiş diyagramı yükle.",
+      "expected_output": "Gömülü Excalidraw tahtası, kayıt/yükleme özelliği."
+    }
+  ]
+}

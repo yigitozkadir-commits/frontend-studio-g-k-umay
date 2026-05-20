@@ -1,0 +1,132 @@
+{
+  "workflow": "dashboard",
+  "version": "1.0.0",
+  "description": "Veri yoğun, interaktif widget'lı, grafikli, tablolu ve filtrelemeli modern bir admin dashboard oluşturur. Dark/light tema, sürükle-bırak grid düzeni ve canlı veri güncellemeleri içerir.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 16,
+      "name": "Tailwind CSS ve Tema Altyapısı",
+      "purpose": "Dashboard'un stil altyapısını ve renk paletini kur.",
+      "instruction": "tailwindlabs/tailwindcss reposuna git. tailwind.config.ts'de content, theme.extend (sidebar genişliği, header yüksekliği, özel renk token'ları) yapılandırmasını incele.",
+      "expected_output": "Dashboard'a özel spacing ve renk token'larıyla yapılandırılmış Tailwind CSS."
+    },
+    {
+      "order": 2,
+      "tool_id": 15,
+      "name": "Temel UI Bileşenleri",
+      "purpose": "Dashboard'un iskeletini oluşturacak tüm shadcn/ui bileşenlerini projeye ekle.",
+      "instruction": "shadcn-ui/ui reposuna git. Button, Card, Input, Select, DropdownMenu, Avatar, Badge, Separator, Skeleton, Table, Tabs, Sheet, Tooltip bileşenlerini projeye ekle.",
+      "expected_output": "Dashboard'da kullanılacak tüm shadcn/ui bileşenleri projeye eklenmiş."
+    },
+    {
+      "order": 3,
+      "tool_id": 144,
+      "name": "Sürükle-Bırak Grid Düzeni",
+      "purpose": "Kullanıcının widget'ları sürükleyip yeniden boyutlandırabileceği ana grid düzenini kur.",
+      "instruction": "react-grid-layout/react-grid-layout reposuna git. ResponsiveGridLayout bileşenini, layout prop yapısını ve breakpoint konfigürasyonunu incele.",
+      "expected_output": "Widget'ların sürüklenip boyutlandırılabildiği responsive grid düzeni."
+    },
+    {
+      "order": 4,
+      "tool_id": 36,
+      "name": "Veri Çekme Altyapısı",
+      "purpose": "Dashboard verilerini sunucudan çekmek ve önbelleğe almak için altyapı kur.",
+      "instruction": "TanStack/query reposuna git. QueryClientProvider'ı root layout'a ekle. useQuery hook'u ile dashboard özet verilerini çek. staleTime ve refetchInterval ayarlarını yapılandır.",
+      "expected_output": "Sunucudan veri çeken ve önbelleğe alan veri katmanı."
+    },
+    {
+      "order": 5,
+      "tool_id": 196,
+      "name": "Grafik Widget'ları",
+      "purpose": "Dashboard'a çizgi, çubuk, pasta ve alan grafikleri ekle.",
+      "instruction": "plouc/nivo reposuna git. @nivo/line, @nivo/bar, @nivo/pie paketlerini incele. ResponsiveLine, ResponsiveBar, ResponsivePie grafikleri oluştur. Her grafiği ayrı bir widget Card'ına yerleştir.",
+      "expected_output": "3 farklı grafik tipinde, animasyonlu ve responsive veri görselleştirme widget'ları."
+    },
+    {
+      "order": 6,
+      "tool_id": 34,
+      "name": "Veri Tablosu",
+      "purpose": "Sıralama, filtreleme ve sayfalandırma özellikli bir veri tablosu ekle.",
+      "instruction": "TanStack/table reposuna git. useReactTable hook'unu, ColumnDef ve SortingState yapısını incele. Sıralanabilir sütunlar, global metin filtresi ve sayfalandırma içeren bir tablo oluştur.",
+      "expected_output": "Sıralama, filtreleme ve sayfalandırma özellikli tam fonksiyonel veri tablosu."
+    },
+    {
+      "order": 7,
+      "tool_id": 35,
+      "name": "Dashboard State Yönetimi",
+      "purpose": "Dashboard genelinde paylaşılan state'i yönet.",
+      "instruction": "pmndrs/zustand reposuna git. create() ile bir dashboard store oluştur. sidebarOpen, aktifTema, widgetLayout, filtreDurumu gibi state'leri tanımla.",
+      "expected_output": "Dashboard genelinde paylaşılan state'i yöneten merkezi store."
+    },
+    {
+      "order": 8,
+      "tool_id": 101,
+      "name": "Filtreleme Paneli",
+      "purpose": "Dashboard verilerini filtrelemek için bir form paneli ekle.",
+      "instruction": "react-hook-form/react-hook-form reposuna git. useForm() hook'unu ve watch() metodunu incele. Tarih aralığı, kategori seçimi ve durum filtresi içeren bir filtre paneli oluştur.",
+      "related_tool_id": 102,
+      "related_instruction": "colinhacks/zod reposuna git. Filtre formu için bir Zod şeması tanımla.",
+      "expected_output": "Anlık filtreleme yapabilen, doğrulamalı filtre paneli."
+    },
+    {
+      "order": 9,
+      "tool_id": 159,
+      "name": "Bildirim Sistemi",
+      "purpose": "Dashboard olayları için toast bildirimleri ekle.",
+      "instruction": "emilkowalski/sonner reposuna git. <Toaster /> bileşenini dashboard layout'una ekle. Veri güncellemelerinde ve hata durumlarında toast göster.",
+      "expected_output": "Dashboard genelinde çalışan toast bildirim sistemi."
+    },
+    {
+      "order": 10,
+      "tool_id": 199,
+      "name": "Tema Desteği",
+      "purpose": "Dashboard'a dark/light/sistem teması ekle.",
+      "instruction": "pacocoursey/next-themes reposuna git. ThemeProvider'ı root layout'a ekle. Sidebar'da tema değiştirme butonu yap. Grafik renklerini tema değişiminde güncelle.",
+      "expected_output": "Dark/light/sistem modu arasında geçiş yapabilen tema sistemi."
+    },
+    {
+      "order": 11,
+      "tool_id": 105,
+      "name": "İkonlar ve Son Rötuşlar",
+      "purpose": "Dashboard'a ikon setini entegre et ve son kontrolleri yap.",
+      "instruction": "lucide-icons/lucide reposuna git. Sidebar menü ikonları (LayoutDashboard, Users, ShoppingCart, BarChart3, Settings), aksiyon ikonları (Filter, Download, RefreshCw) ekle. Mobil responsive kontrolü yap.",
+      "expected_output": "İkonlarla zenginleştirilmiş, erişilebilir, mobil uyumlu tamamlanmış dashboard."
+    },
+    {
+      "order": 12,
+      "tool_id": 71,
+      "name": "Veri Görselleştirme",
+      "purpose": "Dashboard metrikleri için grafik bileşenleri kur.",
+      "instruction": "recharts/recharts reposuna git. LineChart, BarChart, PieChart bileşenlerini import et. Responsive container ile duyarlı grafikler oluştur. Tooltip ve Legend ekle.",
+      "expected_output": "Gerçek verilerle doldurulan, duyarlı dashboard grafikleri."
+    }
+  ],
+  "final_output": "Sürükle-bırak widget grid'i, Nivo grafikleri, TanStack Table ile veri tablosu, filtreleme paneli, dark/light tema ve bildirim sistemi içeren tam fonksiyonel modern admin dashboard.",
+  "estimated_time": "Her adım ~8 dakika, toplam ~90 dakika",
+  "alternative_setups": [
+    {
+      "name": "hafif-versiyon",
+      "description": "Sürükle-bırak grid olmadan, sabit layout'lu dashboard",
+      "skip_steps": [
+        3
+      ]
+    }
+  ],
+  "test_checklist": [
+    "Widget'lar sürüklenip bırakılabiliyor mu?",
+    "Grafikler doğru veriyi gösteriyor ve responsive mi?",
+    "Tablo sıralama ve filtreleme çalışıyor mu?",
+    "Filtre paneli verileri güncelliyor mu?",
+    "Dark/light tema geçişi tüm widget'larda düzgün mü?",
+    "Mobilde sidebar Sheet içinde açılıyor mu?",
+    "Toast bildirimleri çalışıyor mu?",
+    "Boş durum (veri yokken) düzgün görünüyor mu?"
+  ]
+}

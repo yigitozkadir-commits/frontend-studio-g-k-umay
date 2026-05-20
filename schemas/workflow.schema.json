@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-frontend-studio.dev/schemas/workflow.schema.json",
+  "title": "AI Frontend Studio Workflow",
+  "description": "orchestration/workflows/*.json dosyaları için şema.",
+  "type": "object",
+  "required": ["workflow", "version", "description", "prerequisites", "steps", "final_output"],
+  "additionalProperties": true,
+  "properties": {
+    "workflow": {
+      "type": "string",
+      "pattern": "^[0-9a-z][a-z0-9-]*$",
+      "description": "Workflow benzersiz slug'ı (kebab-case)."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "description": { "type": "string", "minLength": 20 },
+    "prerequisites": {
+      "type": "object",
+      "required": ["framework", "language", "styling", "package_manager"],
+      "additionalProperties": true,
+      "properties": {
+        "framework": { "type": "string" },
+        "language": { "type": "string" },
+        "styling": { "type": "string" },
+        "package_manager": { "type": "string", "enum": ["pnpm", "npm", "yarn", "bun"] }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["order", "tool_id", "name", "purpose", "instruction", "expected_output"],
+        "additionalProperties": true,
+        "properties": {
+          "order": { "type": "integer", "minimum": 1 },
+          "tool_id": { "type": "integer", "minimum": 1 },
+          "name": { "type": "string", "minLength": 2 },
+          "purpose": { "type": "string", "minLength": 5 },
+          "instruction": { "type": "string", "minLength": 10 },
+          "expected_output": { "type": "string", "minLength": 5 },
+          "selection_rationale": { "type": "string" }
+        }
+      }
+    },
+    "final_output": { "type": "string", "minLength": 5 },
+    "estimated_time": { "type": "string" },
+    "test_checklist": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

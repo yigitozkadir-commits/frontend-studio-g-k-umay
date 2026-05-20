@@ -1,0 +1,29 @@
+{
+  "workflow": "virtualization",
+  "version": "1.0.0",
+  "description": "Büyük liste ve tablo performansı. TanStack Virtual ile yüksek performanslı sanallaştırma, react-window ile pencereli liste render.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 170,
+      "name": "TanStack Virtual",
+      "purpose": "100.000+ satır listeleri sorunsuz render etmek için TanStack Virtual kur.",
+      "instruction": "TanStack/virtual reposuna git. useVirtualizer hook'u ile liste sanallaştır. Satır yüksekliği tahmini, dinamik yükseklik ve yatay sanallaştırma seçeneklerini incele.",
+      "expected_output": "100.000 satır sorunsuz kaydıran liste, sabit bellek kullanımı."
+    },
+    {
+      "order": 2,
+      "tool_id": 171,
+      "name": "react-window Pencereli Liste",
+      "purpose": "Sabit yükseklikli listeler için react-window kur.",
+      "instruction": "bvaughn/react-window reposuna git. FixedSizeList ve VariableSizeList arasında seçim yap. AutoSizer ile duyarlı boyutlandırma ekle. InfiniteLoader ile sayfalama entegre et.",
+      "expected_output": "Otomatik boyutlanan, sonsuz yükleme destekli sanallaştırılmış liste."
+    }
+  ]
+}

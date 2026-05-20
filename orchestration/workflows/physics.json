@@ -1,0 +1,37 @@
+{
+  "workflow": "physics",
+  "version": "1.0.0",
+  "description": "Web fiziği simülasyonu. Matter.js ile 2D fizik motoru, katı cisim dinamikleri ve çarpışma tespiti.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 178,
+      "name": "Matter.js Fizik Dünyası",
+      "purpose": "2D katı cisim fiziği için Matter.js kur.",
+      "instruction": "liabru/matter-js reposuna git. Engine, World, Runner ve Render oluştur. Body ile statik ve dinamik cisimler ekle. Yerçekimi, sürtünme ve geri tepme konfigürasyonu yap.",
+      "expected_output": "Yerçekimi ve çarpışma fiziği çalışan 2D sahne."
+    },
+    {
+      "order": 2,
+      "tool_id": 177,
+      "name": "Cannon.js 3D Fiziği",
+      "purpose": "Three.js ile entegre 3D fizik için Cannon.js kur.",
+      "instruction": "schteppe/cannon.js reposuna git. World ve Body oluştur. Three.js mesh'lerini Cannon.js body'leriyle senkronize et. ContactMaterial ile yüzey sürtünmelerini ayarla.",
+      "expected_output": "Three.js nesneleri gerçekçi fizikle etkileşen 3D sahne."
+    },
+    {
+      "order": 3,
+      "tool_id": 69,
+      "name": "Performans İzleme",
+      "purpose": "Fizik simülasyonu performansını ölçmek için Stats.js ekle.",
+      "instruction": "mrdoob/stats.js reposuna git. Stats panelini sağ üst köşeye yerleştir. FPS, MS ve MB panelleri arasında geçiş yap. requestAnimationFrame döngüsüne stats.begin/end ekle.",
+      "expected_output": "Gerçek zamanlı FPS/MS/Bellek monitörü, fizik döngüsüyle entegre."
+    }
+  ]
+}

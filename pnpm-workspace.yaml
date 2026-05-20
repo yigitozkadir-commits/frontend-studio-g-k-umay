@@ -1,0 +1,8 @@
+packages:
+  - 'cli'
+  - 'mcp-server'
+  - 'wizard'
+  - 'ai-workflow-generator'
+  - 'packages/*'
+  - 'catalog'
+  - 'starters/*'

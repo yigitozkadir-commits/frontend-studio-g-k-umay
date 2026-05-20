@@ -1,0 +1,359 @@
+[
+  {
+    "id": 1,
+    "name": "Yol Haritaları ve Temel Frontend Yetenekleri",
+    "slug": "yol-haritalari",
+    "description": "Frontend geliştirici yol haritası, web standartları, HTML/CSS şablonları ve algoritma bilgisi.",
+    "tool_count": 4
+  },
+  {
+    "id": 2,
+    "name": "Hareketli Animasyonlar ve Etkileşim",
+    "slug": "animasyonlar",
+    "description": "Web animasyon kütüphaneleri, scroll efektleri, timeline tabanlı motorlar.",
+    "tool_count": 7
+  },
+  {
+    "id": 3,
+    "name": "Yaratıcı Kodlama, 3D ve WebGL",
+    "slug": "3d-webgl",
+    "description": "Three.js, React Three Fiber, PixiJS ile 3D ve 2D yaratıcı render motorları.",
+    "tool_count": 3
+  },
+  {
+    "id": 4,
+    "name": "İleri Düzey UI, Tasarım Sistemleri ve Bileşenler",
+    "slug": "ui-bilesenler",
+    "description": "Modern bileşen kütüphaneleri, Tailwind, Swiper, D3.js ve yardımcı arşivler.",
+    "tool_count": 6
+  },
+  {
+    "id": 5,
+    "name": "Mikro-Etkileşimler ve Gelişmiş Animasyon Motorları",
+    "slug": "mikro-etkilesimler",
+    "description": "Anime.js, react-spring, particles.js ve parallax gibi ufak etkileşim araçları.",
+    "tool_count": 7
+  },
+  {
+    "id": 6,
+    "name": "Modern Kullanıcı Deneyimi (UX) Araçları",
+    "slug": "ux-araclari",
+    "description": "Smooth scroll, görsel zoom, sürükle-bırak, imleç efektleri ve sunum araçları.",
+    "tool_count": 7
+  },
+  {
+    "id": 7,
+    "name": "State Yönetimi ve Veri Mimarisi",
+    "slug": "state-yonetimi",
+    "description": "Zustand, TanStack Query, Jotai, SWR gibi modern state ve veri çekme araçları.",
+    "tool_count": 6
+  },
+  {
+    "id": 8,
+    "name": "WebGL, Shader'lar ve İleri Düzey Görsel Efektler",
+    "slug": "webgl-shader",
+    "description": "OGL, Drei, postprocessing, A-Frame, curtains.js ile ileri görsel programlama.",
+    "tool_count": 6
+  },
+  {
+    "id": 9,
+    "name": "Akıcı Sayfa Geçişleri ve Tipografi Büyüleri",
+    "slug": "sayfa-gecisleri",
+    "description": "Barba.js, Swup, fullPage.js ve metin efektleri (Blotter, Baffle).",
+    "tool_count": 5
+  },
+  {
+    "id": 10,
+    "name": "AI (Yapay Zeka) Entegrasyonu ve Akıllı Arayüzler",
+    "slug": "ai-entegrasyon",
+    "description": "Vercel AI, LangChain.js, TensorFlow.js, Transformers.js ve Monaco Editor.",
+    "tool_count": 5
+  },
+  {
+    "id": 11,
+    "name": "Multimedya: Etkileşimli Ses ve Video",
+    "slug": "multimedya",
+    "description": "Howler.js, Tone.js, Plyr, Video.js ile ses ve video oynatma.",
+    "tool_count": 4
+  },
+  {
+    "id": 12,
+    "name": "Performans ve Modern Mimari Çerçeveleri",
+    "slug": "performans",
+    "description": "Astro, Qwik, Vite, esbuild, Web Vitals ile yüksek performanslı mimariler.",
+    "tool_count": 5
+  },
+  {
+    "id": 13,
+    "name": "Tarayıcı Tabanlı 2D/3D Oyun Motorları",
+    "slug": "oyun-motorlari",
+    "description": "Phaser, Excalibur, PlayCanvas, Tween.js ile web oyun geliştirme.",
+    "tool_count": 4
+  },
+  {
+    "id": 14,
+    "name": "İleri Düzey Veri Görselleştirme",
+    "slug": "veri-gorsellestirme",
+    "description": "Chart.js, Recharts, Plotly, deck.gl ile veri grafikleri ve haritalar.",
+    "tool_count": 4
+  },
+  {
+    "id": 15,
+    "name": "Harita ve Konum Tabanlı Arayüzler",
+    "slug": "harita",
+    "description": "Mapbox GL JS ve Leaflet ile interaktif harita arayüzleri.",
+    "tool_count": 2
+  },
+  {
+    "id": 16,
+    "name": "Erişilebilirlik (a11y) ve Stil Mimarisi",
+    "slug": "erisilebilirlik",
+    "description": "Radix UI, Emotion, Styled Components, PostCSS, Sass gibi stil çözümleri.",
+    "tool_count": 5
+  },
+  {
+    "id": 17,
+    "name": "Gerçek Zamanlı İletişim (Real-Time) ve Ağ Bağlantıları",
+    "slug": "real-time",
+    "description": "Socket.IO, ws, Axios, GraphQL.js ile canlı veri ve API iletişimi.",
+    "tool_count": 4
+  },
+  {
+    "id": 18,
+    "name": "Gelişmiş Canvas Manipülasyonu ve Görsel Düzenleme",
+    "slug": "canvas",
+    "description": "Fabric.js, Konva, Cropper.js, TOAST UI Image Editor ile Canvas düzenleme.",
+    "tool_count": 4
+  },
+  {
+    "id": 19,
+    "name": "Gelişmiş Tipografi ve Metin Efektleri",
+    "slug": "tipografi",
+    "description": "SplitType, TypeIt, TypewriterJS, screenfull.js ile metin animasyonları.",
+    "tool_count": 4
+  },
+  {
+    "id": 20,
+    "name": "Test, QA ve Tarayıcı Otomasyonu",
+    "slug": "test",
+    "description": "Cypress, Playwright, Vitest, Puppeteer ile uçtan uca ve birim testleri.",
+    "tool_count": 4
+  },
+  {
+    "id": 21,
+    "name": "Güçlü Yardımcılar (Utilities) ve Performans Araçları",
+    "slug": "yardimcilar",
+    "description": "Comlink, Day.js, Lodash, RxJS ile asenkron işlemler ve yardımcı fonksiyonlar.",
+    "tool_count": 4
+  },
+  {
+    "id": 22,
+    "name": "Form Yönetimi ve Veri Doğrulama (Validation)",
+    "slug": "form",
+    "description": "React Hook Form, Zod, Yup, Formik ile form state ve validasyon.",
+    "tool_count": 4
+  },
+  {
+    "id": 23,
+    "name": "İkonografi ve SVG Optimizasyonu",
+    "slug": "ikon-svg",
+    "description": "Lucide, SVGO, Feather, SVGR ile ikon setleri ve SVG dönüşümleri.",
+    "tool_count": 4
+  },
+  {
+    "id": 24,
+    "name": "Mikro-Frontend ve Monorepo Mimarisi",
+    "slug": "mikro-frontend",
+    "description": "Turborepo, Nx, single-spa, Lerna ile modüler ve ölçeklenebilir mimariler.",
+    "tool_count": 4
+  },
+  {
+    "id": 25,
+    "name": "WebRTC ve Gelişmiş Medya Akışı",
+    "slug": "webrtc",
+    "description": "simple-peer, PeerJS, MiroTalk, RecordRTC ile gerçek zamanlı medya.",
+    "tool_count": 4
+  },
+  {
+    "id": 26,
+    "name": "Modern İçerik Yönetimi (SSG/SSR) ve Dokümantasyon",
+    "slug": "ssg-ssr",
+    "description": "Next.js, Nuxt, Docusaurus, Decap CMS ile içerik odaklı siteler.",
+    "tool_count": 4
+  },
+  {
+    "id": 27,
+    "name": "Bileşen Geliştirme ve Tasarım Sistemleri (Design Systems)",
+    "slug": "tasarim-sistemleri",
+    "description": "Storybook, React Styleguidist, Bit ile bileşen kütüphanesi yönetimi.",
+    "tool_count": 3
+  },
+  {
+    "id": 28,
+    "name": "Gelişmiş Zengin Metin Editörleri (Rich Text Editors)",
+    "slug": "metin-editor",
+    "description": "Tiptap, Slate, Quill, CKEditor 5 ile zengin metin düzenleme.",
+    "tool_count": 4
+  },
+  {
+    "id": 29,
+    "name": "Alternatif ve Minimalist Framework'ler",
+    "slug": "minimal-framework",
+    "description": "Preact, Solid, Svelte, Alpine.js, HTMX, Stimulus ile hafif yapılar.",
+    "tool_count": 6
+  },
+  {
+    "id": 30,
+    "name": "Tarayıcı İçi Depolama ve Veritabanı (In-Browser Storage)",
+    "slug": "tarayici-depolama",
+    "description": "localForage, Dexie.js, sql.js ile çevrimdışı depolama.",
+    "tool_count": 3
+  },
+  {
+    "id": 31,
+    "name": "Dosya Yönetimi, Sıkıştırma ve PDF İşlemleri",
+    "slug": "dosya-pdf",
+    "description": "PDF.js, pdf-lib, JSZip, Pako ile dosya işleme.",
+    "tool_count": 4
+  },
+  {
+    "id": 32,
+    "name": "Çoklu Dil Desteği (i18n) ve Yerelleştirme",
+    "slug": "i18n",
+    "description": "i18next, FormatJS ile çeviri ve yerelleştirme.",
+    "tool_count": 2
+  },
+  {
+    "id": 33,
+    "name": "Gelişmiş Sürükle-Bırak (Drag & Drop) ve Grid Düzenleri",
+    "slug": "drag-drop",
+    "description": "dnd-kit, React Grid Layout, React Dropzone ile sürükle-bırak.",
+    "tool_count": 3
+  },
+  {
+    "id": 34,
+    "name": "Kimlik Doğrulama (Auth) ve Güvenlik",
+    "slug": "auth",
+    "description": "NextAuth.js, Auth0 React, Supabase ile kimlik doğrulama.",
+    "tool_count": 3
+  },
+  {
+    "id": 35,
+    "name": "Tarayıcıda Gelişmiş Medya ve Video İşleme",
+    "slug": "medya-isleme",
+    "description": "FFmpeg.wasm, WebRTC adapter ile video/ses dönüştürme.",
+    "tool_count": 2
+  },
+  {
+    "id": 36,
+    "name": "Kod Kalitesi, Linter'lar ve Formatlayıcılar",
+    "slug": "kod-kalitesi",
+    "description": "ESLint, Prettier, lint-staged, Husky ile temiz kod.",
+    "tool_count": 4
+  },
+  {
+    "id": 37,
+    "name": "Progressive Web Apps (PWA) ve Arka Plan İşlemleri",
+    "slug": "pwa",
+    "description": "Workbox, Partytown ile PWA ve arka plan performansı.",
+    "tool_count": 2
+  },
+  {
+    "id": 38,
+    "name": "Bildirimler, Modallar ve Geri Bildirim Arayüzleri",
+    "slug": "bildirimler",
+    "description": "React Toastify, SweetAlert2, Sonner, React Modal ile bildirimler.",
+    "tool_count": 4
+  },
+  {
+    "id": 39,
+    "name": "Yeni Nesil CSS Motorları ve Stil Mimarileri",
+    "slug": "css-motorlari",
+    "description": "UnoCSS, Linaria, CSS Modules ile modern stil çözümleri.",
+    "tool_count": 3
+  },
+  {
+    "id": 40,
+    "name": "Headless CMS ve Esnek İçerik Yönetimi",
+    "slug": "headless-cms",
+    "description": "Strapi, Sanity ile API odaklı içerik yönetimi.",
+    "tool_count": 2
+  },
+  {
+    "id": 41,
+    "name": "İleri Düzey GraphQL İstemcileri",
+    "slug": "graphql-istemci",
+    "description": "Apollo Client, URQL ile GraphQL veri çekme.",
+    "tool_count": 2
+  },
+  {
+    "id": 42,
+    "name": "WebAssembly (Wasm) ve Sistem Düzeyi Performans",
+    "slug": "wasm",
+    "description": "wasm-pack, Yew ile Rust/WebAssembly entegrasyonu.",
+    "tool_count": 2
+  },
+  {
+    "id": 43,
+    "name": "Sanallaştırma (Virtualization) ve Büyük Veri İşleme",
+    "slug": "sanallastirma",
+    "description": "TanStack Virtual, react-window ile büyük liste render optimizasyonu.",
+    "tool_count": 2
+  },
+  {
+    "id": 44,
+    "name": "Görsel Optimizasyonu ve Akıllı İşleme",
+    "slug": "gorsel-optimizasyon",
+    "description": "Sharp, Thumbor ile görsel boyutlandırma ve dönüştürme.",
+    "tool_count": 2
+  },
+  {
+    "id": 45,
+    "name": "Özel Etkileşimler ve Node Tabanlı Editörler",
+    "slug": "node-editor",
+    "description": "React Flow, Craft.js, Excalidraw ile diyagram ve sayfa oluşturucu.",
+    "tool_count": 3
+  },
+  {
+    "id": 46,
+    "name": "Web Fizik Motorları ve Performans Monitörleri",
+    "slug": "fizik-motorlari",
+    "description": "Cannon.js, Matter.js, stats.js ile fizik simülasyonu ve FPS takibi.",
+    "tool_count": 3
+  },
+  {
+    "id": 47,
+    "name": "Zaman ve Takvim Yönetimi Arayüzleri",
+    "slug": "takvim",
+    "description": "React Big Calendar ile etkinlik ve takvim yönetimi.",
+    "tool_count": 1
+  },
+  {
+    "id": 48,
+    "name": "Tarayıcıda Makine Öğrenmesi (ML) ve Yapay Zeka (AI)",
+    "slug": "tarayici-ai",
+    "description": "TensorFlow.js modelleri, ML5, Brain.js, Chatbot UI, Ollama JS.",
+    "tool_count": 5
+  },
+  {
+    "id": 49,
+    "name": "İleri Düzey 3D, Optimizasyon ve Artırılmış Gerçeklik (AR)",
+    "slug": "3d-ar",
+    "description": "Babylon.js, three-mesh-bvh, AR.js, JeelizFaceFilter, Leva.",
+    "tool_count": 5
+  },
+  {
+    "id": 50,
+    "name": "Yaratıcı Kodlama (Creative Coding) ve İleri Matematik",
+    "slug": "yaratici-kodlama",
+    "description": "p5.js, Paper.js, Math.js, Ammo.js, Kute.js ile sanatsal kodlama.",
+    "tool_count": 5
+  },
+  {
+    "id": 51,
+    "name": "Stüdyo Standartları, Mimari Çözümler ve Modern Arayüz",
+    "slug": "studyo-standartlari",
+    "description": "Nivo, tldraw, Floating UI, next-themes, Mitosis ile profesyonel altyapı.",
+    "tool_count": 5
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "AI Frontend Studio — Versiyon Uyumluluk Matrisi",
+    "last_updated": "2026-05-17",
+    "description": "Hangi araç versiyonlarının birlikte sorunsuz çalıştığını gösteren referans tablosu."
+  },
+  "stacks": [
+    {
+      "name": "AI Chat Stack",
+      "workflow": "ai-chat",
+      "status": "stable",
+      "tested_date": "2026-05",
+      "packages": {
+        "next": "14.2.x",
+        "react": "18.3.x",
+        "react-dom": "18.3.x",
+        "typescript": "5.4.x",
+        "tailwindcss": "3.4.x",
+        "framer-motion": "11.x",
+        "ai": "3.x",
+        "sonner": "1.x",
+        "next-themes": "0.3.x",
+        "lucide-react": "0.383.x",
+        "localforage": "1.10.x",
+        "@radix-ui/react-dialog": "1.1.x",
+        "zod": "3.x"
+      },
+      "notes": "ai paketi 3.x ile useChat hook API'si değişti. 2.x ile geriye dönük uyumsuz."
+    },
+    {
+      "name": "Landing Page Stack",
+      "workflow": "landing-page",
+      "status": "stable",
+      "tested_date": "2026-05",
+      "packages": {
+        "next": "14.2.x",
+        "react": "18.3.x",
+        "typescript": "5.4.x",
+        "tailwindcss": "3.4.x",
+        "gsap": "3.12.x",
+        "framer-motion": "11.x",
+        "lenis": "1.1.x",
+        "swiper": "11.x",
+        "next-themes": "0.3.x",
+        "web-vitals": "3.x",
+        "three": "0.165.x",
+        "@react-three/fiber": "8.16.x",
+        "@react-three/drei": "9.105.x"
+      },
+      "known_issues": [
+        "lenis 1.x ile gsap ScrollTrigger entegrasyonu için gsap.ticker kullanılmalı, requestAnimationFrame değil.",
+        "swiper 11.x'te React importları değişti: import { Swiper } from 'swiper/react'"
+      ]
+    },
+    {
+      "name": "3D Scene Stack",
+      "workflow": "3d-scene",
+      "status": "stable",
+      "tested_date": "2026-05",
+      "packages": {
+        "next": "14.2.x",
+        "react": "18.3.x",
+        "typescript": "5.4.x",
+        "three": "0.165.x",
+        "@react-three/fiber": "8.16.x",
+        "@react-three/drei": "9.105.x",
+        "postprocessing": "6.35.x",
+        "@react-three/postprocessing": "2.16.x",
+        "leva": "0.9.x",
+        "gsap": "3.12.x",
+        "framer-motion": "11.x"
+      },
+      "known_issues": [
+        "three 0.155+ ile OrbitControls artık 'three/examples/jsm' yerine drei üzerinden alınmalı.",
+        "@react-three/fiber 8.x React 18 Strict Mode ile çift mount sorunu yaşıyor — useEffect cleanup zorunlu.",
+        "postprocessing 6.x ile @react-three/postprocessing versiyon eşleşmesi kritik."
+      ]
+    },
+    {
+      "name": "Dashboard Stack",
+      "workflow": "dashboard",
+      "status": "stable",
+      "tested_date": "2026-05",
+      "packages": {
+        "next": "14.2.x",
+        "react": "18.3.x",
+        "typescript": "5.4.x",
+        "tailwindcss": "3.4.x",
+        "@tanstack/react-query": "5.x",
+        "@tanstack/react-table": "8.x",
+        "@tanstack/react-virtual": "3.x",
+        "zustand": "4.5.x",
+        "react-grid-layout": "1.4.x",
+        "@nivo/core": "0.87.x",
+        "@nivo/bar": "0.87.x",
+        "@nivo/pie": "0.87.x",
+        "@nivo/line": "0.87.x",
+        "react-hook-form": "7.x",
+        "zod": "3.x",
+        "sonner": "1.x",
+        "next-themes": "0.3.x",
+        "lucide-react": "0.383.x"
+      },
+      "known_issues": [
+        "@tanstack/react-query 5.x ile useQuery API değişti: isLoading yerine isPending kullan.",
+        "Nivo 0.87.x SSR ile çalışmıyor — dynamic import zorunlu.",
+        "react-grid-layout ile Tailwind purge çakışması: className'ler safelist'e eklenebilir."
+      ]
+    },
+    {
+      "name": "Animation Stack",
+      "workflow": "animation",
+      "status": "stable",
+      "tested_date": "2026-05",
+      "packages": {
+        "next": "14.2.x",
+        "react": "18.3.x",
+        "typescript": "5.4.x",
+        "tailwindcss": "3.4.x",
+        "gsap": "3.12.x",
+        "lenis": "1.1.x",
+        "framer-motion": "11.x",
+        "lottie-web": "5.12.x",
+        "split-type": "0.3.x",
+        "jarallax": "2.x",
+        "web-vitals": "3.x"
+      },
+      "known_issues": [
+        "split-type 0.3.x ile GSAP timeline'da revert() çağrısı yapılmazsa memory leak oluşur.",
+        "lottie-web 5.x ile React Strict Mode'da animasyon çift başlayabilir — cleanup ekle."
+      ]
+    }
+  ],
+  "global_compatibility": {
+    "node_minimum": "18.17.0",
+    "node_recommended": "20.x LTS",
+    "package_manager": "pnpm 8.x veya 9.x",
+    "typescript_minimum": "5.0",
+    "react_minimum": "18.2",
+    "next_minimum": "14.0"
+  },
+  "incompatible_pairs": [
+    {
+      "package_a": "locomotive-scroll",
+      "package_b": "lenis",
+      "reason": "İkisi de scroll kontrolünü ele geçiriyor. Birini seç.",
+      "recommended": "lenis"
+    },
+    {
+      "package_a": "styled-components",
+      "package_b": "emotion",
+      "reason": "İkisi de CSS-in-JS runtime maliyeti ekliyor. Birini seç.",
+      "recommended": "emotion (daha hızlı)"
+    },
+    {
+      "package_a": "react-beautiful-dnd",
+      "package_b": "dnd-kit",
+      "reason": "İkisi de aynı drag-drop API'sini ele geçiriyor.",
+      "recommended": "dnd-kit (aktif geliştirme, react-beautiful-dnd artık bakımda değil)"
+    },
+    {
+      "package_a": "swr",
+      "package_b": "@tanstack/react-query",
+      "reason": "İkisi de server state yönetiyor.",
+      "recommended": "@tanstack/react-query (daha fazla özellik)"
+    },
+    {
+      "package_a": "react-toastify",
+      "package_b": "sonner",
+      "reason": "İkisi de toast bildirimi.",
+      "recommended": "sonner (daha hafif, modern)"
+    }
+  ]
+}

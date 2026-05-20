@@ -1,0 +1,37 @@
+{
+  "workflow": "micro-interactions",
+  "version": "1.0.0",
+  "description": "UI mikro etkileşimleri ve ince animasyonlar. Anime.js ile timeline animasyonları, React Spring fizik tabanlı geçişler, AOS scroll tetiklemeli animasyonlar.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 21,
+      "name": "Anime.js Timeline",
+      "purpose": "Çok adımlı, sıralı UI animasyonları için Anime.js kur.",
+      "instruction": "juliangarnier/anime reposuna git. anime.timeline() ile zincirleme animasyon oluştur. Sayfa yüklenme sekansı, hero giriş animasyonu yaz. Easing fonksiyonlarını öğren.",
+      "expected_output": "Sayfa yüklenirken çalışan sıralı giriş animasyon sekansı."
+    },
+    {
+      "order": 2,
+      "tool_id": 22,
+      "name": "React Spring Fiziği",
+      "purpose": "Fizik tabanlı akıcı geçişler için React Spring ekle.",
+      "instruction": "pmndrs/react-spring reposuna git. useSpring, useSprings, useTrail hook'larını öğren. Hover efektleri, liste öğesi animasyonları ve sürükle-bırak geçişleri uygula.",
+      "expected_output": "Doğal hissettiren fizik bazlı hover ve geçiş animasyonları."
+    },
+    {
+      "order": 3,
+      "tool_id": 23,
+      "name": "Scroll Tetiklemeli Animasyonlar",
+      "purpose": "Scroll pozisyonuna göre tetiklenen animasyonlar için AOS kur.",
+      "instruction": "michalsnik/aos reposuna git. AOS.init() ile başlat. Elemanlara data-aos attribute'larını ekle. Offset, delay ve easing değerlerini ayarla. Next.js'te SSR uyumluluğunu sağla.",
+      "expected_output": "Scroll edildiğinde fade/slide ile beliren sayfa elementleri."
+    }
+  ]
+}

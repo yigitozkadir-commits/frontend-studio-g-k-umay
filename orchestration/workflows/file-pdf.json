@@ -1,0 +1,37 @@
+{
+  "workflow": "file-pdf",
+  "version": "1.0.0",
+  "description": "PDF okuma, oluşturma ve dosya işleme. PDF.js ile görüntüleme, pdf-lib ile programatik oluşturma, JSZip ile arşiv yönetimi.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 137,
+      "name": "PDF.js Görüntüleyici",
+      "purpose": "Tarayıcıda PDF görüntülemek için PDF.js kur.",
+      "instruction": "mozilla/pdf.js reposuna git. pdfjsLib.getDocument() ile PDF yükle. Sayfa render döngüsü oluştur. Zoom ve sayfa navigasyonu ekle. Web Worker ile arka planda işleme.",
+      "expected_output": "Sayfalama, zoom kontrolü olan PDF görüntüleyici."
+    },
+    {
+      "order": 2,
+      "tool_id": 138,
+      "name": "pdf-lib ile PDF Oluşturma",
+      "purpose": "Programatik PDF oluşturma ve düzenleme için pdf-lib kur.",
+      "instruction": "Hopding/pdf-lib reposuna git. PDFDocument.create() ile yeni PDF başlat. Metin, görsel ve şekil ekle. Mevcut PDF'e form alanı ve imza alanı ekle.",
+      "expected_output": "Dinamik içerikle oluşturulan, indirilebilir PDF."
+    },
+    {
+      "order": 3,
+      "tool_id": 139,
+      "name": "JSZip Arşiv Yönetimi",
+      "purpose": "Dosya arşivleme ve ZIP işlemleri için JSZip kur.",
+      "instruction": "Stuk/jszip reposuna git. Birden fazla dosyayı ZIP'e ekle. Mevcut ZIP'i oku ve içeriğini listele. Büyük dosyalar için stream API'sini kullan.",
+      "expected_output": "Dosya seçme, ZIP oluşturma ve indirme akışı."
+    }
+  ]
+}

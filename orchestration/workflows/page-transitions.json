@@ -1,0 +1,37 @@
+{
+  "workflow": "page-transitions",
+  "version": "1.0.0",
+  "description": "Sayfa geçiş animasyonları. Barba.js ile SPA geçişleri, SWUP ile CSS tabanlı geçişler ve FullPage.js ile tam sayfa kaydırma deneyimi.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 47,
+      "name": "Barba.js Geçişleri",
+      "purpose": "Sayfalar arası akıcı AJAX geçişleri için Barba.js kur.",
+      "instruction": "barbajs/barba reposuna git. barba.init() ile geçiş hook'larını tanımla. beforeEnter, afterEnter, beforeLeave lifecycle'larını kullan. GSAP ile geçiş animasyonlarını koordine et.",
+      "expected_output": "Sayfa değişiminde GSAP animasyonlu geçişler, flicker yok."
+    },
+    {
+      "order": 2,
+      "tool_id": 48,
+      "name": "SWUP CSS Geçişleri",
+      "purpose": "CSS sınıf tabanlı hafif sayfa geçişleri için SWUP kur.",
+      "instruction": "swup/swup reposuna git. SwupPlugin'leri ekle: SwupHeadPlugin, SwupScrollPlugin. CSS ile .transition-fade animasyonu tanımla. Next.js router entegrasyonunu sağla.",
+      "expected_output": "CSS transition sınıflarıyla çalışan sayfa geçişleri."
+    },
+    {
+      "order": 3,
+      "tool_id": 49,
+      "name": "Tam Sayfa Kaydırma",
+      "purpose": "Bölüm bölüm kaydırma deneyimi için FullPage.js kur.",
+      "instruction": "alvarotrigo/fullPage.js reposuna git. ReactFullpage wrapper'ını kullan. Bölüm navigasyonu, klavye ve dokunmatik destek yapılandır. Yatay slayt desteği ekle.",
+      "expected_output": "Fare/klavye/dokunmatik ile kontrol edilen tam sayfa scroll deneyimi."
+    }
+  ]
+}

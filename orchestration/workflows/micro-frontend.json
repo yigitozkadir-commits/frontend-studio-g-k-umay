@@ -1,0 +1,51 @@
+{
+  "workflow": "micro-frontend",
+  "version": "1.0.0",
+  "description": "Module Federation tabanlı micro-frontend mimarisi. Host shell + 2 remote uygulama, paylaşılan dependency'ler, runtime entegrasyon.",
+  "prerequisites": {
+    "framework": "Next.js 14+ veya Vite",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "tags": [
+    "micro-frontend",
+    "module-federation",
+    "monorepo"
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 109,
+      "name": "Monorepo İskeleti",
+      "purpose": "pnpm workspace ile host + remote'lar için monorepo yapısı kur.",
+      "instruction": "pnpm-workspace.yaml oluştur: 'apps/*' ve 'packages/*'. apps/host, apps/remote-a, apps/remote-b oluştur.",
+      "expected_output": "pnpm install monorepo'yu kuruyor, workspace bağlantıları çalışıyor.",
+      "selection_rationale": "pnpm workspace, npm/yarn'a göre disk verimliliği ve symlink netliği açısından üstün."
+    },
+    {
+      "order": 2,
+      "tool_id": 110,
+      "name": "Module Federation Plugin",
+      "purpose": "Vite Module Federation eklentisi ile remote'ları expose et.",
+      "instruction": "@originjs/vite-plugin-federation ekle. vite.config.ts'te apps/remote-a için 'exposes' alanı, host için 'remotes' alanı tanımla.",
+      "expected_output": "Host, remote'ları runtime'da yükleyebiliyor."
+    },
+    {
+      "order": 3,
+      "tool_id": 111,
+      "name": "Paylaşılan State",
+      "purpose": "Host ve remote'lar arasında zustand store paylaş.",
+      "instruction": "packages/shared-state altında zustand store oluştur. Module Federation 'shared' alanına 'zustand' ekle (singleton).",
+      "expected_output": "Host'taki state değişikliği remote'larda da görünüyor."
+    }
+  ],
+  "final_output": "Host + 2 remote, paylaşılan zustand, animasyonlu geçişler, runtime sözleşme doğrulama içeren çalışan micro-frontend mimarisi.",
+  "estimated_time": "Her adım ~12 dakika, toplam ~60 dakika",
+  "test_checklist": [
+    "Host remote'ları runtime'da yüklüyor mu?",
+    "Paylaşılan state senkron mu?",
+    "Bir remote build edilmediğinde host hala çalışıyor mu (graceful fallback)?",
+    "Sözleşme uyumsuzluğu yakalanıyor mu?"
+  ]
+}

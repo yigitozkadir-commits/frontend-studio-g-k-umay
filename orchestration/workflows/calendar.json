@@ -1,0 +1,29 @@
+{
+  "workflow": "calendar",
+  "version": "1.0.0",
+  "description": "Takvim ve etkinlik yönetimi uygulaması. React Big Calendar ile tam özellikli takvim görünümleri, sürükle-bırak etkinlik yönetimi.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 180,
+      "name": "React Big Calendar",
+      "purpose": "Tam özellikli takvim bileşeni için React Big Calendar kur.",
+      "instruction": "jquense/react-big-calendar reposuna git. localizer'ı date-fns veya moment.js ile yapılandır. Month, Week, Day, Agenda görünümlerini kur. onSelectEvent ve onSelectSlot handler'larını ekle.",
+      "expected_output": "Ay/hafta/gün görünümleri olan, etkinlik tıklama destekli takvim."
+    },
+    {
+      "order": 2,
+      "tool_id": 180,
+      "name": "Sürükle-Bırak Etkinlik",
+      "purpose": "Etkinlikleri takvimde sürükleyerek yeniden planla.",
+      "instruction": "react-big-calendar/withDragAndDrop HOC'unu kullan. onEventDrop ve onEventResize handler'larını yaz. Etkinlik verilerini optimistic update ile güncelle.",
+      "expected_output": "Sürüklenebilir, yeniden boyutlandırılabilir takvim etkinlikleri."
+    }
+  ]
+}

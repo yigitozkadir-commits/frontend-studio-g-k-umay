@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-frontend-studio.dev/schemas/category.schema.json",
+  "title": "AI Frontend Studio Category",
+  "type": "object",
+  "required": ["id", "name", "slug", "description"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "name": { "type": "string" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "description": { "type": "string" },
+    "tool_count": { "type": "integer", "minimum": 0 }
+  },
+  "additionalProperties": false
+}

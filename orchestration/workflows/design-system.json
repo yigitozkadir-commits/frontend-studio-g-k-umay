@@ -1,0 +1,37 @@
+{
+  "workflow": "design-system",
+  "version": "1.0.0",
+  "description": "Bileşen kütüphanesi ve tasarım sistemi kurulumu. Storybook ile bileşen katalogu, token tabanlı stil sistemi ve otomatik dokümantasyon.",
+  "prerequisites": {
+    "framework": "Next.js 14+ (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "tool_id": 121,
+      "name": "Storybook Kurulumu",
+      "purpose": "Bileşen geliştirme ve dokümantasyon için Storybook kur.",
+      "instruction": "storybookjs/storybook reposuna git. npx storybook@latest init ile kur. Next.js framework preset'i seç. Controls, Actions ve Docs addon'larını yapılandır.",
+      "expected_output": "Çalışan Storybook, otomatik prop tablosu, interaktif kontroller."
+    },
+    {
+      "order": 2,
+      "tool_id": 122,
+      "name": "React Styleguidist",
+      "purpose": "Alternatif bileşen dokümantasyonu için Styleguidist kur.",
+      "instruction": "styleguidist/react-styleguidist reposuna git. styleguide.config.js oluştur. JSDoc ile bileşen dokümantasyonu yaz. Canlı editörlü örnek sayfalar oluştur.",
+      "expected_output": "Canlı kod editörlü bileşen dokümantasyon sitesi."
+    },
+    {
+      "order": 3,
+      "tool_id": 123,
+      "name": "Bit Bileşen Paylaşımı",
+      "purpose": "Bileşenleri farklı projeler arasında paylaşmak için Bit kur.",
+      "instruction": "teambit/bit reposuna git. bit init ile workspace başlat. Bileşenleri bit add ile ekle. bit tag ve bit push ile sürüm yayınla.",
+      "expected_output": "Sürümlü, paylaşılabilir bileşen paketi."
+    }
+  ]
+}

@@ -194,7 +194,7 @@ describe('GameControls Component', () => {
       render(
         <GameControls {...defaultProps} capturedPieces={capturedPieces} />
       )
-      expect(screen.getByText(/Siyah/i)).toBeInTheDocument()
+      expect(screen.getByText(/Kazandı/i)).toBeInTheDocument()
     })
   })
 
@@ -211,7 +211,7 @@ describe('GameControls Component', () => {
 
     it('calls onUndo when undo button clicked', async () => {
       const onUndo = jest.fn()
-      render(<GameControls {...defaultProps} onUndo={onUndo} />)
+      render(<GameControls {...defaultProps} onUndo={onUndo} moveCount={1} />)
 
       const undoButton = screen.getByText(/Geri Al/i)
       fireEvent.click(undoButton)

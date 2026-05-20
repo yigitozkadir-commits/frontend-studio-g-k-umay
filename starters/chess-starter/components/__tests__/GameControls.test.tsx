@@ -151,7 +151,7 @@ describe('GameControls Component', () => {
       render(
         <GameControls {...defaultProps} capturedPieces={capturedPieces} />
       )
-      expect(screen.getByText(/Siyah/i)).toBeInTheDocument()
+      expect(screen.getByText(/Beyaz Kazandı/i)).toBeInTheDocument()
     })
 
     it('shows captured white pieces', () => {
@@ -161,7 +161,7 @@ describe('GameControls Component', () => {
       render(
         <GameControls {...defaultProps} capturedPieces={capturedPieces} />
       )
-      expect(screen.getByText(/Beyaz/i)).toBeInTheDocument()
+      expect(screen.getByText(/Siyah Kazandı/i)).toBeInTheDocument()
     })
 
     it('shows captured black pieces', () => {
@@ -171,7 +171,7 @@ describe('GameControls Component', () => {
       render(
         <GameControls {...defaultProps} capturedPieces={capturedPieces} />
       )
-      expect(screen.getByText(/Siyah/i)).toBeInTheDocument()
+      expect(screen.getByText(/Beyaz Kazandı/i)).toBeInTheDocument()
     })
   })
 
@@ -184,7 +184,7 @@ describe('GameControls Component', () => {
       render(
         <GameControls {...defaultProps} capturedPieces={capturedPieces} />
       )
-      expect(screen.getByText(/Beyaz/i)).toBeInTheDocument()
+      expect(screen.getByText(/Kazandı/i)).toBeInTheDocument()
     })
 
     it('shows material values for pieces', () => {

@@ -28,9 +28,14 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
   onMakeMove,
 }) => {
   const [selectedForKeyboard, setSelectedForKeyboard] = useState<string | null>(null)
-  const game = new Chess(fen)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const board = (game.board as any)() as Array<Array<any>>
+
+  // Initialize game and board using useMemo to avoid SSR issues
+  const { game, board } = React.useMemo(() => {
+    const gameInstance = new Chess(fen)
+    const boardFunction = gameInstance.board as unknown as () => Array<Array<{ type: string; color: string } | null>>
+    const boardData = boardFunction()
+    return { game: gameInstance, board: boardData }
+  }, [fen])
 
   // Find king position for check indication
   const kingSquare = React.useMemo(() => {
@@ -45,7 +50,7 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
       }
     }
     return null
-  }, [board])
+  }, [game, board])
 
   // Keyboard navigation
   useEffect(() => {

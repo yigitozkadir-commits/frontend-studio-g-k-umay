@@ -123,10 +123,10 @@ describe('gameUtils', () => {
     })
 
     it('works for center squares', () => {
-      expect(isLightSquare('d4')).toBe(true)
-      expect(isLightSquare('e4')).toBe(false)
-      expect(isLightSquare('d5')).toBe(false)
-      expect(isLightSquare('e5')).toBe(true)
+      expect(isLightSquare('d4')).toBe(false) // d4 is dark
+      expect(isLightSquare('e4')).toBe(true) // e4 is light
+      expect(isLightSquare('d5')).toBe(true) // d5 is light
+      expect(isLightSquare('e5')).toBe(false) // e5 is dark
     })
   })
 

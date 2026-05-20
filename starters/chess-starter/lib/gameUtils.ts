@@ -67,7 +67,7 @@ export const isLightSquare = (square: string): boolean => {
   const file = square.charCodeAt(0) - 97 // a-h (0-7)
   const rank = parseInt(square[1]) - 1 // 1-8 (0-7)
   // Light squares are where (file + rank) is odd
-  return (file + rank) % 2 === 1
+  return (file + rank) % 2 !== 0
 }
 
 export const squareToCoordinates = (square: string): { file: number; rank: number } => {

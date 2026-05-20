@@ -203,7 +203,7 @@ describe('GameControls Component', () => {
       const onReset = jest.fn()
       render(<GameControls {...defaultProps} onReset={onReset} />)
 
-      const resetButton = screen.getByText(/Baştan Başla/i)
+      const resetButton = screen.getByText(/Baştan/i)
       fireEvent.click(resetButton)
 
       expect(onReset).toHaveBeenCalled()
@@ -221,7 +221,7 @@ describe('GameControls Component', () => {
 
     it('reset button has correct text', () => {
       render(<GameControls {...defaultProps} />)
-      expect(screen.getByText(/Baştan Başla/i)).toBeInTheDocument()
+      expect(screen.getByText(/Baştan/i)).toBeInTheDocument()
     })
 
     it('undo button has correct text', () => {
@@ -245,7 +245,7 @@ describe('GameControls Component', () => {
         />
       )
 
-      const resetButton = screen.getByText(/Baştan Başla/i)
+      const resetButton = screen.getByText(/Baştan/i)
       fireEvent.click(resetButton)
 
       expect(onReset).toHaveBeenCalled()
@@ -261,7 +261,7 @@ describe('GameControls Component', () => {
         />
       )
 
-      const resetButton = screen.getByText(/Baştan Başla/i)
+      const resetButton = screen.getByText(/Baştan/i)
       fireEvent.click(resetButton)
 
       expect(onReset).toHaveBeenCalled()

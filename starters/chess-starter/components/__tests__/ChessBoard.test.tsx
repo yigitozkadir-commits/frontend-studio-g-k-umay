@@ -64,7 +64,7 @@ describe('ChessBoard Component', () => {
     it('displays black pieces in starting position', () => {
       const { container } = render(<ChessBoard {...defaultProps} />)
       const pieces = container.querySelectorAll('.chess-piece')
-      expect(pieces.length).toBe(16) // 16 pieces for white and black together
+      expect(pieces.length).toBe(32) // 32 pieces total (16 white + 16 black)
     })
 
     it('updates pieces when FEN changes', () => {

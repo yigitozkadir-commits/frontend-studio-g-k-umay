@@ -1,5 +1,4 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { render, screen } from '@testing-library/react'
 import { Game } from '../Game'
 
 describe('Game Component - Integration Tests', () => {
@@ -32,7 +31,6 @@ describe('Game Component - Integration Tests', () => {
 
     it('displays captured pieces section', () => {
       render(<Game />)
-      const capturedElements = screen.queryAllByText(/Ele Geçirilen Taşlar/i)
       // May or may not be visible depending on layout
       expect(screen.getByText(/Oyun Durumu/i)).toBeInTheDocument()
     })
